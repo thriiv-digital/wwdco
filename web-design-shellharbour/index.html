@@ -90,7 +90,7 @@
   .nav-has-mega { position: relative; }
   .nav-has-mega:hover .nav-chevron,
   .nav-has-mega.open .nav-chevron { transform: rotate(180deg); }
-  .nav-mega { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--white); border-radius: 16px; box-shadow: 0 16px 60px rgba(0,0,0,.16); border: 1px solid rgba(0,0,0,.07); padding: 28px 28px 24px; min-width: 680px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .18s ease, transform .18s ease, visibility .18s; transform: translateX(-50%) translateY(-6px); }
+  .nav-mega { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--white); border-radius: 16px; box-shadow: 0 16px 60px rgba(0,0,0,.16); border: 1px solid rgba(0,0,0,.07); padding: 28px 28px 24px; min-width: 900px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .18s ease, transform .18s ease, visibility .18s; transform: translateX(-50%) translateY(-6px); }
   .nav-has-mega:hover .nav-mega,
   .nav-has-mega.open .nav-mega { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
   .mega-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
@@ -267,21 +267,26 @@
         <li class="nav-has-mega" id="mega-services">
           <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">▾</span></a>
           <div class="nav-mega" role="region" aria-label="Services menu">
-            <div class="mega-inner">
-              <div>
-                <div class="mega-col-heading">Services</div>
-                <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">🌐</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites built to rank &amp; convert</span></span></a>
-                <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">🛒</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce stores</span></span></a>
-                <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">📈</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Organic rankings &amp; search traffic</span></span></a>
-              </div>
-              <div>
-                <div class="mega-col-heading">&nbsp;</div>
-                <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">📍</span><span class="mega-item-text"><strong>Local SEO</strong><span>Map pack &amp; Google Business Profile</span></span></a>
-                <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">🎯</span><span class="mega-item-text"><strong>Google Ads</strong><span>Leads from day one, not month six</span></span></a>
-                <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">🔧</span><span class="mega-item-text"><strong>Maintenance</strong><span>Care plans from $149/month</span></span></a>
-              </div>
+                      <div class="mega-inner">
+            <div>
+              <div class="mega-col-heading">Web &amp; eCommerce</div>
+              <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites built to rank &amp; convert</span></span></a>
+              <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#128722;</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce stores</span></span></a>
+              <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">&#128295;</span><span class="mega-item-text"><strong>Maintenance</strong><span>Updates, security &amp; support plans</span></span></a>
             </div>
-            <hr class="mega-divider" />
+            <div>
+              <div class="mega-col-heading">Marketing</div>
+              <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Rank higher, get found locally</span></span></a>
+              <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate Google Maps &amp; local search</span></span></a>
+              <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Leads from day one with paid search</span></span></a>
+            </div>
+            <div>
+              <div class="mega-col-heading">Automation</div>
+              <a href="/business-automation-wollongong/" class="mega-item"><span class="mega-item-icon">&#129302;</span><span class="mega-item-text"><strong>Business Automation</strong><span>AI tools that work while you sleep</span></span></a>
+              <a href="/business-automation-wollongong/#missed-call" class="mega-item"><span class="mega-item-icon">&#128222;</span><span class="mega-item-text"><strong>Missed Call Text Back</strong><span>Never lose a lead to voicemail</span></span></a>
+              <a href="/business-automation-wollongong/#reviews" class="mega-item"><span class="mega-item-icon">&#11088;</span><span class="mega-item-text"><strong>Review Automation</strong><span>Get more Google reviews on autopilot</span></span></a>
+            </div>
+          </div><hr class="mega-divider" />
             <div class="mega-locations-row">
               <span class="mega-locations-label">Areas we serve:</span>
               <a href="/" class="mega-loc-chip">Wollongong</a>
@@ -691,6 +696,7 @@
           <li><a href="/google-ads-wollongong/">Google Ads</a></li>
           <li><a href="/ecommerce-web-design-wollongong/">eCommerce</a></li>
           <li><a href="/website-maintenance-wollongong/">Maintenance</a></li>
+        <li><a href="/business-automation-wollongong/">Business Automation</a></li>
         </ul>
       </div>
       <div class="footer-col">

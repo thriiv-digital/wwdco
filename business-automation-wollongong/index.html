@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Business Automation Wollongong | AI Chatbots, Missed Call Text Back & Lead Nurture</title>
+<meta name="description" content="Stop losing leads after hours. Wollongong Web Design Co builds AI chatbots, missed call text back, review automation and lead nurture systems for Illawarra businesses. See real results." />
+<link rel="canonical" href="https://wollongongwebdesignco.com.au/business-automation-wollongong/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Business Automation Wollongong",
+      "description": "AI chatbots, missed call text back, review automation, lead nurture, AI receptionists and dashboard reporting for Wollongong and Illawarra businesses.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Wollongong Web Design Co",
+        "telephone": "(02) 4003 4436",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1 Innovation Way",
+          "addressLocality": "North Wollongong",
+          "addressRegion": "NSW",
+          "postalCode": "2500",
+          "addressCountry": "AU"
+        }
+      },
+      "areaServed": ["Wollongong", "Shellharbour", "Kiama", "Illawarra", "NSW South Coast"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is missed call text back?",
+          "acceptedAnswer": {"@type": "Answer", "text": "When a customer calls your business and you can't answer, an automated SMS is sent to them within seconds — keeping the conversation alive and stopping them from calling a competitor."}
+        },
+        {
+          "@type": "Question",
+          "name": "How does an AI chatbot help my Wollongong business?",
+          "acceptedAnswer": {"@type": "Answer", "text": "An AI chatbot on your website answers common questions, qualifies leads and captures contact details 24/7 — even after hours, on weekends and public holidays."}
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to set up business automation?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Most automation systems are live within 2–5 business days. We handle the full setup, testing and training — you just flip the switch."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a new website to use your automation tools?",
+          "acceptedAnswer": {"@type": "Answer", "text": "No. Most of our automation systems work alongside your existing website. We can add chatbots, missed call text back and review automation to any site."}
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://wollongongwebdesignco.com.au/"},
+        {"@type": "ListItem", "position": 2, "name": "Business Automation Wollongong", "item": "https://wollongongwebdesignco.com.au/business-automation-wollongong/"}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --electric: #5bc8f5;
+  --cobalt-dark: #0f2550;
+  --ocean: #0d5a9e;
+  --white: #ffffff;
+  --off-white: #f4f7fb;
+  --body-text: #2d3a4a;
+  --muted: #6b7a8d;
+  --radius: 12px;
+  --pad: 80px;
+  --section-pad: 88px;
+  --max: 1440px;
+}
+
+body { font-family: 'Inter', sans-serif; color: var(--body-text); background: var(--white); line-height: 1.6; }
+h1,h2,h3,h4 { font-family: 'Sora', sans-serif; line-height: 1.2; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad); height: 72px;
+  background: transparent; transition: background .3s, box-shadow .3s;
+}
+.nav.scrolled { background: var(--white); box-shadow: 0 2px 16px rgba(0,0,0,.08); }
+.nav-logo { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--white); transition: color .3s; white-space: nowrap; }
+.nav.scrolled .nav-logo { color: var(--cobalt-dark); }
+.nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+.nav-links a { font-size: .92rem; font-weight: 500; color: var(--white); transition: opacity .2s; }
+.nav.scrolled .nav-links a { color: var(--body-text); }
+.nav-links a:hover { opacity: .75; }
+.nav-cta {
+  background: var(--electric); color: var(--cobalt-dark) !important;
+  padding: .5rem 1.2rem; border-radius: 8px; font-weight: 700 !important;
+  transition: filter .2s !important; opacity: 1 !important;
+}
+.nav-cta:hover { filter: brightness(1.08); }
+.burger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.burger span { display: block; width: 24px; height: 2px; background: var(--white); margin: 5px 0; transition: background .3s; }
+.nav.scrolled .burger span { background: var(--cobalt-dark); }
+
+/* MEGA MENU */
+.nav-has-mega { position: relative; }
+.nav-mega-trigger { cursor: pointer; display: flex; align-items: center; gap: .3rem; }
+.nav-chevron { font-size: .7rem; transition: transform .2s; }
+.nav-has-mega.open .nav-chevron { transform: rotate(180deg); }
+.nav-mega {
+  display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%);
+  background: var(--white); border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,.14);
+  padding: 1.5rem; min-width: 680px; border: 1px solid rgba(0,0,0,.07);
+}
+.nav-has-mega:hover .nav-mega,
+.nav-has-mega.open .nav-mega { display: block; }
+.mega-inner { display: flex; gap: 1rem; }
+.mega-inner > div { flex: 1; min-width: 0; }
+.mega-col-heading { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: .75rem; padding-bottom: .5rem; border-bottom: 1px solid #eef1f5; }
+.mega-item { display: flex; align-items: flex-start; gap: .65rem; padding: .55rem .6rem; border-radius: 8px; transition: background .15s; color: var(--body-text); }
+.mega-item:hover { background: var(--off-white); opacity: 1; }
+.mega-item-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+.mega-item-text { display: flex; flex-direction: column; }
+.mega-item-text strong { font-size: .88rem; font-weight: 600; color: var(--cobalt-dark); line-height: 1.3; }
+.mega-item-text span { font-size: .78rem; color: var(--muted); margin-top: 1px; line-height: 1.4; }
+.mega-divider { border: none; border-top: 1px solid #eef1f5; margin: 1rem 0 .85rem; }
+.mega-locations-row { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.mega-locations-label { font-size: .78rem; color: var(--muted); font-weight: 500; }
+.mega-loc-chip {
+  font-size: .78rem; font-weight: 600; padding: .25rem .75rem; border-radius: 20px;
+  background: var(--off-white); color: var(--body-text); transition: background .15s; opacity: 1 !important;
+}
+.mega-loc-chip:hover { background: #e2e8f0; }
+.mega-loc-chip.active { background: var(--cobalt-dark); color: var(--white); }
+
+/* MOBILE DRAWER */
+.mobile-drawer {
+  display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+  background: var(--white); z-index: 99; overflow-y: auto; padding: 1.5rem 1.25rem 2rem;
+  flex-direction: column; gap: .25rem;
+}
+.mobile-drawer.open { display: flex; }
+.drawer-link { font-size: 1rem; font-weight: 500; color: var(--body-text); padding: .75rem 0; border-bottom: 1px solid #eef1f5; }
+.drawer-section-toggle {
+  width: 100%; text-align: left; background: none; border: none; border-bottom: 1px solid #eef1f5;
+  font-size: 1rem; font-weight: 600; color: var(--body-text); padding: .75rem 0;
+  cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Inter', sans-serif;
+}
+.drawer-section-toggle .chev { font-size: .75rem; transition: transform .2s; }
+.drawer-section-toggle.open .chev { transform: rotate(180deg); }
+.drawer-sub { display: none; flex-direction: column; padding: .5rem 0 .5rem 1rem; gap: .1rem; }
+.drawer-sub.open { display: flex; }
+.drawer-sub a { font-size: .93rem; color: var(--body-text); padding: .5rem 0; border-bottom: 1px solid #f4f7fb; }
+.drawer-cta { margin-top: 1rem; background: var(--electric); color: var(--cobalt-dark); font-weight: 700; text-align: center; padding: .9rem; border-radius: 10px; font-size: 1rem; }
+
+/* HERO */
+.hero {
+  min-height: 92vh; display: flex; align-items: center;
+  background: linear-gradient(135deg, var(--cobalt-dark) 0%, #0d3a7a 60%, #0d5a9e 100%);
+  padding: 120px var(--pad) var(--pad);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(91,200,245,.13) 0%, transparent 70%);
+}
+.hero-inner { max-width: var(--max); margin: 0 auto; width: 100%; position: relative; }
+.hero-badge { display: inline-flex; align-items: center; gap: .5rem; background: rgba(91,200,245,.15); border: 1px solid rgba(91,200,245,.3); color: var(--electric); font-size: .82rem; font-weight: 600; padding: .4rem 1rem; border-radius: 20px; margin-bottom: 1.5rem; letter-spacing: .04em; text-transform: uppercase; }
+.hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); color: var(--white); font-weight: 800; max-width: 780px; margin-bottom: 1.25rem; line-height: 1.1; }
+.hero h1 em { font-style: normal; color: var(--electric); }
+.hero p { font-size: 1.15rem; color: rgba(255,255,255,.82); max-width: 560px; margin-bottom: 2rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary { background: var(--electric); color: var(--cobalt-dark); font-weight: 700; padding: .9rem 2rem; border-radius: 10px; font-size: 1rem; transition: filter .2s; display: inline-block; }
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-ghost { border: 2px solid rgba(255,255,255,.3); color: var(--white); font-weight: 600; padding: .85rem 1.8rem; border-radius: 10px; font-size: 1rem; transition: border-color .2s; display: inline-block; }
+.btn-ghost:hover { border-color: rgba(255,255,255,.7); }
+.hero-stats { display: flex; gap: 2.5rem; margin-top: 3.5rem; flex-wrap: wrap; }
+.hero-stat strong { display: block; font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 800; color: var(--electric); }
+.hero-stat span { font-size: .85rem; color: rgba(255,255,255,.65); }
+
+/* PROBLEM SECTION */
+.problem { background: var(--off-white); padding: var(--section-pad) var(--pad); }
+.problem-inner { max-width: var(--max); margin: 0 auto; }
+.section-label { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--electric); background: rgba(91,200,245,.1); border: 1px solid rgba(91,200,245,.25); padding: .3rem .9rem; border-radius: 20px; display: inline-block; margin-bottom: 1rem; }
+.section-label.dark { background: rgba(91,200,245,.15); }
+.problem h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--cobalt-dark); margin-bottom: 1rem; max-width: 700px; }
+.problem p.lead { font-size: 1.1rem; color: var(--muted); max-width: 620px; margin-bottom: 3rem; }
+.stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+.stat-card { background: var(--white); border-radius: var(--radius); padding: 2rem 1.75rem; border-left: 4px solid var(--electric); box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+.stat-card strong { display: block; font-family: 'Sora', sans-serif; font-size: 2.4rem; font-weight: 800; color: var(--cobalt-dark); margin-bottom: .4rem; }
+.stat-card p { font-size: .92rem; color: var(--muted); line-height: 1.5; }
+
+/* SERVICES GRID */
+.services-grid-section { padding: var(--section-pad) var(--pad); background: var(--white); }
+.services-grid-inner { max-width: var(--max); margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 3.5rem; }
+.section-header h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--cobalt-dark); margin-bottom: .75rem; }
+.section-header p { font-size: 1.05rem; color: var(--muted); max-width: 560px; margin: 0 auto; }
+.auto-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; }
+.auto-card {
+  border: 1px solid #e8edf3; border-radius: 16px; padding: 2rem;
+  transition: box-shadow .2s, transform .2s; background: var(--white);
+}
+.auto-card:hover { box-shadow: 0 8px 32px rgba(13,90,158,.1); transform: translateY(-2px); }
+.auto-card-icon { width: 52px; height: 52px; border-radius: 12px; background: rgba(91,200,245,.12); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1.25rem; }
+.auto-card h3 { font-size: 1.1rem; color: var(--cobalt-dark); margin-bottom: .6rem; }
+.auto-card p { font-size: .9rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
+.auto-card ul { list-style: none; }
+.auto-card ul li { font-size: .87rem; color: var(--body-text); padding: .3rem 0; display: flex; gap: .5rem; }
+.auto-card ul li::before { content: '✓'; color: var(--electric); font-weight: 700; flex-shrink: 0; }
+
+/* CASE STUDIES */
+.case-studies { padding: var(--section-pad) var(--pad); background: var(--cobalt-dark); }
+.case-studies-inner { max-width: var(--max); margin: 0 auto; }
+.case-studies h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--white); margin-bottom: .75rem; }
+.case-studies .sub { font-size: 1.05rem; color: rgba(255,255,255,.65); margin-bottom: 3rem; max-width: 560px; }
+.cs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem; }
+.cs-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 2rem; }
+.cs-tag { display: inline-block; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--electric); background: rgba(91,200,245,.15); padding: .25rem .75rem; border-radius: 20px; margin-bottom: 1rem; }
+.cs-card h3 { font-size: 1.05rem; color: var(--white); margin-bottom: .75rem; line-height: 1.4; }
+.cs-problem { font-size: .88rem; color: rgba(255,255,255,.55); margin-bottom: 1.25rem; line-height: 1.6; border-left: 2px solid rgba(255,255,255,.15); padding-left: .75rem; }
+.cs-results { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.cs-result { background: rgba(91,200,245,.12); border: 1px solid rgba(91,200,245,.25); border-radius: 10px; padding: .6rem 1rem; text-align: center; flex: 1; min-width: 90px; }
+.cs-result strong { display: block; font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--electric); }
+.cs-result span { font-size: .73rem; color: rgba(255,255,255,.6); line-height: 1.3; }
+.cs-solution { font-size: .85rem; color: rgba(255,255,255,.65); line-height: 1.6; }
+
+/* HOW IT WORKS */
+.how { padding: var(--section-pad) var(--pad); background: var(--off-white); }
+.how-inner { max-width: var(--max); margin: 0 auto; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; margin-top: 3rem; position: relative; }
+.step { text-align: center; padding: 2rem 1.5rem; }
+.step-num { width: 52px; height: 52px; border-radius: 50%; background: var(--cobalt-dark); color: var(--white); font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
+.step h3 { font-size: 1rem; color: var(--cobalt-dark); margin-bottom: .5rem; }
+.step p { font-size: .88rem; color: var(--muted); line-height: 1.6; }
+
+/* PRICING */
+.pricing { padding: var(--section-pad) var(--pad); background: var(--white); }
+.pricing-inner { max-width: var(--max); margin: 0 auto; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; margin-top: 3rem; }
+.pricing-card { border: 1px solid #e8edf3; border-radius: 16px; padding: 2rem; position: relative; }
+.pricing-card.featured { border-color: var(--ocean); box-shadow: 0 0 0 1px var(--ocean), 0 8px 32px rgba(13,90,158,.12); }
+.price-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--ocean); color: var(--white); font-size: .75rem; font-weight: 700; padding: .3rem 1rem; border-radius: 20px; white-space: nowrap; }
+.pricing-card h3 { font-size: 1.1rem; color: var(--cobalt-dark); margin-bottom: .5rem; }
+.pricing-card .price { font-family: 'Sora', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--cobalt-dark); margin: 1rem 0 .25rem; }
+.pricing-card .price span { font-size: 1rem; font-weight: 400; color: var(--muted); }
+.pricing-card .price-note { font-size: .82rem; color: var(--muted); margin-bottom: 1.5rem; }
+.pricing-card ul { list-style: none; margin-bottom: 1.75rem; }
+.pricing-card ul li { font-size: .88rem; color: var(--body-text); padding: .4rem 0; border-bottom: 1px solid #f4f7fb; display: flex; gap: .5rem; align-items: flex-start; }
+.pricing-card ul li::before { content: '✓'; color: var(--electric); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.btn-outline { display: block; text-align: center; border: 2px solid var(--ocean); color: var(--ocean); font-weight: 700; padding: .75rem; border-radius: 10px; font-size: .95rem; transition: background .2s, color .2s; }
+.btn-outline:hover { background: var(--ocean); color: var(--white); }
+.btn-filled { display: block; text-align: center; background: var(--ocean); color: var(--white); font-weight: 700; padding: .75rem; border-radius: 10px; font-size: .95rem; transition: filter .2s; }
+.btn-filled:hover { filter: brightness(1.1); }
+
+/* INDUSTRY CALLOUT */
+.industry-callout { padding: var(--section-pad) var(--pad); background: linear-gradient(135deg, #0a1e3d 0%, var(--cobalt-dark) 100%); }
+.industry-callout-inner { max-width: var(--max); margin: 0 auto; }
+.industry-callout h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--white); margin-bottom: .75rem; }
+.industry-callout .sub { font-size: 1.05rem; color: rgba(255,255,255,.65); margin-bottom: 3rem; max-width: 560px; }
+.industry-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+.industry-item { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; padding: 1.5rem; }
+.industry-item .ind-icon { font-size: 1.75rem; margin-bottom: .75rem; }
+.industry-item h4 { font-size: .95rem; color: var(--white); margin-bottom: .4rem; }
+.industry-item p { font-size: .82rem; color: rgba(255,255,255,.55); line-height: 1.5; }
+
+/* FAQ */
+.faq { padding: var(--section-pad) var(--pad); background: var(--off-white); }
+.faq-inner { max-width: 780px; margin: 0 auto; }
+.faq h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: var(--cobalt-dark); margin-bottom: 2.5rem; text-align: center; }
+.faq-item { background: var(--white); border-radius: var(--radius); margin-bottom: 1rem; overflow: hidden; border: 1px solid #e8edf3; }
+.faq-q { width: 100%; background: none; border: none; text-align: left; padding: 1.25rem 1.5rem; font-size: 1rem; font-weight: 600; color: var(--cobalt-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: 'Inter', sans-serif; gap: 1rem; }
+.faq-q .faq-icon { font-size: 1.2rem; color: var(--ocean); flex-shrink: 0; transition: transform .2s; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a { display: none; padding: 0 1.5rem 1.25rem; font-size: .93rem; color: var(--muted); line-height: 1.7; }
+.faq-item.open .faq-a { display: block; }
+
+/* CONTACT */
+.contact { padding: var(--section-pad) var(--pad); background: var(--white); }
+.contact-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1.1fr; gap: 5rem; align-items: start; }
+.contact h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--cobalt-dark); margin-bottom: 1rem; }
+.contact p { font-size: 1.05rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.7; }
+.contact-detail { display: flex; align-items: center; gap: .75rem; margin-bottom: 1rem; font-size: .95rem; color: var(--body-text); }
+.contact-detail strong { color: var(--cobalt-dark); }
+.form { display: flex; flex-direction: column; gap: 1.1rem; }
+.form input, .form textarea, .form select {
+  width: 100%; padding: .85rem 1rem; border: 1.5px solid #dde3ec; border-radius: 10px;
+  font-size: .95rem; font-family: 'Inter', sans-serif; color: var(--body-text); background: var(--white);
+  transition: border-color .2s;
+}
+.form input:focus, .form textarea:focus, .form select:focus { outline: none; border-color: var(--ocean); }
+.form textarea { min-height: 130px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-submit { background: var(--ocean); color: var(--white); border: none; border-radius: 10px; padding: 1rem; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: 'Inter', sans-serif; transition: filter .2s; }
+.form-submit:hover { filter: brightness(1.1); }
+
+/* FOOTER */
+footer { background: #06132a; color: rgba(255,255,255,.7); padding: 4rem var(--pad) 2rem; }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer-brand p { font-size: .88rem; line-height: 1.7; margin-top: .75rem; max-width: 300px; }
+footer h4 { font-family: 'Sora', sans-serif; font-size: .85rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: .06em; }
+footer ul { list-style: none; }
+footer ul li { margin-bottom: .6rem; }
+footer ul li a { font-size: .88rem; color: rgba(255,255,255,.6); transition: color .2s; }
+footer ul li a:hover { color: var(--white); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: .82rem; color: rgba(255,255,255,.4); }
+.footer-logo { font-family: 'Sora', sans-serif; font-weight: 800; font-size: 1.05rem; color: var(--white); }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .55s ease, transform .55s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  :root { --pad: 1.25rem; --section-pad: 56px; }
+  .nav-links { display: none; }
+  .burger { display: block; }
+  .hero { min-height: 80vh; padding-top: 100px; }
+  .hero-stats { gap: 1.5rem; }
+  .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .nav-mega { min-width: calc(100vw - 2.5rem); left: 0; transform: none; }
+}
+@media (max-width: 600px) {
+  .footer-inner { grid-template-columns: 1fr; }
+  .cs-results { gap: .5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
+    <a href="/" class="nav-logo">Wollongong Web Design Co</a>
+    <ul class="nav-links" role="list">
+      <li class="nav-has-mega" id="mega-services">
+        <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">&#9662;</span></a>
+        <div class="nav-mega" role="region" aria-label="Services menu">
+          <div class="mega-inner">
+            <div>
+              <div class="mega-col-heading">Web &amp; eCommerce</div>
+              <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites built to rank &amp; convert</span></span></a>
+              <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#128722;</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce stores</span></span></a>
+              <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">&#128295;</span><span class="mega-item-text"><strong>Maintenance</strong><span>Updates, security &amp; support plans</span></span></a>
+            </div>
+            <div>
+              <div class="mega-col-heading">Marketing</div>
+              <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Rank higher, get found locally</span></span></a>
+              <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate Google Maps &amp; local search</span></span></a>
+              <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Leads from day one with paid search</span></span></a>
+            </div>
+            <div>
+              <div class="mega-col-heading">Automation</div>
+              <a href="/business-automation-wollongong/" class="mega-item"><span class="mega-item-icon">&#129302;</span><span class="mega-item-text"><strong>Business Automation</strong><span>AI tools that work while you sleep</span></span></a>
+              <a href="/business-automation-wollongong/#missed-call" class="mega-item"><span class="mega-item-icon">&#128222;</span><span class="mega-item-text"><strong>Missed Call Text Back</strong><span>Never lose a lead to voicemail</span></span></a>
+              <a href="/business-automation-wollongong/#reviews" class="mega-item"><span class="mega-item-icon">&#11088;</span><span class="mega-item-text"><strong>Review Automation</strong><span>Get more Google reviews on autopilot</span></span></a>
+            </div>
+          </div>
+          <hr class="mega-divider" />
+          <div class="mega-locations-row">
+            <span class="mega-locations-label">Areas we serve:</span>
+            <a href="/" class="mega-loc-chip">Wollongong</a>
+            <a href="/web-design-shellharbour/" class="mega-loc-chip">Shellharbour</a>
+            <a href="/web-design-kiama/" class="mega-loc-chip">Kiama</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#why-us">Why Us</a></li>
+      <li><a href="/#process">Process</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-cta">Get a Free Quote</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+    <button class="drawer-section-toggle" data-target="drawer-services" aria-expanded="false">Services <span class="chev">&#9662;</span></button>
+    <div class="drawer-sub" id="drawer-services">
+      <a href="/web-design-wollongong/">&#127760; Web Design</a>
+      <a href="/ecommerce-web-design-wollongong/">&#128722; eCommerce</a>
+      <a href="/seo-wollongong/">&#128200; SEO Wollongong</a>
+      <a href="/local-seo-wollongong/">&#128205; Local SEO</a>
+      <a href="/google-ads-wollongong/">&#127919; Google Ads</a>
+      <a href="/website-maintenance-wollongong/">&#128295; Maintenance</a>
+      <a href="/business-automation-wollongong/">&#129302; Business Automation</a>
+    </div>
+    <a href="/#why-us" class="drawer-link">Why Us</a>
+    <a href="/#process" class="drawer-link">Process</a>
+    <a href="/#faq" class="drawer-link">FAQ</a>
+    <button class="drawer-section-toggle" data-target="drawer-areas" aria-expanded="false">Service Areas <span class="chev">&#9662;</span></button>
+    <div class="drawer-sub" id="drawer-areas">
+      <a href="/">&#128205; Wollongong</a>
+      <a href="/web-design-shellharbour/">&#128205; Shellharbour</a>
+      <a href="/web-design-kiama/">&#128205; Kiama</a>
+    </div>
+    <a href="#contact" class="drawer-cta">Get a Free Quote &#8594;</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge reveal">&#129302; Business Automation · Wollongong</div>
+    <h1 class="reveal">Your business, <em>running 24/7</em> — without the overtime</h1>
+    <p class="reveal">AI chatbots, missed call text back, review automation, lead nurture and more. We build the systems that keep your pipeline full while you're on the tools, with a client, or asleep.</p>
+    <div class="hero-actions reveal">
+      <a href="#contact" class="btn-primary">See What's Possible &#8594;</a>
+      <a href="#case-studies" class="btn-ghost">Real Results &#8595;</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="hero-stat"><strong>78%</strong><span>of customers buy from the<br>first business to respond</span></div>
+      <div class="hero-stat"><strong>5 min</strong><span>Response time needed to<br>maximise lead conversion</span></div>
+      <div class="hero-stat"><strong>62%</strong><span>of calls to small businesses<br>go unanswered</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="problem-inner">
+    <span class="section-label">The Cost of Slow Follow-Up</span>
+    <h2 class="reveal">Every missed call, unanswered chat or forgotten follow-up is a job going to your competitor</h2>
+    <p class="lead reveal">Illawarra business owners are busy — on the tools, with clients, running the business. The leads don't stop coming just because you can't pick up. Automation bridges the gap.</p>
+    <div class="stat-cards">
+      <div class="stat-card reveal"><strong>$47K</strong><p>Average annual revenue lost by a tradie who misses just 4 calls per week at a $230 average job value</p></div>
+      <div class="stat-card reveal"><strong>10×</strong><p>More likely to qualify a lead if you respond within 5 minutes vs 60 minutes — speed to lead is everything</p></div>
+      <div class="stat-card reveal"><strong>88%</strong><p>Of consumers read online reviews before choosing a local business — yet most businesses never ask for them</p></div>
+      <div class="stat-card reveal"><strong>2–3 hrs</strong><p>The time the average SMB owner wastes each day answering repeat questions that an AI could handle instantly</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services-grid-section" id="services">
+  <div class="services-grid-inner">
+    <div class="section-header">
+      <span class="section-label">What We Build</span>
+      <h2 class="reveal">The full automation stack for Illawarra businesses</h2>
+      <p class="reveal">Pick one or stack them all — each system works standalone or as part of an integrated growth engine.</p>
+    </div>
+    <div class="auto-grid">
+
+      <div class="auto-card reveal" id="missed-call">
+        <div class="auto-card-icon">&#128222;</div>
+        <h3>Missed Call Text Back</h3>
+        <p>When a call goes unanswered, an automated SMS fires within seconds — keeping the conversation alive before they call your competitor.</p>
+        <ul>
+          <li>Instant SMS with your business name</li>
+          <li>Custom message + booking link</li>
+          <li>Works after hours, weekends &amp; public holidays</li>
+          <li>Two-way SMS conversation handling</li>
+        </ul>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">&#129302;</div>
+        <h3>AI Chatbot</h3>
+        <p>A trained AI assistant on your website that answers questions, qualifies leads and captures contact details around the clock.</p>
+        <ul>
+          <li>Trained on your business, services &amp; FAQs</li>
+          <li>Captures name, email, phone &amp; enquiry type</li>
+          <li>Hands off to you when it can't help</li>
+          <li>Works on any existing website</li>
+        </ul>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">&#128241;</div>
+        <h3>AI Receptionist</h3>
+        <p>An AI that handles incoming calls — answers FAQs, takes messages, books appointments and routes urgent calls to the right person.</p>
+        <ul>
+          <li>Natural-sounding AI voice</li>
+          <li>Appointment booking integration</li>
+          <li>Call summaries sent to your phone</li>
+          <li>Overflow routing for urgent calls</li>
+        </ul>
+      </div>
+
+      <div class="auto-card reveal" id="reviews">
+        <div class="auto-card-icon">&#11088;</div>
+        <h3>Review Automation</h3>
+        <p>Automatically request Google reviews after every job or appointment. Turn happy customers into your best marketing — on autopilot.</p>
+        <ul>
+          <li>Triggered SMS or email after job completion</li>
+          <li>Direct link to your Google review page</li>
+          <li>Follow-up sequence for non-responders</li>
+          <li>Negative feedback private redirect</li>
+        </ul>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">&#128200;</div>
+        <h3>Lead Intelligence</h3>
+        <p>Know who's visiting your site, where they came from and what they looked at — so you can follow up with context, not cold calls.</p>
+        <ul>
+          <li>Visitor identification &amp; enrichment</li>
+          <li>Source tracking (Google, Facebook, referral)</li>
+          <li>Behaviour-based lead scoring</li>
+          <li>CRM sync &amp; notification triggers</li>
+        </ul>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">&#128140;</div>
+        <h3>Lead Nurture Sequences</h3>
+        <p>Automated email and SMS follow-up that keeps you top of mind for leads who aren't ready to buy today but will be next month.</p>
+        <ul>
+          <li>Multi-step email + SMS sequences</li>
+          <li>Personalised by service or enquiry type</li>
+          <li>Behaviour triggers (opened, clicked, visited)</li>
+          <li>CRM integration &amp; pipeline tracking</li>
+        </ul>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">&#128293;</div>
+        <h3>Lead Reheat</h3>
+        <p>Automatically re-engage leads that went cold — old enquiries, past customers, quote approvals that never came through.</p>
+        <ul>
+          <li>Segmented reactivation campaigns</li>
+          <li>SMS + email reactivation flows</li>
+          <li>"We haven't heard from you" sequences</li>
+          <li>Seasonal &amp; promotion-triggered campaigns</li>
+        </ul>
+      </div>
+
+      <div class="auto-card reveal">
+        <div class="auto-card-icon">&#128202;</div>
+        <h3>Reporting Dashboards</h3>
+        <p>One screen showing your leads, conversions, revenue, reviews and campaign performance — no more logging into five different platforms.</p>
+        <ul>
+          <li>Live lead &amp; pipeline visibility</li>
+          <li>Google Ads + SEO performance</li>
+          <li>Review score &amp; response tracking</li>
+          <li>Weekly automated email summary</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="case-studies" id="case-studies">
+  <div class="case-studies-inner">
+    <span class="section-label dark">Real Results</span>
+    <h2 class="reveal">What automation looks like in the real world</h2>
+    <p class="sub reveal">Time saved, money recovered, revenue added. Here's what happens when Illawarra businesses stop leaving leads on the table.</p>
+    <div class="cs-grid">
+
+      <div class="cs-card reveal">
+        <span class="cs-tag">Missed Call Text Back</span>
+        <h3>South Coast plumbing business recovering $4,800/month in lost work</h3>
+        <p class="cs-problem">Missing 5–8 calls per week after hours and on weekends. By the time they called back the next morning, the customer had already booked someone else.</p>
+        <div class="cs-results">
+          <div class="cs-result"><strong>11</strong><span>extra jobs<br>per month</span></div>
+          <div class="cs-result"><strong>$4.8K</strong><span>additional<br>revenue/mo</span></div>
+          <div class="cs-result"><strong>3 min</strong><span>avg response<br>time (was 14hr)</span></div>
+        </div>
+        <p class="cs-solution">&#128293; Missed call text back fires within 30 seconds. The customer replies to the SMS, gets a booking link, and the job is locked in — all before the business owner even knows they called.</p>
+      </div>
+
+      <div class="cs-card reveal">
+        <span class="cs-tag">Review Automation</span>
+        <h3>Wollongong café going from 3.9 to 4.7 stars in 90 days</h3>
+        <p class="cs-problem">Great food, loyal regulars — but only 34 Google reviews and a 3.9 star average from a handful of unhappy customers years ago. New customers were choosing competitors with more reviews.</p>
+        <div class="cs-results">
+          <div class="cs-result"><strong>61</strong><span>new Google<br>reviews</span></div>
+          <div class="cs-result"><strong>4.7★</strong><span>average rating<br>(was 3.9)</span></div>
+          <div class="cs-result"><strong>+31%</strong><span>new customer<br>foot traffic</span></div>
+        </div>
+        <p class="cs-solution">&#11088; Post-visit SMS triggered 4 hours after a transaction. Direct link to Google review page. Negative responses redirected privately. 61 new reviews in 90 days — zero manual effort.</p>
+      </div>
+
+      <div class="cs-card reveal">
+        <span class="cs-tag">AI Chatbot + Lead Nurture</span>
+        <h3>Illawarra allied health clinic saving 12 hours per week in admin</h3>
+        <p class="cs-problem">Receptionist was spending 2–3 hours per day answering the same 8 questions via phone and email: opening hours, fees, parking, rebates, appointment availability. Genuine enquiries were getting buried.</p>
+        <div class="cs-results">
+          <div class="cs-result"><strong>12 hrs</strong><span>admin saved<br>per week</span></div>
+          <div class="cs-result"><strong>34</strong><span>extra appts<br>per month</span></div>
+          <div class="cs-result"><strong>$2.1K</strong><span>saved in<br>admin costs/mo</span></div>
+        </div>
+        <p class="cs-solution">&#129302; AI chatbot handles FAQs and after-hours enquiries. Lead nurture sequence follows up website form submissions automatically. Receptionist now focuses on patients, not phone tag.</p>
+      </div>
+
+      <div class="cs-card reveal">
+        <span class="cs-tag">Lead Reheat</span>
+        <h3>Building company reactivating $38K from a cold enquiry database</h3>
+        <p class="cs-problem">Three years of website enquiries sitting in a spreadsheet — 340 contacts who'd asked for quotes but never converted. No follow-up had been sent since the original reply.</p>
+        <div class="cs-results">
+          <div class="cs-result"><strong>$38K</strong><span>pipeline<br>reactivated</span></div>
+          <div class="cs-result"><strong>14</strong><span>new project<br>enquiries</span></div>
+          <div class="cs-result"><strong>3</strong><span>contracts<br>signed</span></div>
+        </div>
+        <p class="cs-solution">&#128293; A 3-email reactivation sequence sent over 2 weeks. Personalised by project type, with a seasonal hook. 14 re-engaged enquiries, 3 signed contracts — from a database that was gathering dust.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="how-inner">
+    <div class="section-header">
+      <span class="section-label">How It Works</span>
+      <h2 class="reveal">Up and running in days, not months</h2>
+      <p class="reveal">No technical headaches. We handle the full setup — you just tell us what's not working in your business and we build the fix.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Discovery Call</h3>
+        <p>We map your current lead flow and identify exactly where leads are falling through the cracks — calls, chats, follow-up or reviews.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Build &amp; Configure</h3>
+        <p>We set up your chosen automations, train any AI on your business information and connect everything to your existing tools.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Test &amp; Refine</h3>
+        <p>You approve every message, flow and response before anything goes live. We test every scenario so there are no surprises.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <h3>Go Live</h3>
+        <p>We flip the switch. Most systems are live within 2–5 business days. We monitor the first two weeks to optimise performance.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">5</div>
+        <h3>Ongoing Support</h3>
+        <p>Monthly reporting, message tuning, AI updates and local support. We're here when your business grows or your needs change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY CALLOUT -->
+<section class="industry-callout">
+  <div class="industry-callout-inner">
+    <span class="section-label dark">Built for Your Industry</span>
+    <h2 class="reveal">Automation that understands your trade</h2>
+    <p class="sub reveal">Not generic software — systems configured for how your business actually works.</p>
+    <div class="industry-grid">
+      <div class="industry-item reveal">
+        <div class="ind-icon">&#128296;</div>
+        <h4>Tradies &amp; Construction</h4>
+        <p>Missed call text back + quote follow-up. Recover after-hours leads automatically while you're on site.</p>
+      </div>
+      <div class="industry-item reveal">
+        <div class="ind-icon">&#127869;</div>
+        <h4>Cafés &amp; Restaurants</h4>
+        <p>Post-visit review requests + chatbot for hours &amp; reservations. Turn diners into Google reviews.</p>
+      </div>
+      <div class="industry-item reveal">
+        <div class="ind-icon">&#129657;</div>
+        <h4>Health &amp; Allied Health</h4>
+        <p>AI receptionist for appointment FAQs + nurture sequences for referrals. Reduce phone tag, fill your books.</p>
+      </div>
+      <div class="industry-item reveal">
+        <div class="ind-icon">&#127968;</div>
+        <h4>Real Estate &amp; Property</h4>
+        <p>Lead intelligence + instant follow-up sequences. Know who's on your site and engage them before competitors do.</p>
+      </div>
+      <div class="industry-item reveal">
+        <div class="ind-icon">&#128678;</div>
+        <h4>Automotive</h4>
+        <p>Service reminders + review automation. Keep customers coming back and building your reputation.</p>
+      </div>
+      <div class="industry-item reveal">
+        <div class="ind-icon">&#128188;</div>
+        <h4>Professional Services</h4>
+        <p>Lead nurture sequences + dashboard reporting. Stay top of mind for the slow-burn B2B decision cycle.</p>
+      </div>
+      <div class="industry-item reveal">
+        <div class="ind-icon">&#127955;</div>
+        <h4>Fitness &amp; Wellness</h4>
+        <p>AI chatbot + class/appointment automation. Handle enquiries 24/7 without adding headcount.</p>
+      </div>
+      <div class="industry-item reveal">
+        <div class="ind-icon">&#128722;</div>
+        <h4>Retail &amp; eCommerce</h4>
+        <p>Abandoned cart reheat + review flows. Win back browsers who didn't buy and grow your social proof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="pricing-inner">
+    <div class="section-header">
+      <span class="section-label">Investment</span>
+      <h2 class="reveal">Transparent pricing, no lock-in contracts</h2>
+      <p class="reveal">Start with one automation or go all-in from day one. Every plan includes full setup, testing and local support.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card reveal">
+        <h3>Starter Automation</h3>
+        <div class="price">$297<span>/mo</span></div>
+        <div class="price-note">+ $497 one-time setup</div>
+        <ul>
+          <li>Missed call text back</li>
+          <li>Review automation (SMS or email)</li>
+          <li>Basic reporting dashboard</li>
+          <li>Monthly performance report</li>
+          <li>Local support via phone &amp; email</li>
+        </ul>
+        <a href="#contact" class="btn-outline">Get Started</a>
+      </div>
+
+      <div class="pricing-card featured reveal">
+        <div class="price-badge">Most Popular</div>
+        <h3>Growth Automation</h3>
+        <div class="price">$597<span>/mo</span></div>
+        <div class="price-note">+ $997 one-time setup</div>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>AI chatbot (trained on your business)</li>
+          <li>Lead nurture sequences (email + SMS)</li>
+          <li>Lead intelligence &amp; source tracking</li>
+          <li>CRM integration</li>
+          <li>Bi-weekly optimisation calls</li>
+        </ul>
+        <a href="#contact" class="btn-filled">Get Started</a>
+      </div>
+
+      <div class="pricing-card reveal">
+        <h3>Full Stack</h3>
+        <div class="price">$997<span>/mo</span></div>
+        <div class="price-note">+ $1,997 one-time setup</div>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>AI receptionist (voice)</li>
+          <li>Lead reheat campaigns</li>
+          <li>Advanced dashboard &amp; reporting</li>
+          <li>Industry-specific automation flows</li>
+          <li>Dedicated account manager</li>
+          <li>Priority support SLA</li>
+        </ul>
+        <a href="#contact" class="btn-outline">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <h2 class="reveal">Frequently asked questions</h2>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Do I need a new website to use your automation tools? <span class="faq-icon">+</span></button>
+      <div class="faq-a">No — most of our automation systems work alongside your existing website. We can add chatbots, missed call text back and review automation to any site, regardless of who built it.</div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">How long does setup take? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Most systems are live within 2–5 business days. More complex builds with AI receptionists and multi-channel nurture sequences may take up to 10 business days. We'll give you a clear timeline upfront.</div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Are there lock-in contracts? <span class="faq-icon">+</span></button>
+      <div class="faq-a">No lock-in contracts. We bill month to month and you can cancel anytime. We're confident you'll see results — we don't need a contract to keep you.</div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">What platforms do you integrate with? <span class="faq-icon">+</span></button>
+      <div class="faq-a">We integrate with most popular CRMs (HubSpot, Salesforce, Zoho), booking platforms, Google Business Profile, Gmail, Outlook and more. If you're using something else, ask us — we've most likely built an integration for it.</div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Will the AI chatbot sound robotic? <span class="faq-icon">+</span></button>
+      <div class="faq-a">No. We train it on your brand voice, typical customer questions and your specific services. Most visitors can't tell it's an AI — and when they push the boundaries of what it knows, it hands off gracefully to you.</div>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">Can I see what the automations are doing? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes — your dashboard shows every conversation, every lead captured, every review requested and every follow-up sent. Full transparency, and you can pause or edit any flow at any time.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <span class="section-label">Let's Talk Automation</span>
+      <h2 class="reveal">Find out how much you're leaving on the table</h2>
+      <p class="reveal">Book a free 20-minute call and we'll map your current lead flow, identify the gaps and show you exactly which automations would make the biggest difference for your business.</p>
+      <div class="contact-detail"><span>&#128222;</span> <span><strong>(02) 4003 4436</strong></span></div>
+      <div class="contact-detail"><span>&#128205;</span> <span>1 Innovation Way, North Wollongong NSW 2500</span></div>
+      <div class="contact-detail"><span>&#128337;</span> <span>Usually respond within 2 business hours</span></div>
+    </div>
+    <div>
+      <form class="form" action="https://formspree.io/f/mlgqdvyy" method="POST">
+        <input type="hidden" name="_source" value="business-automation-wollongong page" />
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="text" name="business" placeholder="Business name" />
+        </div>
+        <div class="form-row">
+          <input type="email" name="email" placeholder="Email address" required />
+          <input type="tel" name="phone" placeholder="Phone number" />
+        </div>
+        <select name="service">
+          <option value="" disabled selected>Which automation interests you most?</option>
+          <option>Missed Call Text Back</option>
+          <option>AI Chatbot</option>
+          <option>AI Receptionist</option>
+          <option>Review Automation</option>
+          <option>Lead Nurture Sequences</option>
+          <option>Lead Reheat</option>
+          <option>Full Stack Automation</option>
+          <option>Not sure — show me what fits</option>
+        </select>
+        <textarea name="message" placeholder="Tell us a bit about your business and the biggest lead challenge you're facing..."></textarea>
+        <button type="submit" class="form-submit">Book My Free Strategy Call &#8594;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Wollongong Web Design Co</div>
+      <p>Web design, SEO, Google Ads and business automation for Illawarra businesses. Locally based in North Wollongong, serving the whole region.</p>
+      <p style="margin-top:.75rem;font-size:.82rem;">ABN: 36 537 236 855</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul>
+        <li><a href="/web-design-wollongong/">Web Design</a></li>
+        <li><a href="/ecommerce-web-design-wollongong/">eCommerce</a></li>
+        <li><a href="/seo-wollongong/">SEO Wollongong</a></li>
+        <li><a href="/local-seo-wollongong/">Local SEO</a></li>
+        <li><a href="/google-ads-wollongong/">Google Ads</a></li>
+        <li><a href="/website-maintenance-wollongong/">Maintenance</a></li>
+        <li><a href="/business-automation-wollongong/">Business Automation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Automation</h4>
+      <ul>
+        <li><a href="/business-automation-wollongong/#missed-call">Missed Call Text Back</a></li>
+        <li><a href="/business-automation-wollongong/">AI Chatbot</a></li>
+        <li><a href="/business-automation-wollongong/">AI Receptionist</a></li>
+        <li><a href="/business-automation-wollongong/#reviews">Review Automation</a></li>
+        <li><a href="/business-automation-wollongong/">Lead Nurture</a></li>
+        <li><a href="/business-automation-wollongong/">Lead Reheat</a></li>
+        <li><a href="/business-automation-wollongong/">Dashboards</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Areas</h4>
+      <ul>
+        <li><a href="/">Wollongong</a></li>
+        <li><a href="/web-design-shellharbour/">Shellharbour</a></li>
+        <li><a href="/web-design-kiama/">Kiama</a></li>
+      </ul>
+      <h4 style="margin-top:1.5rem;">Contact</h4>
+      <ul>
+        <li><a href="tel:0240034436">(02) 4003 4436</a></li>
+        <li><a href="#contact">Get a Free Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Wollongong Web Design Co. All rights reserved.</span>
+    <span>1 Innovation Way, North Wollongong NSW 2500</span>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), {passive: true});
+
+// Mega menu
+const megaTriggers = document.querySelectorAll('.nav-has-mega');
+megaTriggers.forEach(li => {
+  const trigger = li.querySelector('.nav-mega-trigger');
+  trigger.addEventListener('click', e => {
+    const isOpen = li.classList.toggle('open');
+    trigger.setAttribute('aria-expanded', isOpen);
+    e.preventDefault();
+  });
+});
+document.addEventListener('click', e => {
+  megaTriggers.forEach(li => {
+    if (!li.contains(e.target)) { li.classList.remove('open'); li.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', false); }
+  });
+});
+
+// Mobile drawer
+const burger = document.getElementById('burger');
+const drawer = document.getElementById('mobile-drawer');
+burger.addEventListener('click', () => {
+  const open = drawer.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('.drawer-section-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.getElementById(btn.dataset.target);
+    const open = target.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+  });
+});
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(b => b.setAttribute('aria-expanded', false));
+    if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', true); }
+  });
+});
+
+// Reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold: 0.1});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
