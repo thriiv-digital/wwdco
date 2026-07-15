@@ -241,7 +241,7 @@
     .nav-chevron { font-size: .65rem; transition: transform .2s; display: inline-block; }
     .nav-mega { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-6px); background: var(--white); border-radius: 16px; box-shadow: 0 16px 60px rgba(0,0,0,.16); border: 1px solid rgba(0,0,0,.07); padding: 28px 28px 24px; min-width: 900px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .18s ease, transform .18s ease, visibility .18s; }
     .nav-has-mega:hover .nav-mega, .nav-has-mega.open .nav-mega { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
-    .mega-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+    .mega-inner { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px 24px; }
     .mega-col-heading { font-family: var(--font-head); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 8px 8px; border-bottom: 1px solid rgba(0,0,0,.07); margin-bottom: 6px; }
     .mega-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 10px; border-radius: 10px; transition: background var(--tr); text-decoration: none; color: inherit; opacity: 1; }
     .mega-item:hover { background: #f0f7fe; opacity: 1; }
@@ -251,8 +251,9 @@
     .mega-divider { border: none; border-top: 1px solid rgba(0,0,0,.06); margin: 10px 0 6px; }
     .mega-locations-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 4px 6px; }
     .mega-locations-label { font-family: var(--font-head); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-right: 6px; white-space: nowrap; }
-    .mega-loc-chip { display: inline-flex; align-items: center; font-family: var(--font-head); font-size: .78rem; font-weight: 600; color: var(--ocean); background: rgba(13,90,158,.07); padding: 4px 12px; border-radius: 100px; border: 1px solid rgba(13,90,158,.15); transition: background var(--tr), color var(--tr); opacity: 1; }
-    .mega-loc-chip:hover, .mega-loc-chip.active { background: var(--ocean); color: var(--white); opacity: 1; }
+    .mega-loc-chip { display: inline-flex; align-items: center; font-size: .78rem; font-weight: 600; color: var(--body-text); background: var(--off-white); padding: 4px 14px; border-radius: 100px; border: none; transition: background var(--tr); opacity: 1; }
+    .mega-loc-chip:hover { background: #e2e8f0; opacity: 1; }
+    .mega-loc-chip.active { background: var(--cobalt-dark); color: var(--white); }
     /* Drawer accordion for mega */
     .drawer-section-toggle { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; color: rgba(255,255,255,.85); padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.07); cursor: pointer; background: none; border-top: none; border-left: none; border-right: none; width: 100%; text-align: left; }
     .drawer-section-toggle .chev { font-size: .7rem; transition: transform .2s; }
@@ -768,6 +769,7 @@
               <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Rank higher, get found locally</span></span></a>
               <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate Google Maps &amp; local search</span></span></a>
               <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Leads from day one with paid search</span></span></a>
+              <a href="/google-business-profile-wollongong/" class="mega-item"><span class="mega-item-icon">&#128338;</span><span class="mega-item-text"><strong>Google Business Profile</strong><span>Rank in the Maps 3-pack</span></span></a>
             </div>
             <div>
               <div class="mega-col-heading">Automation</div>
