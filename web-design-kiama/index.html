@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-AU">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Web Design Shellharbour — Custom Websites for Shellharbour Businesses | Wollongong Web Design Co</title>
-<meta name="description" content="Web design for Shellharbour businesses. Custom websites that rank on Google and convert visitors into customers. Local Illawarra team, fixed quotes. Call (02) 4003 4436." />
-<link rel="canonical" href="https://www.wollongongwebdesignco.com.au/web-design-shellharbour/" />
+<title>Web Design Kiama — Custom Websites for Kiama Businesses | Wollongong Web Design Co</title>
+<meta name="description" content="Web design for Kiama businesses. Custom websites that rank on Google and convert visitors into customers. Local Illawarra team, 45 min from Kiama, fixed quotes. Call (02) 4003 4436." />
+<link rel="canonical" href="https://www.wollongongwebdesignco.com.au/web-design-kiama/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -56,7 +56,7 @@
   .section-header p { font-size: 1.05rem; margin-top: 14px; color: var(--muted); }
   .section--dark .section-header p { color: rgba(255,255,255,.7); }
 
-  /* ── NAV + MEGA MENU ── */
+  /* NAV */
   #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: transparent; transition: background var(--tr), box-shadow var(--tr); }
   #nav.scrolled { background: var(--white); box-shadow: 0 2px 20px rgba(0,0,0,.08); }
   .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); display: flex; align-items: center; justify-content: space-between; height: 72px; }
@@ -88,11 +88,9 @@
 
   /* MEGA MENU */
   .nav-has-mega { position: relative; }
-  .nav-has-mega:hover .nav-chevron,
-  .nav-has-mega.open .nav-chevron { transform: rotate(180deg); }
-  .nav-mega { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--white); border-radius: 16px; box-shadow: 0 16px 60px rgba(0,0,0,.16); border: 1px solid rgba(0,0,0,.07); padding: 28px 28px 24px; min-width: 680px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .18s ease, transform .18s ease, visibility .18s; transform: translateX(-50%) translateY(-6px); }
-  .nav-has-mega:hover .nav-mega,
-  .nav-has-mega.open .nav-mega { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+  .nav-has-mega:hover .nav-chevron, .nav-has-mega.open .nav-chevron { transform: rotate(180deg); }
+  .nav-mega { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-6px); background: var(--white); border-radius: 16px; box-shadow: 0 16px 60px rgba(0,0,0,.16); border: 1px solid rgba(0,0,0,.07); padding: 28px 28px 24px; min-width: 680px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+  .nav-has-mega:hover .nav-mega, .nav-has-mega.open .nav-mega { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
   .mega-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
   .mega-col-heading { font-family: var(--font-head); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 8px 8px; border-bottom: 1px solid rgba(0,0,0,.07); margin-bottom: 6px; }
   .mega-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 10px; border-radius: 10px; transition: background var(--tr); text-decoration: none; color: inherit; }
@@ -100,12 +98,11 @@
   .mega-item-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
   .mega-item-text strong { display: block; font-family: var(--font-head); font-size: .88rem; font-weight: 700; color: var(--cobalt-dark); line-height: 1.2; margin-bottom: 2px; }
   .mega-item-text span { font-size: .78rem; color: var(--muted); line-height: 1.4; }
-  .mega-divider { grid-column: 1 / -1; border: none; border-top: 1px solid rgba(0,0,0,.06); margin: 10px 0 6px; }
-  .mega-locations-row { grid-column: 1 / -1; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 4px 6px; }
+  .mega-divider { border: none; border-top: 1px solid rgba(0,0,0,.06); margin: 10px 0 6px; }
+  .mega-locations-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 4px 6px; }
   .mega-locations-label { font-family: var(--font-head); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-right: 6px; white-space: nowrap; }
-  .mega-loc-chip { display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-head); font-size: .78rem; font-weight: 600; color: var(--ocean); background: rgba(13,90,158,.07); padding: 4px 12px; border-radius: 100px; border: 1px solid rgba(13,90,158,.15); transition: background var(--tr), color var(--tr); }
-  .mega-loc-chip:hover { background: var(--ocean); color: var(--white); }
-  .mega-loc-chip.active { background: var(--ocean); color: var(--white); border-color: var(--ocean); }
+  .mega-loc-chip { display: inline-flex; align-items: center; font-family: var(--font-head); font-size: .78rem; font-weight: 600; color: var(--ocean); background: rgba(13,90,158,.07); padding: 4px 12px; border-radius: 100px; border: 1px solid rgba(13,90,158,.15); transition: background var(--tr), color var(--tr); }
+  .mega-loc-chip:hover, .mega-loc-chip.active { background: var(--ocean); color: var(--white); }
 
   /* MOBILE DRAWER */
   .mobile-drawer { display: none; position: fixed; top: 72px; left: 0; right: 0; background: var(--cobalt-dark); border-top: 1px solid rgba(91,200,245,.15); padding: 16px var(--pad) 32px; z-index: 199; flex-direction: column; gap: 0; box-shadow: 0 8px 32px rgba(0,0,0,.4); overflow-y: auto; max-height: calc(100vh - 72px); }
@@ -141,7 +138,7 @@
   .breadcrumb-list li { font-size: .82rem; color: var(--muted); }
   .breadcrumb-list a { color: var(--ocean); }
   .breadcrumb-list a:hover { text-decoration: underline; }
-  .breadcrumb-sep { color: var(--muted); font-size: .75rem; }
+  .breadcrumb-sep { font-size: .75rem; }
 
   /* BODY */
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
@@ -149,7 +146,6 @@
   .body-paras p { margin-bottom: 16px; line-height: 1.8; }
   .body-paras p:last-child { margin-bottom: 0; }
 
-  /* SERVICES GRID */
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .service-card { background: var(--off-white); border: 1px solid rgba(0,0,0,.07); border-radius: var(--radius); padding: 24px 20px; transition: border-color var(--tr), box-shadow var(--tr); }
   .service-card:hover { border-color: var(--ocean); box-shadow: 0 4px 20px rgba(13,90,158,.1); }
@@ -158,18 +154,20 @@
   .service-card p { font-size: .85rem; color: var(--muted); line-height: 1.65; margin-bottom: 12px; }
   .service-card a { font-family: var(--font-head); font-size: .82rem; font-weight: 700; color: var(--ocean); }
 
-  /* WHY LOCAL */
   .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .why-card { background: rgba(91,200,245,.07); border: 1px solid rgba(91,200,245,.18); border-radius: var(--radius); padding: 22px 18px; }
+  .why-icon { font-size: 1.4rem; margin-bottom: 10px; }
   .why-card h4 { font-family: var(--font-head); font-weight: 700; font-size: .95rem; color: var(--white); margin-bottom: 8px; }
   .why-card p { font-size: .84rem; color: rgba(255,255,255,.65); line-height: 1.65; }
-  .why-icon { font-size: 1.4rem; margin-bottom: 10px; }
 
-  /* SUBURBS */
   .suburb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
   .suburb-chip { background: var(--white); border: 1px solid rgba(0,0,0,.1); border-radius: 8px; padding: 10px 14px; font-size: .84rem; font-family: var(--font-head); font-weight: 600; color: var(--body-text); text-align: center; }
 
-  /* PRICING */
+  .industries-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .industry-chip { background: var(--off-white); border: 1px solid rgba(0,0,0,.08); border-radius: 10px; padding: 16px 14px; text-align: center; }
+  .industry-icon { font-size: 1.4rem; margin-bottom: 6px; }
+  .industry-chip p { font-family: var(--font-head); font-size: .8rem; font-weight: 700; color: var(--cobalt-dark); line-height: 1.3; }
+
   .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .price-card { background: var(--white); border: 1px solid rgba(0,0,0,.09); border-radius: var(--radius); padding: 28px 24px; position: relative; }
   .price-card--featured { border-color: var(--ocean); box-shadow: 0 8px 32px rgba(13,90,158,.15); }
@@ -183,7 +181,6 @@
   .price-includes li::before { content: '✓'; color: var(--ocean); font-weight: 800; font-size: .78rem; flex-shrink: 0; margin-top: 2px; }
   .price-cta { width: 100%; text-align: center; justify-content: center; padding: 12px; }
 
-  /* FAQ */
   .faq-grid { display: flex; flex-direction: column; max-width: 860px; margin: 0 auto; }
   .faq-item { border: 1px solid rgba(0,0,0,.08); border-radius: 10px; overflow: hidden; margin-bottom: 8px; }
   .faq-question { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 22px; cursor: pointer; font-family: var(--font-head); font-weight: 700; font-size: .95rem; color: var(--cobalt-dark); list-style: none; background: var(--white); user-select: none; }
@@ -193,7 +190,6 @@
   details[open] .faq-chevron { transform: rotate(180deg); }
   .faq-answer { padding: 0 22px 18px; font-size: .88rem; line-height: 1.75; color: var(--muted); background: var(--white); }
 
-  /* CTA */
   #cta-strip { background: linear-gradient(135deg, var(--cobalt-dark) 0%, #0d3570 100%); padding: 80px 0; }
   .cta-inner { text-align: center; max-width: 700px; margin: 0 auto; }
   .cta-inner h2 { color: var(--white); font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 16px; }
@@ -201,7 +197,6 @@
   .cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
   .cta-note { margin-top: 16px; font-size: .78rem; color: rgba(255,255,255,.4); }
 
-  /* CONTACT */
   #contact { padding: var(--section-pad) 0; }
   .contact-wrap { max-width: 600px; margin: 0 auto; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -211,7 +206,6 @@
   .form-input:focus { border-color: var(--ocean); box-shadow: 0 0 0 3px rgba(13,90,158,.1); }
   textarea.form-input { resize: vertical; }
 
-  /* FOOTER */
   footer { background: var(--cobalt-dark); padding: 56px 0 32px; }
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
   .footer-logo-wrap { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 800; font-size: 1.05rem; color: var(--white); margin-bottom: 4px; }
@@ -237,7 +231,7 @@
     .nav-logo-icon { display: none; }
     .two-col, .two-col--3-2 { grid-template-columns: 1fr; gap: 32px; }
     .services-grid, .why-grid, .pricing-grid { grid-template-columns: 1fr 1fr; }
-    .suburb-grid { grid-template-columns: repeat(2, 1fr); }
+    .suburb-grid, .industries-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .hero-actions { flex-direction: column; }
@@ -247,7 +241,6 @@
     .services-grid, .why-grid, .pricing-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; }
     .cta-actions { flex-direction: column; align-items: center; }
-    .suburb-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -265,28 +258,28 @@
     <nav aria-label="Main navigation">
       <ul class="nav-links">
         <li class="nav-has-mega" id="mega-services">
-          <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">▾</span></a>
+          <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">&#9662;</span></a>
           <div class="nav-mega" role="region" aria-label="Services menu">
             <div class="mega-inner">
               <div>
                 <div class="mega-col-heading">Services</div>
-                <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">🌐</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites built to rank &amp; convert</span></span></a>
-                <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">🛒</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce stores</span></span></a>
-                <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">📈</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Organic rankings &amp; search traffic</span></span></a>
+                <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites built to rank &amp; convert</span></span></a>
+                <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#128722;</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce stores</span></span></a>
+                <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Organic rankings &amp; search traffic</span></span></a>
               </div>
               <div>
                 <div class="mega-col-heading">&nbsp;</div>
-                <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">📍</span><span class="mega-item-text"><strong>Local SEO</strong><span>Map pack &amp; Google Business Profile</span></span></a>
-                <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">🎯</span><span class="mega-item-text"><strong>Google Ads</strong><span>Leads from day one, not month six</span></span></a>
-                <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">🔧</span><span class="mega-item-text"><strong>Maintenance</strong><span>Care plans from $149/month</span></span></a>
+                <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Map pack &amp; Google Business Profile</span></span></a>
+                <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Leads from day one, not month six</span></span></a>
+                <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">&#128295;</span><span class="mega-item-text"><strong>Maintenance</strong><span>Care plans from $149/month</span></span></a>
               </div>
             </div>
             <hr class="mega-divider" />
             <div class="mega-locations-row">
               <span class="mega-locations-label">Areas we serve:</span>
               <a href="/" class="mega-loc-chip">Wollongong</a>
-              <a href="/web-design-shellharbour/" class="mega-loc-chip active">Shellharbour</a>
-              <a href="/web-design-kiama/" class="mega-loc-chip">Kiama</a>
+              <a href="/web-design-shellharbour/" class="mega-loc-chip">Shellharbour</a>
+              <a href="/web-design-kiama/" class="mega-loc-chip active">Kiama</a>
             </div>
           </div>
         </li>
@@ -309,51 +302,50 @@
   </div>
 </header>
 <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
-  <button class="drawer-section-toggle" data-target="drawer-services" aria-expanded="false">Services <span class="chev">▾</span></button>
+  <button class="drawer-section-toggle" data-target="drawer-services" aria-expanded="false">Services <span class="chev">&#9662;</span></button>
   <div class="drawer-sub" id="drawer-services">
-    <a href="/web-design-wollongong/">🌐 Web Design</a>
-    <a href="/ecommerce-web-design-wollongong/">🛒 eCommerce</a>
-    <a href="/seo-wollongong/">📈 SEO Wollongong</a>
-    <a href="/local-seo-wollongong/">📍 Local SEO</a>
-    <a href="/google-ads-wollongong/">🎯 Google Ads</a>
-    <a href="/website-maintenance-wollongong/">🔧 Maintenance</a>
+    <a href="/web-design-wollongong/">&#127760; Web Design</a>
+    <a href="/ecommerce-web-design-wollongong/">&#128722; eCommerce</a>
+    <a href="/seo-wollongong/">&#128200; SEO Wollongong</a>
+    <a href="/local-seo-wollongong/">&#128205; Local SEO</a>
+    <a href="/google-ads-wollongong/">&#127919; Google Ads</a>
+    <a href="/website-maintenance-wollongong/">&#128295; Maintenance</a>
   </div>
   <a href="/#why-us" class="drawer-link">Why Us</a>
   <a href="/#process" class="drawer-link">Process</a>
   <a href="/#faq" class="drawer-link">FAQ</a>
-  <button class="drawer-section-toggle" data-target="drawer-areas" aria-expanded="false">Service Areas <span class="chev">▾</span></button>
+  <button class="drawer-section-toggle" data-target="drawer-areas" aria-expanded="false">Service Areas <span class="chev">&#9662;</span></button>
   <div class="drawer-sub" id="drawer-areas">
-    <a href="/">📍 Wollongong</a>
-    <a href="/web-design-shellharbour/">📍 Shellharbour</a>
+    <a href="/">&#128205; Wollongong</a>
+    <a href="/web-design-shellharbour/">&#128205; Shellharbour</a>
+    <a href="/web-design-kiama/">&#128205; Kiama</a>
   </div>
-  <a href="#contact" class="drawer-cta">Get a Free Quote →</a>
+  <a href="#contact" class="drawer-cta">Get a Free Quote &#8594;</a>
 </nav>
 
 <main>
 
-<!-- HERO -->
 <section id="page-hero" aria-labelledby="page-h1">
   <div class="container">
     <div class="hero-eyebrow">
       <span class="hero-eyebrow-dot" aria-hidden="true"></span>
-      Shellharbour Web Design Specialists
+      Kiama Web Design Specialists
     </div>
-    <h1 id="page-h1" class="page-hero-h1">Web Design Shellharbour —<br><em>Websites Built for the Illawarra</em></h1>
-    <p class="page-hero-sub">Your Shellharbour business deserves a website that reflects the quality of your work — and gets found when local customers are searching. We build custom sites that rank on Google, load fast on mobile, and turn visitors into enquiries.</p>
+    <h1 id="page-h1" class="page-hero-h1">Web Design Kiama —<br><em>Built for the South Coast</em></h1>
+    <p class="page-hero-sub">Kiama businesses are competing with every other business on a customer's phone screen. We build custom websites that show up in local searches, load fast on mobile, and turn visitors into phone calls — for businesses from Kiama to Gerringong and beyond.</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn btn--electric">Get a Free Shellharbour Consultation →</a>
+      <a href="#contact" class="btn btn--electric">Get a Free Kiama Consultation →</a>
       <a href="tel:0240034436" class="btn btn--ghost-white">📞 (02) 4003 4436</a>
     </div>
     <div class="hero-trust">
-      <div class="trust-chip"><span class="trust-chip-icon">✓</span> Wollongong-based team — 20 min from Shellharbour</div>
-      <div class="trust-chip"><span class="trust-chip-icon">✓</span> 165+ Illawarra websites delivered</div>
+      <div class="trust-chip"><span class="trust-chip-icon">✓</span> Wollongong-based — 45 min from Kiama</div>
+      <div class="trust-chip"><span class="trust-chip-icon">✓</span> 165+ Illawarra &amp; South Coast websites</div>
       <div class="trust-chip"><span class="trust-chip-icon">★</span> 5.0 Google rating</div>
       <div class="trust-chip"><span class="trust-chip-icon">✓</span> Fixed quotes, no lock-in</div>
     </div>
   </div>
 </section>
 
-<!-- BREADCRUMB -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="container">
     <ol class="breadcrumb-list">
@@ -361,43 +353,42 @@
       <li class="breadcrumb-sep" aria-hidden="true">›</li>
       <li><a href="/web-design-wollongong/">Web Design Wollongong</a></li>
       <li class="breadcrumb-sep" aria-hidden="true">›</li>
-      <li aria-current="page">Web Design Shellharbour</li>
+      <li aria-current="page">Web Design Kiama</li>
     </ol>
   </div>
 </nav>
 
 
-<!-- LOCAL CONTEXT -->
 <section class="section" aria-labelledby="local-heading">
   <div class="container">
     <div class="two-col two-col--3-2">
       <div class="body-paras reveal">
-        <div class="label">Local Web Design for Shellharbour</div>
-        <h2 id="local-heading">Shellharbour Businesses Deserve More Than a DIY Website</h2>
-        <p style="margin-top:16px;">Shellharbour has one of the most consistently growing local economies in the Illawarra. From the new housing estates pushing into Albion Park and Shell Cove to the established trade and retail businesses along the city strip, competition for online visibility is increasing fast — and the gap between businesses with a professional digital presence and those without is widening every year.</p>
-        <p>The challenge for most Shellharbour businesses is the same: you know you need a better website, but you're not sure who to trust, what it should cost, or what "better" actually means in practice. Many have been burned by cheap offshore builds that looked fine for six months before something broke, or by a local freelancer who disappeared after launch.</p>
-        <p>We're based in North Wollongong — 20 minutes from Shellharbour City Centre. We build websites for Shellharbour businesses regularly: trades in Oak Flats, health practitioners in Shellharbour Village, retail in Warilla, hospitality along the waterfront, and service businesses across the full LGA. We know the area and we know what Shellharbour customers are searching for when they go to Google.</p>
-        <p>Every site we build is custom — not a tweaked template — designed for the specific suburb and customer base of your business, with the SEO structure to rank for the search terms that bring Shellharbour customers to your door.</p>
+        <div class="label">Local Web Design for Kiama</div>
+        <h2 id="local-heading">Kiama's Digital Landscape Is More Competitive Than It Looks</h2>
+        <p style="margin-top:16px;">Kiama punches well above its weight. For a town of around 23,000 people, it has a dense, competitive mix of tourism and hospitality businesses, a surprisingly strong professional services sector, a growing health and wellness community, and a loyal local customer base that actively seeks out and supports local businesses — if they can find them online.</p>
+        <p>That last part is where the gap sits. Kiama has hundreds of businesses doing excellent work, but a significant proportion of them have websites that were built a decade ago, don't work on mobile, load too slowly, and rank nowhere near the first page for the searches their customers are actually making. The businesses that are winning locally are the ones that show up — in Google Maps, in organic results, and on recommendation — and back that up with a website that instantly communicates quality and trust.</p>
+        <p>We're a Wollongong agency, 45 minutes up the freeway. We work with Kiama businesses regularly — tourism operators, trades, health practitioners, food and hospitality, retail, and professional services. We understand the seasonal traffic patterns that affect Kiama's visitor economy and what it takes to capture both the resident market and the weekend influx from Sydney. Those are different audiences with different search behaviours, and a well-structured local website and SEO strategy can target both simultaneously.</p>
+        <p>We meet in person — at your business in Kiama, a café along the strip, or at our North Wollongong studio. For businesses on the South Coast who've been frustrated by dealing with offshore agencies or city-based studios who've never been to Kiama, having a local team who can actually drive down to see your space and understand your context makes a real difference.</p>
       </div>
       <div class="reveal" style="padding-top:56px;">
         <div style="background:var(--off-white);border-radius:var(--radius);padding:28px 24px;">
-          <div class="label" style="margin-bottom:16px;">Shellharbour by Numbers</div>
+          <div class="label" style="margin-bottom:16px;">Kiama by the Numbers</div>
           <div style="display:flex;flex-direction:column;gap:14px;">
             <div>
-              <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--ocean);line-height:1;">82,000+</div>
-              <div style="font-size:.82rem;color:var(--muted);margin-top:4px;">Shellharbour LGA population — one of the fastest-growing in NSW</div>
+              <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--ocean);line-height:1;">23,000+</div>
+              <div style="font-size:.82rem;color:var(--muted);margin-top:4px;">Kiama LGA residents — plus significant tourist and day-tripper volume</div>
             </div>
             <div>
-              <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--ocean);line-height:1;">92%</div>
-              <div style="font-size:.82rem;color:var(--muted);margin-top:4px;">of Shellharbour residents research local businesses online before making contact</div>
+              <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--ocean);line-height:1;">1.5M+</div>
+              <div style="font-size:.82rem;color:var(--muted);margin-top:4px;">Annual visitors to Kiama — a customer base bigger than any local LGA</div>
             </div>
             <div>
-              <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--ocean);line-height:1;">20 min</div>
-              <div style="font-size:.82rem;color:var(--muted);margin-top:4px;">From our North Wollongong studio to Shellharbour City Centre</div>
+              <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--ocean);line-height:1;">87%</div>
+              <div style="font-size:.82rem;color:var(--muted);margin-top:4px;">of visitors research local businesses on their phone before or during the trip</div>
             </div>
             <div>
-              <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--ocean);line-height:1;">Shell Cove</div>
-              <div style="font-size:.82rem;color:var(--muted);margin-top:4px;">Fastest-growing new suburb in the LGA — new businesses need web presence from day one</div>
+              <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--ocean);line-height:1;">45 min</div>
+              <div style="font-size:.82rem;color:var(--muted);margin-top:4px;">From our North Wollongong studio to Kiama — we meet in person</div>
             </div>
           </div>
         </div>
@@ -407,49 +398,68 @@
 </section>
 
 
-<!-- SERVICES -->
-<section class="section section--alt" aria-labelledby="services-heading">
+<section class="section section--alt" aria-labelledby="industries-heading">
   <div class="container">
     <div class="section-header reveal">
-      <div class="label">What We Build for Shellharbour</div>
-      <h2 id="services-heading">Web Design &amp; Digital Marketing Services for Shellharbour Businesses</h2>
-      <p>From a professional website through to SEO, Google Ads, and eCommerce — we handle the full digital picture so you can focus on running your business.</p>
+      <div class="label">Who We Work With in Kiama</div>
+      <h2 id="industries-heading">Industries We Serve Across the Kiama Region</h2>
+      <p>From tourism and hospitality to trades and health — we've built websites for most business types in the Kiama area and understand what each industry needs to win online.</p>
+    </div>
+    <div class="industries-grid reveal">
+      <div class="industry-chip"><div class="industry-icon">🏄</div><p>Tourism &amp; Experiences</p></div>
+      <div class="industry-chip"><div class="industry-icon">🍽️</div><p>Cafés &amp; Restaurants</p></div>
+      <div class="industry-chip"><div class="industry-icon">🏡</div><p>Holiday Accommodation</p></div>
+      <div class="industry-chip"><div class="industry-icon">🔨</div><p>Trades &amp; Construction</p></div>
+      <div class="industry-chip"><div class="industry-icon">💆</div><p>Health &amp; Wellness</p></div>
+      <div class="industry-chip"><div class="industry-icon">🛍️</div><p>Retail &amp; Boutique</p></div>
+      <div class="industry-chip"><div class="industry-icon">⚖️</div><p>Professional Services</p></div>
+      <div class="industry-chip"><div class="industry-icon">🌿</div><p>Farming &amp; Produce</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label">What We Build for Kiama</div>
+      <h2 id="services-heading">Web Design &amp; Digital Marketing for Kiama Businesses</h2>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-card-icon">🌐</div>
         <h3>Website Design &amp; Development</h3>
-        <p>Custom WordPress websites built to rank on Google and convert Shellharbour visitors into enquiries. Mobile-first, fast loading, and designed to reflect the quality of your business.</p>
+        <p>Custom WordPress websites designed for Kiama's unique market — capturing local residents and the visitor economy simultaneously. Mobile-first, fast, and built to rank.</p>
         <a href="/web-design-wollongong/">Learn more →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-card-icon">📍</div>
-        <h3>Local SEO for Shellharbour</h3>
-        <p>Rank when Shellharbour locals search for your services. Google Business Profile optimisation, map pack rankings, suburb-targeted landing pages, and citation building across Australian directories.</p>
+        <h3>Local SEO for Kiama</h3>
+        <p>Rank when Sydneysiders and locals search for cafés, trades, accommodation, and services in Kiama. Google Maps pack, Google Business Profile, and suburb-level content.</p>
         <a href="/local-seo-wollongong/">Learn more →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-card-icon">📈</div>
-        <h3>SEO &amp; Search Visibility</h3>
-        <p>Long-term organic search growth for Shellharbour businesses. We target the search terms your customers actually use — building traffic that grows month after month without paying per click.</p>
+        <h3>SEO &amp; Organic Visibility</h3>
+        <p>Long-term organic rankings for Kiama businesses targeting both local intent ("plumber Kiama") and visitor intent ("best café Kiama"). Traffic that compounds month after month.</p>
         <a href="/seo-wollongong/">Learn more →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-card-icon">🎯</div>
         <h3>Google Ads Management</h3>
-        <p>Immediate visibility for competitive Shellharbour search terms. We manage Google Search and Local Service Ads campaigns targeting your specific service area — leads from launch day.</p>
+        <p>Immediate search visibility for competitive Kiama terms. Seasonal campaign management for tourism and hospitality businesses — turning the summer peak into maximum bookings.</p>
         <a href="/google-ads-wollongong/">Learn more →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-card-icon">🛒</div>
-        <h3>eCommerce Websites</h3>
-        <p>Shopify and WooCommerce stores for Shellharbour product businesses. Sell beyond the Illawarra — to customers across NSW and Australia — without opening a second location.</p>
+        <h3>eCommerce &amp; Online Bookings</h3>
+        <p>Shopify stores for Kiama producers and retailers, and booking integrations for experience and accommodation businesses — sell direct and reduce reliance on third-party platforms.</p>
         <a href="/ecommerce-web-design-wollongong/">Learn more →</a>
       </div>
       <div class="service-card reveal">
         <div class="service-card-icon">🔧</div>
         <h3>Website Maintenance</h3>
-        <p>Monthly care plans keeping your Shellharbour website secure, fast, and up to date. Security monitoring, daily backups, updates, and priority local support from $149/month.</p>
+        <p>Monthly care plans keeping your Kiama website secure and trading year-round — security monitoring, daily backups, updates, and priority local support from $149/month.</p>
         <a href="/website-maintenance-wollongong/">Learn more →</a>
       </div>
     </div>
@@ -457,91 +467,84 @@
 </section>
 
 
-<!-- WHY LOCAL -->
 <section class="section section--dark" aria-labelledby="why-heading">
   <div class="container">
     <div class="section-header reveal">
-      <div class="label">Why Choose a Local Illawarra Agency</div>
-      <h2 id="why-heading">Why Shellharbour Businesses Work With Us</h2>
+      <div class="label">Why Work With a Local Agency</div>
+      <h2 id="why-heading">Why Kiama Businesses Choose Wollongong Web Design Co</h2>
     </div>
     <div class="why-grid">
       <div class="why-card reveal">
         <div class="why-icon">📍</div>
-        <h4>We know Shellharbour</h4>
-        <p>We know the LGA suburbs, the competition, the customer expectations, and the search terms locals actually use. Your website is built for your specific market — not a generic regional template.</p>
+        <h4>We know the South Coast</h4>
+        <p>We understand Kiama's dual market — local residents and the visitor economy. Your website is built to capture both audiences, not just one.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🌊</div>
+        <h4>Seasonal strategy built-in</h4>
+        <p>Kiama's visitor peaks are predictable. We build content and campaign strategies around them — so your highest-traffic months convert at their maximum potential.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon">🤝</div>
-        <h4>In-person meetings available</h4>
-        <p>We're 20 minutes from Shellharbour City Centre. We can meet in person at your office or at a local café — not just another Zoom call with someone interstate or offshore.</p>
+        <h4>In-person available</h4>
+        <p>45 minutes from Kiama, we can meet at your business, a local café, or our Wollongong studio. A real conversation beats a 45-minute discovery call every time.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon">⚡</div>
         <h4>Fast local response</h4>
-        <p>When something needs attention, you're not waiting for a ticketing system to route it to the right person. Our Wollongong team picks it up fast — same business day for most requests.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon">💬</div>
-        <h4>Plain-language communication</h4>
-        <p>No jargon, no upselling you things you don't need. We explain what we're doing and why, give you honest advice on what will actually move the needle for your specific business.</p>
+        <p>When something's urgent — a booking link breaks before the long weekend — you reach us directly, not a helpdesk ticket. Same-day response for care plan clients.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon">📊</div>
-        <h4>Results accountability</h4>
-        <p>We track what matters to your business — enquiry volume, phone calls, organic positions, Google Maps rankings. Monthly reports show real numbers, not vanity metrics.</p>
+        <h4>Results you can see</h4>
+        <p>Monthly reports tracking what matters: enquiry volume, Google rankings, map pack positions, phone calls from organic traffic. Real numbers, not vanity metrics.</p>
       </div>
       <div class="why-card reveal">
         <div class="why-icon">🔒</div>
         <h4>No lock-in contracts</h4>
-        <p>We earn your continued business every month. No lock-in retainers for services you're not happy with. If it's not working, we fix it — or we tell you honestly what will.</p>
+        <p>Month-to-month for all retainer services. We earn your continued business every month — and we think that's the right way to run an agency.</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- SHELLHARBOUR SUBURBS -->
 <section class="section" aria-labelledby="suburbs-heading">
   <div class="container">
     <div class="section-header reveal">
-      <div class="label">Areas We Serve Across the Shellharbour LGA</div>
-      <h2 id="suburbs-heading">We Build Websites for Businesses Across Shellharbour</h2>
-      <p>Whether you're in Shellharbour City Centre, Shell Cove, Oak Flats, or anywhere across the LGA — we build websites that rank for local searches in your specific suburb.</p>
+      <div class="label">Areas Across the Kiama LGA</div>
+      <h2 id="suburbs-heading">We Serve the Full Kiama Region</h2>
+      <p>Whether you're in Kiama township, Gerringong, Jamberoo, or anywhere across the LGA — we build websites targeting local searches specific to your town or suburb.</p>
     </div>
     <div class="suburb-grid reveal">
-      <div class="suburb-chip">Shellharbour City</div>
-      <div class="suburb-chip">Shell Cove</div>
-      <div class="suburb-chip">Oak Flats</div>
-      <div class="suburb-chip">Albion Park</div>
-      <div class="suburb-chip">Albion Park Rail</div>
-      <div class="suburb-chip">Warilla</div>
-      <div class="suburb-chip">Barrack Heights</div>
-      <div class="suburb-chip">Barrack Point</div>
-      <div class="suburb-chip">Flinders</div>
-      <div class="suburb-chip">Mount Warrigal</div>
-      <div class="suburb-chip">Dunmore</div>
-      <div class="suburb-chip">Lake Illawarra</div>
+      <div class="suburb-chip">Kiama</div>
+      <div class="suburb-chip">Kiama Downs</div>
+      <div class="suburb-chip">Kiama Heights</div>
+      <div class="suburb-chip">Gerringong</div>
+      <div class="suburb-chip">Gerroa</div>
+      <div class="suburb-chip">Jamberoo</div>
+      <div class="suburb-chip">Minnamurra</div>
+      <div class="suburb-chip">Bombo</div>
     </div>
   </div>
 </section>
 
 
-<!-- PRICING -->
 <section class="section section--alt" aria-labelledby="pricing-heading">
   <div class="container">
     <div class="section-header reveal">
       <div class="label">Investment</div>
-      <h2 id="pricing-heading">Website Pricing for Shellharbour Businesses</h2>
-      <p>Fixed quotes. No hourly billing. No surprises. Every project is scoped and quoted in full before we start.</p>
+      <h2 id="pricing-heading">Website Pricing for Kiama Businesses</h2>
+      <p>Fixed quotes. No hourly billing. No surprises. Every project is scoped in full before we start.</p>
     </div>
     <div class="pricing-grid">
       <div class="price-card reveal">
         <div class="price-tier">Starter</div>
         <div class="price-amount"><span>from $</span>1,950</div>
-        <div class="price-ideal">For new businesses and trades needing a professional web presence</div>
+        <div class="price-ideal">New businesses, trades, and sole traders needing a professional online presence</div>
         <ul class="price-includes">
           <li>Custom design (5–7 pages)</li>
-          <li>Mobile-first, fast loading</li>
+          <li>Mobile-first &amp; fast loading</li>
           <li>Contact form + click-to-call</li>
           <li>Google Analytics setup</li>
           <li>Basic on-page SEO</li>
@@ -553,29 +556,29 @@
         <div class="price-badge">Most Popular</div>
         <div class="price-tier">Business</div>
         <div class="price-amount"><span>from $</span>3,500</div>
-        <div class="price-ideal">For established Shellharbour businesses ready to compete online</div>
+        <div class="price-ideal">Established Kiama businesses ready to compete online and grow enquiries</div>
         <ul class="price-includes">
           <li>Custom design (8–15 pages)</li>
-          <li>Full on-page SEO setup</li>
-          <li>Google Business Profile optimisation</li>
+          <li>Full on-page SEO</li>
+          <li>Google Business Profile setup</li>
           <li>Blog / news section</li>
-          <li>Lead capture forms</li>
+          <li>Lead capture &amp; enquiry forms</li>
           <li>Core Web Vitals pass</li>
           <li>60-day post-launch support</li>
         </ul>
         <a href="#contact" class="btn btn--primary price-cta">Get a Quote</a>
       </div>
       <div class="price-card reveal">
-        <div class="price-tier">eCommerce</div>
+        <div class="price-tier">Tourism &amp; eCommerce</div>
         <div class="price-amount"><span>from $</span>5,500</div>
-        <div class="price-ideal">For Shellharbour businesses ready to sell products online</div>
+        <div class="price-ideal">Tourism operators, accommodation, and product businesses selling online</div>
         <ul class="price-includes">
-          <li>Shopify or WooCommerce</li>
+          <li>Booking system integration</li>
+          <li>Shopify or WooCommerce option</li>
           <li>Custom storefront design</li>
-          <li>Up to 50 products</li>
-          <li>Payment gateways incl. Afterpay</li>
-          <li>eCommerce SEO setup</li>
-          <li>Shipping configuration</li>
+          <li>Payment &amp; booking configuration</li>
+          <li>eCommerce / booking SEO setup</li>
+          <li>Seasonal content strategy</li>
           <li>30-day post-launch support</li>
         </ul>
         <a href="#contact" class="btn btn--outline price-cta">Get a Quote</a>
@@ -586,38 +589,37 @@
 </section>
 
 
-<!-- FAQ -->
 <section class="section" aria-labelledby="faq-heading">
   <div class="container">
     <div class="section-header reveal">
       <div class="label">FAQ</div>
-      <h2 id="faq-heading">Web Design Shellharbour — Common Questions</h2>
+      <h2 id="faq-heading">Web Design Kiama — Common Questions</h2>
     </div>
     <div class="faq-grid">
 
       <details class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <summary class="faq-question"><span itemprop="name">Do you come to Shellharbour for meetings?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Yes. We're based in North Wollongong — about 20 minutes from Shellharbour City Centre. We meet clients at their office, a local café, or at our studio. We're also set up for phone and video calls for clients who prefer remote meetings. The choice is yours.</div></div>
+        <summary class="faq-question"><span itemprop="name">Do you travel to Kiama for meetings?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Yes. We're based in North Wollongong — about 45 minutes from Kiama. We'll come to you for the initial discovery meeting and key project milestones. We're also set up for video calls for day-to-day communication, which most Kiama clients find more convenient during the build phase.</div></div>
       </details>
 
       <details class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <summary class="faq-question"><span itemprop="name">Can you help my Shellharbour business rank on Google Maps?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Yes — Google Maps (Google Business Profile) ranking is a core part of our local SEO service. For Shellharbour businesses, appearing in the map pack when locals search for your service is often more valuable than organic rankings. We optimise your Google Business Profile, build local citations, and create suburb-targeted content to improve your map pack position.</div></div>
+        <summary class="faq-question"><span itemprop="name">Can you help my Kiama tourism business get found by Sydney visitors?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Yes — and this is a specific strength for Kiama businesses. We target both local intent searches ("café Kiama") and visitor intent searches ("best things to do in Kiama", "weekend trip from Sydney"). These require different content and SEO strategies, and we build both into your site from launch day. We also advise on Google Ads for seasonal peaks like long weekends and school holidays when competition for visibility spikes.</div></div>
       </details>
 
       <details class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <summary class="faq-question"><span itemprop="name">How long does a Shellharbour website take to build?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">A Starter or Business website typically takes 4–6 weeks from project kickoff to launch. eCommerce sites take 8–12 weeks. Timeline depends on how quickly you can provide feedback during the design phase and supply content (text and photos). We'll give you a specific timeline in your project proposal.</div></div>
+        <summary class="faq-question"><span itemprop="name">How long does a Kiama website build take?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Starter and Business sites typically launch 4–6 weeks from project kickoff. Tourism and eCommerce sites take 8–12 weeks due to booking integrations and larger content requirements. We'll give you a specific timeline in your project proposal and keep you updated weekly throughout the build.</div></div>
       </details>
 
       <details class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <summary class="faq-question"><span itemprop="name">Do you work with trades and home service businesses in Shellharbour?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Yes — trades and home services are one of our most common client types across the Shellharbour LGA. Plumbers, electricians, landscapers, builders, cleaners, and similar businesses have specific website needs: clear service area maps, easy click-to-call on mobile, Google Maps ranking for suburb searches, and trust signals (licences, reviews) prominently displayed. We know what converts for trades.</div></div>
+        <summary class="faq-question"><span itemprop="name">My current website is old and slow — can you rebuild it without losing my Google rankings?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Yes — and protecting existing rankings during a rebuild is something we handle carefully. We audit your current site's ranking pages and keywords before starting, map all existing URLs to their new equivalents, implement 301 redirects, and submit an updated sitemap to Google after launch. We also monitor your Search Console data in the weeks after launch to catch any ranking drops early. A well-executed rebuild should maintain or improve your current positions.</div></div>
       </details>
 
       <details class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <summary class="faq-question"><span itemprop="name">What's included in a website quote for a Shellharbour business?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Your quote is fixed and itemised — design, development, SEO setup, analytics configuration, post-launch support, and any specific features (booking system, contact forms, image galleries, etc.). There are no hidden extras. Domain registration and hosting are separate costs paid directly to the provider, and we'll advise exactly what you'll need and what it costs.</div></div>
+        <summary class="faq-question"><span itemprop="name">Do you do website maintenance for Kiama businesses already on a care plan with someone else?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Yes. If you're unhappy with your current maintenance provider — or if your site has been "maintained" but still has outdated plugins, no proper backups, or security issues — we do a site audit, onboard your site to our systems, and take over. There's a one-off $199 onboarding fee for sites we didn't build. From there, our standard care plan rates apply with no lock-in contract.</div></div>
       </details>
 
     </div>
@@ -625,13 +627,12 @@
 </section>
 
 
-<!-- CTA -->
 <section id="cta-strip" aria-labelledby="cta-heading">
   <div class="container">
     <div class="cta-inner">
       <div class="label" style="color:var(--electric);">Ready to Get Started?</div>
-      <h2 id="cta-heading">Get a Free Web Design Consultation for Your Shellharbour Business</h2>
-      <p>Wollongong-based. Illawarra-focused. Fixed quotes with no lock-in. We'll advise on the right solution for your business and your budget — no obligation.</p>
+      <h2 id="cta-heading">Get a Free Web Design Consultation for Your Kiama Business</h2>
+      <p>Wollongong-based. South Coast-focused. Fixed quotes with no lock-in. We'll give you honest advice on what will actually move the needle for your business.</p>
       <div class="cta-actions">
         <a href="#contact" class="btn btn--electric">Book a Free Consultation →</a>
         <a href="tel:0240034436" class="btn btn--ghost-white">Call (02) 4003 4436</a>
@@ -642,12 +643,11 @@
 </section>
 
 
-<!-- CONTACT -->
 <section id="contact" class="section" aria-labelledby="contact-heading">
   <div class="container">
     <div class="section-header reveal" style="margin-bottom:40px;">
       <div class="label">Get in Touch</div>
-      <h2 id="contact-heading">Talk to Us About Your Shellharbour Website</h2>
+      <h2 id="contact-heading">Talk to Us About Your Kiama Website</h2>
       <p>Tell us what you need. We'll come back with honest advice and a fixed quote within 3 business days.</p>
     </div>
     <form class="contact-wrap reveal" action="https://formspree.io/f/mlgqdvyy" method="POST">
@@ -655,12 +655,12 @@
         <div class="form-group"><label class="form-label" for="cf-name">First Name</label><input id="cf-name" type="text" name="name" class="form-input" placeholder="Jane" required /></div>
         <div class="form-group"><label class="form-label" for="cf-biz">Business Name</label><input id="cf-biz" type="text" name="business" class="form-input" placeholder="Your Business" /></div>
       </div>
-      <div class="form-group"><label class="form-label" for="cf-suburb">Your suburb</label><input id="cf-suburb" type="text" name="suburb" class="form-input" placeholder="e.g. Shellharbour, Oak Flats, Shell Cove…" /></div>
+      <div class="form-group"><label class="form-label" for="cf-suburb">Your town / suburb</label><input id="cf-suburb" type="text" name="suburb" class="form-input" placeholder="e.g. Kiama, Gerringong, Jamberoo…" /></div>
       <div class="form-group"><label class="form-label" for="cf-website">Current website (if any)</label><input id="cf-website" type="url" name="website" class="form-input" placeholder="https://yourbusiness.com.au" /></div>
       <div class="form-group"><label class="form-label" for="cf-email">Email</label><input id="cf-email" type="email" name="email" class="form-input" placeholder="jane@yourbusiness.com.au" required /></div>
       <div class="form-group"><label class="form-label" for="cf-phone">Phone</label><input id="cf-phone" type="tel" name="phone" class="form-input" placeholder="04XX XXX XXX" /></div>
       <div class="form-group"><label class="form-label" for="cf-msg">What do you need?</label><textarea id="cf-msg" name="message" rows="3" class="form-input" placeholder="Tell us about your business and what you're looking to achieve online…" required></textarea></div>
-      <input type="hidden" name="_source" value="web-design-shellharbour page" />
+      <input type="hidden" name="_source" value="web-design-kiama page" />
       <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:14px;">
         Send My Enquiry
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -680,7 +680,7 @@
           <div class="nav-logo-icon" aria-hidden="true">W</div>
           Wollongong <span>Web Design Co</span>
         </div>
-        <p>Web design and digital marketing for Shellharbour and Wollongong businesses. Custom websites, SEO, Google Ads, eCommerce, and maintenance. 165+ Illawarra sites delivered.</p>
+        <p>Web design and digital marketing for Kiama, Shellharbour, and Wollongong businesses. Custom websites, SEO, Google Ads, and eCommerce for the Illawarra and South Coast.</p>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -722,30 +722,26 @@
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.wollongongwebdesignco.com.au/web-design-shellharbour/",
-      "url": "https://www.wollongongwebdesignco.com.au/web-design-shellharbour/",
-      "name": "Web Design Shellharbour — Custom Websites for Shellharbour Businesses",
-      "description": "Web design for Shellharbour businesses. Custom websites that rank on Google and convert visitors. Local Illawarra team. Fixed quotes.",
-      "breadcrumb": { "@id": "https://www.wollongongwebdesignco.com.au/web-design-shellharbour/#breadcrumb" }
+      "@id": "https://www.wollongongwebdesignco.com.au/web-design-kiama/",
+      "url": "https://www.wollongongwebdesignco.com.au/web-design-kiama/",
+      "name": "Web Design Kiama — Custom Websites for Kiama Businesses",
+      "description": "Web design for Kiama businesses. Custom websites targeting local residents and the visitor economy. Local Illawarra team, fixed quotes. Call (02) 4003 4436."
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.wollongongwebdesignco.com.au/web-design-shellharbour/#breadcrumb",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.wollongongwebdesignco.com.au/" },
         { "@type": "ListItem", "position": 2, "name": "Web Design Wollongong", "item": "https://www.wollongongwebdesignco.com.au/web-design-wollongong/" },
-        { "@type": "ListItem", "position": 3, "name": "Web Design Shellharbour", "item": "https://www.wollongongwebdesignco.com.au/web-design-shellharbour/" }
+        { "@type": "ListItem", "position": 3, "name": "Web Design Kiama", "item": "https://www.wollongongwebdesignco.com.au/web-design-kiama/" }
       ]
     },
     {
       "@type": "Service",
-      "@id": "https://www.wollongongwebdesignco.com.au/web-design-shellharbour/#service",
-      "name": "Web Design Shellharbour",
+      "name": "Web Design Kiama",
       "serviceType": "Website Design & Development",
-      "areaServed": { "@type": "City", "name": "Shellharbour", "containedInPlace": { "@type": "AdministrativeArea", "name": "Shellharbour LGA" } },
+      "areaServed": { "@type": "City", "name": "Kiama" },
       "provider": {
         "@type": ["LocalBusiness", "ProfessionalService"],
-        "@id": "https://www.wollongongwebdesignco.com.au/#business",
         "name": "Wollongong Web Design Co",
         "telephone": "+61240034436",
         "address": { "@type": "PostalAddress", "streetAddress": "1 Innovation Way", "addressLocality": "North Wollongong", "addressRegion": "NSW", "postalCode": "2500", "addressCountry": "AU" }
@@ -754,10 +750,9 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://www.wollongongwebdesignco.com.au/web-design-shellharbour/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Do you come to Shellharbour for meetings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We're based in North Wollongong — 20 minutes from Shellharbour City Centre. We meet at your office, a local café, or our studio." } },
-        { "@type": "Question", "name": "Can you help my Shellharbour business rank on Google Maps?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — Google Business Profile ranking is a core part of our local SEO service for Shellharbour businesses, covering map pack optimisation, citations, and suburb-targeted content." } }
+        { "@type": "Question", "name": "Do you travel to Kiama for meetings?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — 45 minutes from our North Wollongong studio. We meet at your business, a local café, or our studio." } },
+        { "@type": "Question", "name": "Can you help my Kiama tourism business get found by Sydney visitors?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We target both local and visitor intent searches simultaneously, and advise on seasonal Google Ads for peak periods." } }
       ]
     }
   ]
@@ -765,7 +760,6 @@
 </script>
 
 <script>
-  /* Mega menu toggle on click (touch fallback) */
   const megaTriggers = document.querySelectorAll('.nav-has-mega');
   megaTriggers.forEach(li => {
     const trigger = li.querySelector('.nav-mega-trigger');
@@ -777,23 +771,9 @@
   });
   document.addEventListener('click', e => {
     megaTriggers.forEach(li => {
-      if (!li.contains(e.target)) {
-        li.classList.remove('open');
-        li.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', false);
-      }
+      if (!li.contains(e.target)) { li.classList.remove('open'); li.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', false); }
     });
   });
-
-  /* Hamburger */
-  const burger = document.querySelector('.nav-hamburger');
-  const drawer = document.getElementById('mobile-drawer');
-  burger.addEventListener('click', () => {
-    const open = drawer.classList.toggle('open');
-    burger.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', open);
-  });
-
-  /* Drawer accordion */
   document.querySelectorAll('.drawer-section-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
       const target = document.getElementById(btn.dataset.target);
@@ -802,20 +782,22 @@
       btn.setAttribute('aria-expanded', open);
     });
   });
-
+  const burger = document.querySelector('.nav-hamburger');
+  const drawer = document.getElementById('mobile-drawer');
+  burger.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
   drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     drawer.classList.remove('open');
     burger.classList.remove('open');
     burger.setAttribute('aria-expanded', false);
   }));
-
-  /* Nav scroll */
   const nav = document.getElementById('nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-
-  /* Reveal */
   const revObs = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); }
   }), { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
