@@ -806,7 +806,7 @@
         <div class="stat-label">Local Experience</div>
       </div>
       <div class="stat-card reveal">
-        <div class="stat-number"><span class="count-up" data-target="38" data-suffix="">0</span> <span style="font-size:1.5rem;color:#f5a623">★</span></div>
+        <div class="stat-number"><span class="count-up" data-target="10" data-suffix="">0</span> <span style="font-size:1.5rem;color:#f5a623">★</span></div>
         <div class="stat-label">Google Reviews</div>
       </div>
       <div class="stat-card reveal">
@@ -952,9 +952,9 @@
         <div class="reviews-panel" aria-label="Google reviews">
           <div class="review-header">
             <div>
-              <div class="review-rating-num">[RATING]</div>
+              <div class="review-rating-num">5.0</div>
               <div class="review-stars" aria-hidden="true">★★★★★</div>
-              <div class="review-count">Based on 38 Google reviews</div>
+              <div class="review-count">Based on 10 Google reviews</div>
             </div>
             <div style="text-align:right;">
               <div style="font-size:1.4rem;font-weight:800;color:var(--ocean);">G</div>
@@ -1105,7 +1105,7 @@
 
       <details class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
         <summary class="faq-question"><span itemprop="name">How much does web design cost in Wollongong?</span><div class="faq-chevron" aria-hidden="true">▾</div></summary>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Web design costs vary by project size. A simple 5-page brochure website typically starts from $2,500–$4,000. A feature-rich business website with eCommerce or SEO usually ranges from $5,000–$15,000+. We provide a fixed, transparent quote after a free discovery call — no surprises. Call (02) 4003 4436.</div></div>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Our websites start from $1,950 for a professional brochure site, up to $10,000+ for feature-rich eCommerce and digital marketing builds. We provide a fixed, transparent quote after a free discovery call — no surprises. Call (02) 4003 4436.</div></div>
       </details>
 
       <details class="faq-item reveal" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -1204,22 +1204,20 @@
       <h2 id="contact-heading">Request a Free Web Design Quote</h2>
       <p>Tell us about your project and we'll get back to you within one business day.</p>
     </div>
-    <div class="contact-wrap reveal">
-      <p style="font-size:.84rem;color:var(--muted);text-align:center;margin-bottom:22px;">
-      </p>
+    <form class="contact-wrap reveal" action="https://formspree.io/f/mlgqdvyy" method="POST">
       <div class="form-row">
-        <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" placeholder="Jane" /></div>
-        <div class="form-group"><label class="form-label">Business Name</label><input type="text" class="form-input" placeholder="Your Business" /></div>
+        <div class="form-group"><label class="form-label" for="cf-name">First Name</label><input id="cf-name" type="text" name="name" class="form-input" placeholder="Jane" required /></div>
+        <div class="form-group"><label class="form-label" for="cf-biz">Business Name</label><input id="cf-biz" type="text" name="business" class="form-input" placeholder="Your Business" /></div>
       </div>
-      <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="jane@yourbusiness.com.au" /></div>
-      <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" placeholder="04XX XXX XXX" /></div>
-      <div class="form-group"><label class="form-label">What do you need?</label><textarea rows="4" class="form-input" placeholder="Tell us about your project — new website, redesign, SEO, eCommerce..." style="resize:vertical;"></textarea></div>
-      <button class="btn btn--primary" style="width:100%;justify-content:center;padding:15px;">
+      <div class="form-group"><label class="form-label" for="cf-email">Email</label><input id="cf-email" type="email" name="email" class="form-input" placeholder="jane@yourbusiness.com.au" required /></div>
+      <div class="form-group"><label class="form-label" for="cf-phone">Phone</label><input id="cf-phone" type="tel" name="phone" class="form-input" placeholder="04XX XXX XXX" /></div>
+      <div class="form-group"><label class="form-label" for="cf-msg">What do you need?</label><textarea id="cf-msg" name="message" rows="4" class="form-input" placeholder="Tell us about your project — new website, redesign, SEO, eCommerce..." style="resize:vertical;" required></textarea></div>
+      <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:15px;">
         Send My Request
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
       <p style="text-align:center;font-size:.78rem;color:var(--muted);margin-top:12px;">We respond within 1 business day. No spam, ever.</p>
-    </div>
+    </form>
   </div>
 </section>
 
@@ -1310,9 +1308,13 @@
         "addressCountry": "AU"
       },
       "geo": { "@type": "GeoCoordinates", "latitude": -34.4234, "longitude": 150.8995 },
-      "sameAs": ["https://maps.app.goo.gl/AevT5mboQner5fDPA"],
+      "priceRange": "$1,950–$10,000",
+      "sameAs": [
+        "https://maps.app.goo.gl/AevT5mboQner5fDPA",
+        "https://share.google/VjmbDI19rmrNwFYmw"
+      ],
       "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00" }],
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "[RATING]", "reviewCount": "38", "bestRating": "5" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "10", "bestRating": "5" },
       "memberOf": [
         { "@type": "Organization", "name": "ICT Illawarra" },
         { "@type": "Organization", "name": "AWIA — Australian Web Industry Association" },
@@ -1324,7 +1326,7 @@
       "@type": "FAQPage",
       "@id": "https://www.wollongongwebdesignco.com.au/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "How much does web design cost in Wollongong?", "acceptedAnswer": { "@type": "Answer", "text": "A simple 5-page brochure website typically starts from $2,500–$4,000. A feature-rich website with eCommerce or SEO usually ranges from $5,000–$15,000+. We provide a fixed, transparent quote after a free discovery call." } },
+        { "@type": "Question", "name": "How much does web design cost in Wollongong?", "acceptedAnswer": { "@type": "Answer", "text": "Our websites start from $1,950 for a professional brochure site, up to $10,000+ for feature-rich eCommerce and digital marketing builds. We provide a fixed, transparent quote after a free discovery call — no surprises." } },
         { "@type": "Question", "name": "How long does it take to build a website in Wollongong?", "acceptedAnswer": { "@type": "Answer", "text": "A standard 5–8 page website typically takes 4–6 weeks. Larger sites or eCommerce can take 8–12 weeks." } },
         { "@type": "Question", "name": "What is local SEO and does my Wollongong business need it?", "acceptedAnswer": { "@type": "Answer", "text": "Local SEO optimises your online presence so you appear when people in Wollongong and the Illawarra search for your type of business — including the Google map pack and local keyword rankings." } },
         { "@type": "Question", "name": "How do I get started with Wollongong Web Design Co?", "acceptedAnswer": { "@type": "Answer", "text": "Call (02) 4003 4436 or fill in the contact form. We'll start with a free 30-minute discovery call, then provide a clear proposal and quote. No obligation." } }
