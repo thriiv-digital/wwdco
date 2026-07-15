@@ -141,11 +141,13 @@
     .nav-logo {
       font-family: var(--font-head); font-weight: 800; font-size: 1.1rem;
       display: flex; align-items: center; gap: 10px;
-      color: var(--white); transition: color var(--tr);
+      color: var(--white); transition: color var(--tr); line-height: 1.2;
     }
-    .nav-logo span { color: var(--electric); transition: color var(--tr); }
+    .nav-logo-text { display: flex; flex-direction: column; }
+    .nav-logo-line1 { white-space: nowrap; }
+    .nav-logo-line2 { color: var(--electric); transition: color var(--tr); white-space: nowrap; }
     #nav.scrolled .nav-logo { color: var(--cobalt); }
-    #nav.scrolled .nav-logo span { color: var(--ocean); }
+    #nav.scrolled .nav-logo .nav-logo-line2 { color: var(--ocean); }
 
     .nav-logo-icon {
       width: 34px; height: 34px;
@@ -181,8 +183,61 @@
       box-shadow: 0 3px 14px rgba(13,90,158,.3);
     }
 
+    /* Mobile nav */
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center; gap: 5px;
+      width: 38px; height: 38px; background: none; border: none; cursor: pointer;
+      padding: 4px; border-radius: 6px;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 2px; border-radius: 2px;
+      background: var(--white); transition: transform .25s, opacity .25s;
+    }
+    #nav.scrolled .nav-hamburger span { background: var(--cobalt); }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-phone-pill {
+      display: none;
+      align-items: center; gap: 6px;
+      background: rgba(91,200,245,.15); border: 1px solid rgba(91,200,245,.4);
+      color: var(--electric); font-family: var(--font-head);
+      font-weight: 700; font-size: .82rem;
+      padding: 6px 12px; border-radius: 100px;
+      white-space: nowrap; transition: background var(--tr);
+    }
+    #nav.scrolled .nav-phone-pill {
+      background: rgba(13,90,158,.1); border-color: rgba(13,90,158,.3); color: var(--ocean);
+    }
+
+    .mobile-drawer {
+      display: none; position: fixed; top: 72px; left: 0; right: 0;
+      background: var(--cobalt-dark); border-top: 1px solid rgba(91,200,245,.15);
+      padding: 24px var(--pad) 32px; z-index: 199;
+      flex-direction: column; gap: 4px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    }
+    .mobile-drawer.open { display: flex; }
+    #nav.scrolled + .mobile-drawer, .mobile-drawer { background: var(--cobalt-dark); }
+    .mobile-drawer a {
+      font-family: var(--font-head); font-weight: 700; font-size: 1.1rem;
+      color: rgba(255,255,255,.85); padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      transition: color var(--tr);
+    }
+    .mobile-drawer a:last-child { border-bottom: none; }
+    .mobile-drawer a:hover { color: var(--electric); }
+    .mobile-drawer .drawer-cta {
+      margin-top: 16px; background: var(--electric);
+      color: var(--cobalt-dark); text-align: center;
+      padding: 14px; border-radius: var(--radius); border: none;
+      font-size: 1rem;
+    }
+
     @media (max-width: 900px) {
-      .nav-links, .nav-phone { display: none; }
+      .nav-links, .nav-phone, .nav-cta-btn { display: none; }
+      .nav-hamburger, .nav-phone-pill { display: flex; }
     }
 
     /* ════════════════════════════════════════════════
@@ -661,7 +716,10 @@
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Wollongong Web Design Co">
       <div class="nav-logo-icon" aria-hidden="true">W</div>
-      Wollongong <span>Web Design Co</span>
+      <div class="nav-logo-text">
+        <span class="nav-logo-line1">Wollongong</span>
+        <span class="nav-logo-line2">Web Design Co</span>
+      </div>
     </a>
     <nav aria-label="Main navigation">
       <ul class="nav-links">
@@ -672,12 +730,27 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
-    <div style="display:flex;align-items:center;gap:16px;">
+    <div style="display:flex;align-items:center;gap:12px;">
       <a href="tel:0240034436" class="nav-phone">(02) 4003 4436</a>
+      <a href="tel:0240034436" class="nav-phone-pill" aria-label="Call us">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        (02) 4003 4436
+      </a>
       <a href="#contact" class="btn nav-cta-btn" style="padding:10px 22px;font-size:.88rem;">Get a Quote</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
+<nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+  <a href="#services" class="drawer-link">Services</a>
+  <a href="#why-us" class="drawer-link">Why Us</a>
+  <a href="#process" class="drawer-link">Process</a>
+  <a href="#locations" class="drawer-link">Areas</a>
+  <a href="#faq" class="drawer-link">FAQ</a>
+  <a href="#contact" class="drawer-cta">Get a Free Quote →</a>
+</nav>
 
 
 <!-- ══════════════════════════════════════════════════
@@ -1349,6 +1422,20 @@
 
 <!-- JS -->
 <script>
+  /* Hamburger menu */
+  const burger = document.querySelector('.nav-hamburger');
+  const drawer = document.getElementById('mobile-drawer');
+  burger.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    drawer.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', false);
+  }));
+
   /* Transparent nav → scrolled */
   const nav = document.getElementById('nav');
   const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
