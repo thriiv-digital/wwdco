@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-AU">
 <head>
 <meta charset="UTF-8" />
@@ -366,6 +366,33 @@
     .footer-grid { grid-template-columns: 1fr; }
     .cta-actions { flex-direction: column; align-items: center; }
   }
+  /* MEGA MENU */
+  .nav-has-mega { position: relative; }
+  .nav-has-mega:hover .nav-chevron, .nav-has-mega.open .nav-chevron { transform: rotate(180deg); }
+  .nav-chevron { font-size: .65rem; transition: transform .2s; display: inline-block; }
+  .nav-mega { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-6px); background: var(--white); border-radius: 16px; box-shadow: 0 16px 60px rgba(0,0,0,.16); border: 1px solid rgba(0,0,0,.07); padding: 28px 28px 24px; min-width: 680px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+  .nav-has-mega:hover .nav-mega, .nav-has-mega.open .nav-mega { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+  .mega-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
+  .mega-col-heading { font-family: var(--font-head); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 8px 8px; border-bottom: 1px solid rgba(0,0,0,.07); margin-bottom: 6px; }
+  .mega-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 10px; border-radius: 10px; transition: background var(--tr); text-decoration: none; color: inherit; }
+  .mega-item:hover { background: var(--off-white); }
+  .mega-item-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+  .mega-item-text strong { display: block; font-family: var(--font-head); font-size: .88rem; font-weight: 700; color: var(--cobalt-dark); line-height: 1.2; margin-bottom: 2px; }
+  .mega-item-text span { font-size: .78rem; color: var(--muted); line-height: 1.4; }
+  .mega-divider { border: none; border-top: 1px solid rgba(0,0,0,.06); margin: 10px 0 6px; }
+  .mega-locations-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 4px 6px; }
+  .mega-locations-label { font-family: var(--font-head); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-right: 6px; white-space: nowrap; }
+  .mega-loc-chip { display: inline-flex; align-items: center; font-family: var(--font-head); font-size: .78rem; font-weight: 600; color: var(--ocean); background: rgba(13,90,158,.07); padding: 4px 12px; border-radius: 100px; border: 1px solid rgba(13,90,158,.15); transition: background var(--tr), color var(--tr); }
+  .mega-loc-chip:hover { background: var(--ocean); color: var(--white); }
+  .drawer-section-toggle { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; color: rgba(255,255,255,.85); padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.07); cursor: pointer; background: none; border-top: none; border-left: none; border-right: none; width: 100%; text-align: left; }
+  .drawer-section-toggle .chev { font-size: .7rem; transition: transform .2s; }
+  .drawer-section-toggle.open .chev { transform: rotate(180deg); }
+  .drawer-sub { display: none; flex-direction: column; padding: 6px 0 6px 12px; gap: 2px; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .drawer-sub.open { display: flex; }
+  .drawer-sub a { font-size: .9rem; color: rgba(255,255,255,.65); padding: 9px 8px; border-radius: 6px; transition: color var(--tr), background var(--tr); display: flex; align-items: center; gap: 8px; }
+  .drawer-sub a:hover { color: var(--electric); background: rgba(255,255,255,.04); }
+  .drawer-link { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; color: rgba(255,255,255,.85); padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.07); transition: color var(--tr); display: block; }
+  .drawer-link:hover { color: var(--electric); }
 </style>
 </head>
 <body>
@@ -380,12 +407,35 @@
         <span class="nav-logo-line2">Web Design Co</span>
       </div>
     </a>
-    <nav aria-label="Main navigation">
+<nav aria-label="Main navigation">
       <ul class="nav-links">
-        <li><a href="/#services">Services</a></li>
+        <li class="nav-has-mega" id="mega-services">
+          <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">&#9662;</span></a>
+          <div class="nav-mega" role="region" aria-label="Services menu">
+            <div class="mega-inner">
+              <div>
+                <div class="mega-col-heading">Services</div>
+                <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites built to rank &amp; convert</span></span></a>
+                <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#128722;</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce stores</span></span></a>
+                <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Organic rankings &amp; search traffic</span></span></a>
+              </div>
+              <div>
+                <div class="mega-col-heading">&nbsp;</div>
+                <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Map pack &amp; Google Business Profile</span></span></a>
+                <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Leads from day one, not month six</span></span></a>
+                <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">&#128295;</span><span class="mega-item-text"><strong>Maintenance</strong><span>Care plans from $149/month</span></span></a>
+              </div>
+            </div>
+            <hr class="mega-divider" />
+            <div class="mega-locations-row">
+              <span class="mega-locations-label">Areas we serve:</span>
+              <a href="/" class="mega-loc-chip">Wollongong</a>
+              <a href="/web-design-shellharbour/" class="mega-loc-chip">Shellharbour</a>
+            </div>
+          </div>
+        </li>
         <li><a href="/#why-us">Why Us</a></li>
         <li><a href="/#process">Process</a></li>
-        <li><a href="/#locations">Areas</a></li>
         <li><a href="/#faq">FAQ</a></li>
       </ul>
     </nav>
@@ -403,12 +453,24 @@
   </div>
 </header>
 <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
-  <a href="/#services">Services</a>
-  <a href="/#why-us">Why Us</a>
-  <a href="/#process">Process</a>
-  <a href="/#locations">Areas</a>
-  <a href="/#faq">FAQ</a>
-  <a href="#contact" class="drawer-cta">Get a Free Quote →</a>
+  <button class="drawer-section-toggle" data-target="drawer-services" aria-expanded="false">Services <span class="chev">&#9662;</span></button>
+  <div class="drawer-sub" id="drawer-services">
+    <a href="/web-design-wollongong/">&#127760; Web Design</a>
+    <a href="/ecommerce-web-design-wollongong/">&#128722; eCommerce</a>
+    <a href="/seo-wollongong/">&#128200; SEO Wollongong</a>
+    <a href="/local-seo-wollongong/">&#128205; Local SEO</a>
+    <a href="/google-ads-wollongong/">&#127919; Google Ads</a>
+    <a href="/website-maintenance-wollongong/">&#128295; Maintenance</a>
+  </div>
+  <a href="/#why-us" class="drawer-link">Why Us</a>
+  <a href="/#process" class="drawer-link">Process</a>
+  <a href="/#faq" class="drawer-link">FAQ</a>
+  <button class="drawer-section-toggle" data-target="drawer-areas" aria-expanded="false">Service Areas <span class="chev">&#9662;</span></button>
+  <div class="drawer-sub" id="drawer-areas">
+    <a href="/">&#128205; Wollongong</a>
+    <a href="/web-design-shellharbour/">&#128205; Shellharbour</a>
+  </div>
+  <a href="#contact" class="drawer-cta">Get a Free Quote &#8594;</a>
 </nav>
 
 <main>
@@ -1281,7 +1343,31 @@
 
 <!-- JS -->
 <script>
-  /* Hamburger */
+  /* Hamburger */  /* Mega menu */
+  const megaTriggers = document.querySelectorAll('.nav-has-mega');
+  megaTriggers.forEach(li => {
+    const trigger = li.querySelector('.nav-mega-trigger');
+    trigger.addEventListener('click', e => {
+      const isOpen = li.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', isOpen);
+      e.preventDefault();
+    });
+  });
+  document.addEventListener('click', e => {
+    megaTriggers.forEach(li => {
+      if (!li.contains(e.target)) { li.classList.remove('open'); li.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', false); }
+    });
+  });
+  /* Drawer accordion */
+  document.querySelectorAll('.drawer-section-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.dataset.target);
+      const open = target.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+  
   const burger = document.querySelector('.nav-hamburger');
   const drawer = document.getElementById('mobile-drawer');
   burger.addEventListener('click', () => {
