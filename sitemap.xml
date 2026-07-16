@@ -100,4 +100,16 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Legal -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/terms/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>
