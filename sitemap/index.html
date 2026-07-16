@@ -26,13 +26,13 @@ a{color:inherit;text-decoration:none}
 .nav-cta:hover{filter:brightness(1.08)}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:4px}
 .burger span{display:block;width:24px;height:2px;background:var(--cobalt-dark);margin:5px 0}
-.nav-has-mega{position:static;display:flex;align-items:center}
+.nav-links li{display:flex;align-items:center}.nav-has-mega{position:relative}
 .nav-mega-trigger{cursor:pointer;display:flex;align-items:center;gap:.3rem}
 .nav-chevron{font-size:.7rem;transition:transform .2s}
 .nav-has-mega.open .nav-chevron{transform:rotate(180deg)}
-.nav-mega{display:none;position:absolute;top:72px;left:var(--pad);right:var(--pad);background:var(--white);border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.14);padding:2rem;border:1px solid rgba(0,0,0,.07)}
+.nav-mega{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-radius:0 0 20px 20px;box-shadow:0 16px 48px rgba(0,0,0,.16);border-bottom:1px solid rgba(0,0,0,.07)}
 .nav-has-mega:hover .nav-mega,.nav-has-mega.open .nav-mega{display:block}
-.mega-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5rem}
+.mega-body{max-width:var(--max);margin:0 auto;padding:2rem var(--pad)}.mega-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5rem}
 .mega-inner>div{min-width:0}
 .mega-col-heading{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--cobalt-dark);margin-bottom:.3rem;padding-bottom:.5rem;border-bottom:1px solid #eef1f5}
 .mega-item{display:flex;align-items:flex-start;gap:.65rem;padding:.55rem .6rem;border-radius:8px;transition:background .15s;color:var(--body-text)}
@@ -103,8 +103,8 @@ a{color:inherit;text-decoration:none}
 /* nav logo icon */
 .nav-logo{display:flex;align-items:center;gap:10px}
 .nav-logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--ocean),var(--cobalt-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:800;font-size:1.1rem;flex-shrink:0}
-.nav-logo-text{display:flex;flex-direction:column;line-height:1.15}
-.nav-logo-line1,.nav-logo-line2{display:block;white-space:nowrap;font-size:1rem}
+.nav-logo-text{display:flex;flex-direction:row;align-items:center;gap:.4em}
+.nav-logo-line1,.nav-logo-line2{white-space:nowrap;font-size:1.05rem}
 .nav-logo-line2{color:var(--electric)}
 .nav.scrolled .nav-logo-line2{color:var(--ocean)}
 /* nav phone pill */
@@ -114,8 +114,8 @@ a{color:inherit;text-decoration:none}
 .mega-col-blurb{font-size:.8rem;color:var(--muted);margin-bottom:.9rem;line-height:1.45}
 /* footer contact block */
 .footer-contact-block{margin-top:1rem}
-.footer-contact-row{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:.5rem;display:grid;grid-template-columns:1.4rem 1fr;gap:.5rem;align-items:start;line-height:1.5}
-.fcr-icon{text-align:center;flex-shrink:0;opacity:.7}.footer-contact-row a{color:rgba(255,255,255,.55);transition:color .2s;text-decoration:none}
+.footer-contact-row{font-size:.87rem;color:rgba(255,255,255,.55);margin-bottom:.5rem;display:grid;grid-template-columns:1.4rem 1fr;gap:.5rem;align-items:start;line-height:1.5}
+.fcr-icon{text-align:center;flex-shrink:0;opacity:.7}.footer-contact-row a{color:rgba(255,255,255,.55);font-size:.87rem;transition:color .2s;text-decoration:none;display:inline}
 .footer-contact-row a:hover{color:var(--electric)}
 .footer-copy-block{display:flex;flex-direction:row;align-items:center}
 .footer-abn-bottom{color:rgba(255,255,255,.3);font-size:.78rem}
@@ -131,8 +131,7 @@ a{color:inherit;text-decoration:none}
   <ul class="nav-links">
     <li class="nav-has-mega">
       <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">&#9662;</span></a>
-      <div class="nav-mega" role="region" aria-label="Services menu">
-        <div class="mega-inner">
+      <div class="nav-mega" role="region" aria-label="Services menu"><div class="mega-body"><div class="mega-inner">
           <div>
             <div class="mega-col-heading">Web &amp; eCommerce</div><div class="mega-col-blurb">Build a site that works as hard as you do &mdash; fast, local, built to convert.</div>
             <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites that convert</span></span></a>
@@ -152,23 +151,21 @@ a{color:inherit;text-decoration:none}
             <a href="/business-automation-wollongong/#missed-call" class="mega-item"><span class="mega-item-icon">&#128241;</span><span class="mega-item-text"><strong>Missed Call Text Back</strong><span>Never lose a lead</span></span></a>
             <a href="/business-automation-wollongong/#reviews" class="mega-item"><span class="mega-item-icon">&#11088;</span><span class="mega-item-text"><strong>Review Automation</strong><span>More 5-star reviews</span></span></a>
           </div>
-        </div>
-        <hr class="mega-divider" />
+        </div><hr class="mega-divider" />
         <div class="mega-locations-row">
           <span class="mega-locations-label">Areas we serve:</span>
           <a href="/" class="mega-loc-chip">Wollongong</a>
           <a href="/web-design-shellharbour/" class="mega-loc-chip">Shellharbour</a>
           <a href="/web-design-kiama/" class="mega-loc-chip">Kiama</a>
           <a href="/web-design-southern-highlands/" class="mega-loc-chip">Southern Highlands</a>
-        </div>
-      </div>
+        </div></div></div>
     </li>
     <li><a href="/about/">About</a></li>
     <li><a href="/about/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
-  </ul>
+  </ul>  <a href="tel:0240034436" class="nav-phone-pill">
   <a href="/#contact" class="nav-cta">Get a Free Quote</a>
-  <a href="tel:0240034436" class="nav-phone-pill">&#128222; (02) 4003 4436</a>
+&#128222; (02) 4003 4436</a>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -479,7 +476,7 @@ a{color:inherit;text-decoration:none}
         <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;color:#fff">Wollongong Web Design Co</div>
         <p>Web design, SEO and business automation for Wollongong and Illawarra businesses. We build sites that rank, convert and grow.</p>
         <div class="footer-contact-block">
-          <div class="footer-contact-row"><span class="fcr-icon">&#128205;</span><span>1 Innovation Way, North Wollongong NSW 2500</span></div>
+          <div class="footer-contact-row"><span class="fcr-icon">&#128205;</span><span><a href="https://maps.google.com/?q=Wollongong+Web+Design+Co,+1+Innovation+Way,+North+Wollongong+NSW+2500" target="_blank" rel="noopener">1 Innovation Way, North Wollongong NSW 2500</a></span></div>
           <div class="footer-contact-row"><span class="fcr-icon">&#128222;</span><span><a href="tel:0240034436">(02) 4003 4436</a></span></div>
           <div class="footer-contact-row"><span class="fcr-icon">&#9993;</span><span><a href="#" class="email-obf" data-u="hello" data-d="wollongongwebdesignco.com.au" aria-label="Email us">[click to email]</a></span></div>
         </div>
@@ -516,9 +513,7 @@ a{color:inherit;text-decoration:none}
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy-block">
-        <div class="footer-copy">&copy; 2025 Wollongong Web Design Co. All rights reserved. &nbsp;&middot;&nbsp; ABN 36 537 236 855</div>
-      </div>
+      <div class="footer-copy">&copy; 2026 Wollongong Web Design Co. All rights reserved. &nbsp;&middot;&nbsp; ABN 36 537 236 855</div>
       <div class="footer-links-row">
         <a href="/privacy/">Privacy Policy</a>
         <a href="/terms/">Terms</a>
@@ -537,5 +532,6 @@ const burger=document.getElementById('burger'),drawer=document.getElementById('m
 burger.addEventListener('click',()=>{const o=drawer.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
 document.querySelectorAll('.drawer-section-toggle').forEach(btn=>{btn.addEventListener('click',()=>{const t=document.getElementById(btn.dataset.target);const o=t.classList.toggle('open');btn.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);});});
 </script>
+<script>document.querySelectorAll(".email-obf").forEach(function(a){var u=a.getAttribute("data-u"),d=a.getAttribute("data-d"),e=u+"@"+d;a.href="mailto:"+e;a.textContent=e;a.removeAttribute("aria-label");});</script>
 </body>
 </html>
