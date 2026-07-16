@@ -412,13 +412,13 @@
   .nav-mega-trigger{cursor:pointer;display:flex;align-items:center;gap:.3rem}
   .nav-chevron{font-size:.7rem;transition:transform .2s;display:inline-block}
   .nav-has-mega.open .nav-chevron{transform:rotate(180deg)}
-  .nav-mega{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-radius:0 0 20px 20px;box-shadow:0 16px 48px rgba(0,0,0,.16);border-bottom:1px solid rgba(0,0,0,.07);border-left:1px solid rgba(0,0,0,.04);border-right:1px solid rgba(0,0,0,.04)}
-  .nav-has-mega:hover .nav-mega,.nav-has-mega.open .nav-mega{display:block;opacity:1;visibility:visible;pointer-events:auto}
+  .nav-mega{display:none;position:fixed;top:72px;left:0;right:0;transform:none!important;background:var(--white);border-radius:0 0 20px 20px;box-shadow:0 16px 48px rgba(0,0,0,.16);border-bottom:1px solid rgba(0,0,0,.07);border-left:1px solid rgba(0,0,0,.04);border-right:1px solid rgba(0,0,0,.04)}
+  .nav-has-mega:hover .nav-mega,.nav-has-mega.open .nav-mega{display:block;opacity:1;visibility:visible;pointer-events:auto;transform:none!important}
   .mega-body{max-width:var(--max);margin:0 auto;padding:2rem var(--pad)}.mega-inner{display:grid!important;grid-template-columns:1fr 1fr 1fr!important;gap:2.5rem!important}
   .mega-inner>div{min-width:0}
   .mega-col-heading{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--cobalt-dark);margin-bottom:.3rem;padding-bottom:.5rem;border-bottom:1px solid #eef1f5}
   .mega-item{display:flex;align-items:flex-start;gap:.65rem;padding:.55rem .6rem;border-radius:8px;transition:background .15s;color:var(--body-text);text-decoration:none}
-  .mega-item:hover{background:var(--off-white);opacity:1}
+  .mega-item:hover{background:rgba(91,200,245,.08);opacity:1}.mega-item:hover .mega-item-text strong{color:var(--electric)!important}
   .mega-item-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
   .mega-item-text{display:flex;flex-direction:column}
   .mega-item-text strong{font-size:.88rem;font-weight:600;color:var(--cobalt-dark);line-height:1.3;display:block;margin-bottom:0}
@@ -457,7 +457,7 @@
   .footer-links-row{display:flex;gap:1.5rem}
   .footer-links-row a{color:rgba(255,255,255,.35)!important;font-size:.82rem!important;margin-bottom:0!important}
   .footer-links-row a:hover{color:var(--electric)!important}
-  @media(max-width:900px){.nav-links{display:none!important}.burger{display:block!important}.nav-phone-pill{display:none!important}.nav-logo-icon{display:none!important}.nav-cta{display:none!important}}
+  .nav-right{display:flex;align-items:center;gap:.75rem}@media(max-width:900px){.nav-links{display:none!important}.burger{display:block!important}.nav-phone-pill{display:none!important}.nav-logo-icon{display:none!important}.nav-cta{display:none!important}.nav-right{gap:.5rem}}
   
   /* nav-logo icon */
   .nav-logo{display:flex!important;align-items:center;gap:10px}
@@ -521,8 +521,7 @@
     <li><a href="/about/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
   </ul>
-  <a href="tel:0240034436" class="nav-phone-pill">&#128222; (02) 4003 4436</a>
-  <a href="/#contact" class="nav-cta">Get a Free Quote</a>
+  <div class="nav-right"><a href="tel:0240034436" class="nav-phone-pill">&#128222; (02) 4003 4436</a><a href="/#contact" class="nav-cta">Get a Free Quote</a></div>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
