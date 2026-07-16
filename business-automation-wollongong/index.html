@@ -105,7 +105,7 @@ img { max-width: 100%; display: block; }
 .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
 .nav-links a { font-size: .92rem; font-weight: 500; color: var(--white); transition: opacity .2s; }
 .nav.scrolled .nav-links a { color: var(--body-text); }
-.nav-links a:hover { opacity: .75; }
+.nav-links a:hover { color: var(--electric) !important; opacity: 1; }
 .nav-cta {
   background: var(--electric); color: var(--cobalt-dark) !important;
   padding: .5rem 1.2rem; border-radius: 8px; font-weight: 700 !important;
@@ -117,35 +117,31 @@ img { max-width: 100%; display: block; }
 .nav.scrolled .burger span { background: var(--cobalt-dark); }
 
 /* MEGA MENU */
-.nav-has-mega { position: relative; }
-.nav-mega-trigger { cursor: pointer; display: flex; align-items: center; gap: .3rem; }
-.nav-chevron { font-size: .7rem; transition: transform .2s; }
-.nav-has-mega.open .nav-chevron { transform: rotate(180deg); }
-.nav-mega {
-  display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%);
-  background: var(--white); border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,.14);
-  padding: 1.5rem; min-width: 680px; border: 1px solid rgba(0,0,0,.07);
-}
-.nav-has-mega:hover .nav-mega,
-.nav-has-mega.open .nav-mega { display: block; }
-.mega-inner { display: flex; gap: 1rem; }
-.mega-inner > div { flex: 1; min-width: 0; }
-.mega-col-heading { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: .75rem; padding-bottom: .5rem; border-bottom: 1px solid #eef1f5; }
-.mega-item { display: flex; align-items: flex-start; gap: .65rem; padding: .55rem .6rem; border-radius: 8px; transition: background .15s; color: var(--body-text); }
-.mega-item:hover { background: var(--off-white); opacity: 1; }
-.mega-item-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
-.mega-item-text { display: flex; flex-direction: column; }
-.mega-item-text strong { font-size: .88rem; font-weight: 600; color: var(--cobalt-dark); line-height: 1.3; }
-.mega-item-text span { font-size: .78rem; color: var(--muted); margin-top: 1px; line-height: 1.4; }
-.mega-divider { border: none; border-top: 1px solid #eef1f5; margin: 1rem 0 .85rem; }
-.mega-locations-row { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
-.mega-locations-label { font-size: .78rem; color: var(--muted); font-weight: 500; }
-.mega-loc-chip {
-  font-size: .78rem; font-weight: 600; padding: .25rem .75rem; border-radius: 20px;
-  background: var(--off-white); color: var(--body-text); transition: background .15s; opacity: 1 !important;
-}
-.mega-loc-chip:hover { background: #e2e8f0; }
-.mega-loc-chip.active { background: var(--off-white); color: var(--body-text); }
+.nav-has-mega{position:relative}.nav-links li{display:flex;align-items:center}
+.nav-mega-trigger{cursor:pointer;display:flex;align-items:center;gap:.3rem}
+.nav-chevron{font-size:.7rem;transition:transform .2s;display:inline-block}
+.nav-has-mega.open .nav-chevron{transform:rotate(180deg)}
+.nav-mega{display:none;position:fixed;top:72px;left:50%;transform:translateX(-50%)!important;width:1000px;max-width:calc(100vw - 3rem);background:var(--white);border-radius:0 0 20px 20px;box-shadow:0 16px 48px rgba(0,0,0,.16);border:1px solid rgba(0,0,0,.07)}
+.nav-has-mega:hover .nav-mega,.nav-has-mega.open .nav-mega{display:block;opacity:1;visibility:visible;pointer-events:auto}
+.mega-body{padding:2rem 2rem}
+.mega-inner{display:grid!important;grid-template-columns:1fr 1fr 1fr!important;gap:2.5rem!important}
+.mega-inner>div{min-width:0}
+.mega-col-heading{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--cobalt-dark);margin-bottom:.3rem;padding-bottom:.5rem;border-bottom:1px solid #eef1f5}
+.mega-col-blurb{font-size:.8rem;color:var(--muted);margin-bottom:.9rem;line-height:1.45}
+.mega-item{display:flex;align-items:flex-start;gap:.65rem;padding:.55rem .6rem;border-radius:8px;transition:background .15s;color:var(--body-text);text-decoration:none}
+.mega-item:hover{background:rgba(91,200,245,.08);opacity:1}
+.mega-item:hover .mega-item-text strong{color:var(--electric)!important}
+.mega-item-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+.mega-item-text{display:flex;flex-direction:column}
+.mega-item-text strong{font-size:.88rem;font-weight:600;color:var(--cobalt-dark);line-height:1.3;display:block;margin-bottom:0}
+.mega-item-text span{font-size:.78rem;color:var(--muted);margin-top:1px;line-height:1.4}
+.mega-divider{border:none;border-top:1px solid #eef1f5;margin:1rem 0 .85rem}
+.mega-locations-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;padding:0}
+.mega-locations-label{font-size:.78rem;color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0}
+.mega-loc-chip{font-size:.78rem;font-weight:600;padding:.25rem .75rem;border-radius:20px;background:transparent;color:var(--electric)!important;border:1.5px solid var(--electric);transition:background .15s,color .15s,border-color .15s;opacity:1!important;display:inline-flex}
+.mega-loc-chip:hover{background:var(--cobalt-dark);color:var(--white)!important;border-color:var(--cobalt-dark)}
+.mega-loc-chip.active{background:var(--cobalt-dark);color:var(--white)!important;border-color:var(--cobalt-dark)}
+.nav-right{display:flex;align-items:center;gap:.75rem}
 
 /* MOBILE DRAWER */
 .mobile-drawer {
@@ -334,7 +330,7 @@ footer ul li a:hover { color: var(--white); }
   .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .form-row { grid-template-columns: 1fr; }
-  .nav-mega { min-width: calc(100vw - 2.5rem); left: 0; transform: none; }
+  .nav-right { display: none; } .nav-logo-icon { display: none; }
 }
 @media (max-width: 600px) {
   .footer-inner { grid-template-columns: 1fr; }
@@ -401,7 +397,6 @@ footer ul li a:hover { color: var(--white); }
             <a href="/web-design-southern-highlands/" class="mega-loc-chip">Southern Highlands</a>
           </div></div></div>
       </li>
-      <li><a href="/about/">About</a></li>
     <li><a href="/about/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
     </ul>
@@ -928,20 +923,15 @@ const nav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), {passive: true});
 
 // Mega menu
-const megaTriggers = document.querySelectorAll('.nav-has-mega');
-megaTriggers.forEach(li => {
-  const trigger = li.querySelector('.nav-mega-trigger');
-  trigger.addEventListener('click', e => {
-    const isOpen = li.classList.toggle('open');
-    trigger.setAttribute('aria-expanded', isOpen);
-    e.preventDefault();
-  });
+const megaTriggers=document.querySelectorAll('.nav-has-mega');
+megaTriggers.forEach(li=>{const t=li.querySelector('.nav-mega-trigger'),m=li.querySelector('.nav-mega');let tm;
+  const openM=()=>{clearTimeout(tm);li.classList.add('open');t.setAttribute('aria-expanded','true');};
+  const closeM=()=>{tm=setTimeout(()=>{li.classList.remove('open');t.setAttribute('aria-expanded','false');},150);};
+  li.addEventListener('mouseenter',openM);li.addEventListener('mouseleave',closeM);
+  if(m){m.addEventListener('mouseenter',openM);m.addEventListener('mouseleave',closeM);}
+  t.addEventListener('click',e=>{li.classList.contains('open')?closeM():openM();e.preventDefault();});
 });
-document.addEventListener('click', e => {
-  megaTriggers.forEach(li => {
-    if (!li.contains(e.target)) { li.classList.remove('open'); li.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', false); }
-  });
-});
+document.addEventListener('click',e=>{megaTriggers.forEach(li=>{if(!li.contains(e.target)){li.classList.remove('open');const t=li.querySelector('.nav-mega-trigger');if(t)t.setAttribute('aria-expanded','false');}});});
 
 // Mobile drawer
 const burger = document.getElementById('burger');
