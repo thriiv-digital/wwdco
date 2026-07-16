@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Web & eCommerce -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/web-design-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/ecommerce-web-design-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/website-maintenance-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Marketing -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/seo-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/local-seo-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/google-ads-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/google-business-profile-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Automation -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/business-automation-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Location pages -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/web-design-shellharbour/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/web-design-kiama/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/web-design-southern-highlands/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Industry pages -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/tradie-websites-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/restaurant-websites-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/health-clinic-websites-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/professional-services-websites-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sitemap page -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/sitemap/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
