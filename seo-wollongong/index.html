@@ -394,80 +394,145 @@
   .drawer-sub a:hover { color: var(--electric); background: rgba(255,255,255,.04); }
   .drawer-link { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; color: rgba(255,255,255,.85); padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.07); transition: color var(--tr); display: block; }
   .drawer-link:hover { color: var(--electric); }
+  /* ===== NAV / FOOTER STANDARD ===== */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);height:72px;background:transparent;transition:background .3s,box-shadow .3s}
+  .nav.scrolled{background:var(--white);box-shadow:0 2px 16px rgba(0,0,0,.08)}
+  .nav-logo{font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;color:var(--white);transition:color .3s;white-space:nowrap;text-decoration:none}
+  .nav.scrolled .nav-logo{color:var(--cobalt-dark)}
+  .nav-links{display:flex!important;align-items:center;gap:2rem;list-style:none}
+  .nav-links a{font-size:.92rem;font-weight:500;color:var(--white);transition:opacity .2s}
+  .nav.scrolled .nav-links a{color:var(--body-text)}
+  .nav-links a:hover{opacity:.75;color:inherit!important}
+  .nav-cta{background:var(--electric);color:var(--cobalt-dark)!important;padding:.5rem 1.2rem;border-radius:8px;font-weight:700!important;transition:filter .2s!important;opacity:1!important}
+  .nav-cta:hover{filter:brightness(1.08)}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:4px}
+  .burger span{display:block;width:24px;height:2px;background:var(--white);margin:5px 0;transition:background .3s}
+  .nav.scrolled .burger span{background:var(--cobalt-dark)}
+  .nav-has-mega{position:relative}
+  .nav-mega-trigger{cursor:pointer;display:flex;align-items:center;gap:.3rem}
+  .nav-chevron{font-size:.7rem;transition:transform .2s;display:inline-block}
+  .nav-has-mega.open .nav-chevron{transform:rotate(180deg)}
+  .nav-mega{display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);background:var(--white);border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.14);padding:1.5rem;min-width:900px;border:1px solid rgba(0,0,0,.07)}
+  .nav-has-mega:hover .nav-mega,.nav-has-mega.open .nav-mega{display:block;opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%)}
+  .mega-inner{display:flex!important;gap:1rem;grid-template-columns:none!important}
+  .mega-inner>div{flex:1;min-width:0}
+  .mega-col-heading{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.75rem;padding-bottom:.5rem;border-bottom:1px solid #eef1f5;padding-left:0;padding-right:0}
+  .mega-item{display:flex;align-items:flex-start;gap:.65rem;padding:.55rem .6rem;border-radius:8px;transition:background .15s;color:var(--body-text);text-decoration:none}
+  .mega-item:hover{background:var(--off-white);opacity:1}
+  .mega-item-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+  .mega-item-text{display:flex;flex-direction:column}
+  .mega-item-text strong{font-size:.88rem;font-weight:600;color:var(--cobalt-dark);line-height:1.3;display:block;margin-bottom:0}
+  .mega-item-text span{font-size:.78rem;color:var(--muted);margin-top:1px;line-height:1.4}
+  .mega-divider{border:none;border-top:1px solid #eef1f5;margin:1rem 0 .85rem}
+  .mega-locations-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;padding:0}
+  .mega-locations-label{font-size:.78rem;color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0}
+  .mega-loc-chip{font-size:.78rem;font-weight:600;padding:.25rem .75rem;border-radius:20px;background:var(--off-white);color:var(--body-text);transition:background .15s;opacity:1!important;border:none;display:inline-flex}
+  .mega-loc-chip:hover{background:#e2e8f0;color:var(--body-text)}
+  .mega-loc-chip.active{background:var(--cobalt-dark);color:var(--white)}
+  .mobile-drawer{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:var(--white)!important;z-index:99;overflow-y:auto;padding:1.5rem 1.25rem 2rem;flex-direction:column;gap:.25rem;box-shadow:none}
+  .mobile-drawer.open{display:flex!important}
+  .mobile-drawer a{font-size:.93rem;color:var(--body-text)!important;padding:.5rem 0;border-bottom:1px solid #f4f7fb;font-weight:400;font-family:'Inter',sans-serif;transition:color .15s}
+  .mobile-drawer a:last-child{border-bottom:none}
+  .mobile-drawer a:hover{color:var(--ocean)!important;background:none}
+  .drawer-link{font-size:1rem!important;font-weight:500!important;color:var(--body-text)!important;padding:.75rem 0!important;border-bottom:1px solid #eef1f5!important;display:block}
+  .drawer-section-toggle{width:100%;text-align:left;background:none;border:none;border-bottom:1px solid #eef1f5;font-size:1rem;font-weight:600;color:var(--body-text);padding:.75rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif}
+  .drawer-section-toggle .chev{font-size:.75rem;transition:transform .2s}
+  .drawer-section-toggle.open .chev{transform:rotate(180deg)}
+  .drawer-sub{display:none;flex-direction:column;padding:.5rem 0 .5rem 1rem;gap:.1rem;border-bottom:1px solid #eef1f5}
+  .drawer-sub.open{display:flex}
+  .drawer-sub a{font-size:.93rem!important;color:var(--body-text)!important;padding:.5rem 0!important;border-bottom:1px solid #f4f7fb!important;font-weight:400!important}
+  .drawer-cta{margin-top:1rem;background:var(--electric)!important;color:var(--cobalt-dark)!important;font-weight:700!important;text-align:center;padding:.9rem;border-radius:10px;font-size:1rem;display:block!important;border-bottom:none!important}
+  .footer{background:#08172f!important;padding:4rem var(--pad) 2rem!important}
+  .footer-inner{max-width:var(--max);margin:0 auto}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+  .footer-brand p{color:rgba(255,255,255,.5)!important;font-size:.88rem;margin-top:.75rem;line-height:1.6}
+  .footer-abn{font-size:.8rem;color:rgba(255,255,255,.35);margin-top:.5rem}
+  .footer-col h4{font-family:'Sora',sans-serif!important;font-weight:700!important;color:var(--white)!important;font-size:.9rem!important;margin-bottom:1rem!important;text-transform:none!important;letter-spacing:0!important}
+  .footer-col a,.footer-col ul a{display:block!important;color:rgba(255,255,255,.55)!important;font-size:.87rem!important;margin-bottom:.5rem!important;transition:color .2s!important;text-decoration:none!important;padding:0!important;border:none!important}
+  .footer-col a:hover,.footer-col ul a:hover{color:var(--electric)!important;background:none!important}
+  .footer-col-sub{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.3);margin:1rem 0 .5rem}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.08)!important;padding-top:1.5rem!important;display:flex!important;justify-content:space-between!important;align-items:center!important;flex-wrap:wrap!important;gap:1rem!important;background:none!important}
+  .footer-bottom p{color:rgba(255,255,255,.35)!important;font-size:.82rem!important}
+  .footer-copy{color:rgba(255,255,255,.35);font-size:.82rem}
+  .footer-links-row{display:flex;gap:1.5rem}
+  .footer-links-row a{color:rgba(255,255,255,.35)!important;font-size:.82rem!important;margin-bottom:0!important}
+  .footer-links-row a:hover{color:var(--electric)!important}
+  @media(max-width:900px){.nav-links{display:none!important}.burger{display:block!important}}
+  @media(max-width:768px){.nav-links{display:none!important}.burger{display:block!important}.footer-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<header id="nav" role="banner">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="Wollongong Web Design Co — Home">
-      <div class="nav-logo-icon" aria-hidden="true">W</div>
-      <div class="nav-logo-text">
-        <span class="nav-logo-line1">Wollongong</span>
-        <span class="nav-logo-line2">Web Design Co</span>
-      </div>
-    </a>
-<nav aria-label="Main navigation">
-      <ul class="nav-links">
-        <li class="nav-has-mega" id="mega-services">
-          <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">&#9662;</span></a>
-          <div class="nav-mega" role="region" aria-label="Services menu">
-                      <div class="mega-inner">
-            <div>
-              <div class="mega-col-heading">Web &amp; eCommerce</div>
-              <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites built to rank &amp; convert</span></span></a>
-              <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#128722;</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce stores</span></span></a>
-              <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">&#128295;</span><span class="mega-item-text"><strong>Maintenance</strong><span>Updates, security &amp; support plans</span></span></a>
-            </div>
-            <div>
-              <div class="mega-col-heading">Marketing</div>
-              <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Rank higher, get found locally</span></span></a>
-              <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate Google Maps &amp; local search</span></span></a>
-              <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Leads from day one with paid search</span></span></a>
-            </div>
-            <div>
-              <div class="mega-col-heading">Automation</div>
-              <a href="/business-automation-wollongong/" class="mega-item"><span class="mega-item-icon">&#129302;</span><span class="mega-item-text"><strong>Business Automation</strong><span>AI tools that work while you sleep</span></span></a>
-              <a href="/business-automation-wollongong/#missed-call" class="mega-item"><span class="mega-item-icon">&#128222;</span><span class="mega-item-text"><strong>Missed Call Text Back</strong><span>Never lose a lead to voicemail</span></span></a>
-              <a href="/business-automation-wollongong/#reviews" class="mega-item"><span class="mega-item-icon">&#11088;</span><span class="mega-item-text"><strong>Review Automation</strong><span>Get more Google reviews on autopilot</span></span></a>
-            </div>
-          </div><hr class="mega-divider" />
-            <div class="mega-locations-row">
-              <span class="mega-locations-label">Areas we serve:</span>
-              <a href="/" class="mega-loc-chip">Wollongong</a>
-              <a href="/web-design-shellharbour/" class="mega-loc-chip">Shellharbour</a>
-              <a href="/web-design-kiama/" class="mega-loc-chip">Kiama</a>
-            <a href="/web-design-southern-highlands/" class="mega-loc-chip">Southern Highlands</a>
-            </div>
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo">Wollongong Web Design Co</a>
+  <ul class="nav-links">
+    <li class="nav-has-mega">
+      <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">&#9662;</span></a>
+      <div class="nav-mega" role="region" aria-label="Services menu">
+        <div class="mega-inner">
+          <div>
+            <div class="mega-col-heading">Web &amp; eCommerce</div>
+            <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites that convert</span></span></a>
+            <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#128722;</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce</span></span></a>
+            <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">&#128295;</span><span class="mega-item-text"><strong>Maintenance</strong><span>Updates, security &amp; support</span></span></a>
           </div>
-        </li>
-        <li><a href="/about/">About</a></li>
-    <li><a href="/#why-us">Why Us</a></li>
-        <li><a href="/#process">Process</a></li>
-        <li><a href="/#faq">FAQ</a></li>
-      </ul>
-    </nav>
-    <div style="display:flex;align-items:center;gap:12px;">
-      <a href="tel:0240034436" class="nav-phone">(02) 4003 4436</a>
-      <a href="tel:0240034436" class="nav-phone-pill" aria-label="Call us">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        (02) 4003 4436
-      </a>
-      <a href="#contact" class="btn nav-cta-btn" style="padding:10px 22px;font-size:.88rem;">Get a Quote</a>
-      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
+          <div>
+            <div class="mega-col-heading">Marketing</div>
+            <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Rank higher, get found</span></span></a>
+            <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate local search</span></span></a>
+            <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Pay-per-click campaigns</span></span></a>
+            <a href="/google-business-profile-wollongong/" class="mega-item"><span class="mega-item-icon">&#128338;</span><span class="mega-item-text"><strong>Google Business Profile</strong><span>Rank in the Maps 3-pack</span></span></a>
+          </div>
+          <div>
+            <div class="mega-col-heading">Automation</div>
+            <a href="/business-automation-wollongong/" class="mega-item"><span class="mega-item-icon">&#129302;</span><span class="mega-item-text"><strong>Business Automation</strong><span>AI tools that save hours</span></span></a>
+            <a href="/business-automation-wollongong/#missed-call" class="mega-item"><span class="mega-item-icon">&#128241;</span><span class="mega-item-text"><strong>Missed Call Text Back</strong><span>Never lose a lead</span></span></a>
+            <a href="/business-automation-wollongong/#reviews" class="mega-item"><span class="mega-item-icon">&#11088;</span><span class="mega-item-text"><strong>Review Automation</strong><span>More 5-star reviews</span></span></a>
+          </div>
+        </div>
+        <hr class="mega-divider" />
+        <div class="mega-locations-row">
+          <span class="mega-locations-label">Areas we serve:</span>
+          <a href="/" class="mega-loc-chip">Wollongong</a>
+          <a href="/web-design-shellharbour/" class="mega-loc-chip">Shellharbour</a>
+          <a href="/web-design-kiama/" class="mega-loc-chip">Kiama</a>
+          <a href="/web-design-southern-highlands/" class="mega-loc-chip">Southern Highlands</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Free Quote</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
 <nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
-  <a href="/#services">Services</a>
-  <a href="/#why-us">Why Us</a>
-  <a href="/#process">Process</a>
-  <a href="/#locations">Areas</a>
-  <a href="/#faq">FAQ</a>
-  <a href="#contact" class="drawer-cta">Get a Free SEO Audit →</a>
+  <button class="drawer-section-toggle" data-target="drawer-services" aria-expanded="false">Services <span class="chev">&#9662;</span></button>
+  <div class="drawer-sub" id="drawer-services">
+    <a href="/web-design-wollongong/">&#127760; Web Design</a>
+    <a href="/ecommerce-web-design-wollongong/">&#128722; eCommerce</a>
+    <a href="/seo-wollongong/">&#128200; SEO Wollongong</a>
+    <a href="/local-seo-wollongong/">&#128205; Local SEO</a>
+    <a href="/google-ads-wollongong/">&#127919; Google Ads</a>
+    <a href="/google-business-profile-wollongong/">&#128338; Google Business Profile</a>
+    <a href="/website-maintenance-wollongong/">&#128295; Maintenance</a>
+    <a href="/business-automation-wollongong/">&#129302; Business Automation</a>
+  </div>
+  <a href="/about/" class="drawer-link">About</a>
+  <a href="/blog/" class="drawer-link">Blog</a>
+  <button class="drawer-section-toggle" data-target="drawer-areas" aria-expanded="false">Service Areas <span class="chev">&#9662;</span></button>
+  <div class="drawer-sub" id="drawer-areas">
+    <a href="/">&#128205; Wollongong</a>
+    <a href="/web-design-shellharbour/">&#128205; Shellharbour</a>
+    <a href="/web-design-kiama/">&#128205; Kiama</a>
+    <a href="/web-design-southern-highlands/">&#128205; Southern Highlands</a>
+  </div>
+  <a href="#contact" class="drawer-cta">Get a Free Quote &#8594;</a>
 </nav>
 
 <main>
@@ -1136,50 +1201,53 @@
 
 
 <!-- FOOTER -->
-<footer id="footer" role="contentinfo">
-  <div class="container">
+<footer class="footer">
+  <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-logo-wrap">
-          <div class="nav-logo-icon" aria-hidden="true">W</div>
-          Wollongong <span>Web Design Co</span>
-        </div>
-        <p>Wollongong's specialist web design and digital marketing agency. Fast, beautiful, Google-ready websites and SEO for Illawarra businesses. 165+ websites delivered. 15 years local.</p>
+        <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:1.05rem;color:#fff">Wollongong Web Design Co</div>
+        <p>Web design, SEO and business automation for Wollongong and Illawarra businesses. We build sites that rank, convert and grow.</p>
+        <div class="footer-abn">ABN 36 537 236 855 &nbsp;&middot;&nbsp; 1 Innovation Way, North Wollongong NSW 2500</div>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
-        <ul>
-          <li><a href="/web-design-wollongong/">Web Design</a></li>
-          <li><a href="/seo-wollongong/">SEO Wollongong</a></li>
-          <li><a href="/local-seo-wollongong/">Local SEO</a></li>
-          <li><a href="/google-ads-wollongong/">Google Ads</a>
-        <a href="/google-business-profile-wollongong/">Google Business Profile</a></li>
-          <li><a href="/ecommerce-web-design-wollongong/">eCommerce</a></li>
-        </ul>
+        <a href="/web-design-wollongong/">Web Design</a>
+        <a href="/ecommerce-web-design-wollongong/">eCommerce</a>
+        <a href="/seo-wollongong/">SEO Wollongong</a>
+        <a href="/local-seo-wollongong/">Local SEO</a>
+        <a href="/google-ads-wollongong/">Google Ads</a>
+        <a href="/google-business-profile-wollongong/">Google Business Profile</a>
+        <a href="/website-maintenance-wollongong/">Maintenance</a>
+        <a href="/business-automation-wollongong/">Business Automation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <a href="/tradie-websites-wollongong/">Tradies</a>
+        <a href="/restaurant-websites-wollongong/">Restaurants &amp; Caf&eacute;s</a>
+        <a href="/health-clinic-websites-wollongong/">Health Clinics</a>
+        <a href="/professional-services-websites-wollongong/">Professional Services</a>
+        <div class="footer-col-sub">Areas</div>
+        <a href="/">Wollongong</a>
+        <a href="/web-design-shellharbour/">Shellharbour</a>
+        <a href="/web-design-kiama/">Kiama</a>
+        <a href="/web-design-southern-highlands/">Southern Highlands</a>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
-        <ul>
-          <li><a href="/about/">About</a></li>
-    <li><a href="/#why-us">Why Us</a></li>
-          <li><a href="/#process">Our Process</a></li>
-          <li><a href="/#locations">Service Areas</a></li>
-          <li><a href="/#faq">FAQ</a></li>
-          <li><a href="/#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
         <a href="/about/">About Us</a>
-        <div class="footer-contact-item"><span>📍</span><span>1 Innovation Way<br>North Wollongong NSW 2500</span></div>
-        <div class="footer-contact-item"><span>📞</span><a href="tel:0240034436">(02) 4003 4436</a></div>
-        <div class="footer-contact-item"><span>✉️</span><a href="mailto:hello@wollongongwebdesignco.com.au">hello@wollongongwebdesignco.com.au</a></div>
-        <div class="footer-contact-item"><span>🕐</span><span>Mon–Fri: 9am–5pm</span></div>
+        <a href="/blog/">Blog</a>
+        <a href="/sitemap/">Sitemap</a>
+        <a href="tel:0240034436">(02) 4003 4436</a>
+        <a href="mailto:hello@wollongongwebdesignco.com.au">hello@wollongongwebdesignco.com.au</a>
+        <a href="/#contact">Get a Free Quote</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Wollongong Web Design Co. All rights reserved. ABN 36 537 236 855</p>
-      <p><a href="/" style="color:rgba(255,255,255,.32);transition:color .2s;" onmouseover="this.style.color='#5bc8f5'" onmouseout="this.style.color='rgba(255,255,255,.32)'">← Back to Home</a></p>
+      <div class="footer-copy">&copy; 2025 Wollongong Web Design Co. All rights reserved.</div>
+      <div class="footer-links-row">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -1254,47 +1322,14 @@
 
 <!-- JS -->
 <script>  /* Mega menu */
-  const megaTriggers = document.querySelectorAll('.nav-has-mega');
-  megaTriggers.forEach(li => {
-    const trigger = li.querySelector('.nav-mega-trigger');
-    trigger.addEventListener('click', e => {
-      const isOpen = li.classList.toggle('open');
-      trigger.setAttribute('aria-expanded', isOpen);
-      e.preventDefault();
-    });
-  });
-  document.addEventListener('click', e => {
-    megaTriggers.forEach(li => {
-      if (!li.contains(e.target)) { li.classList.remove('open'); li.querySelector('.nav-mega-trigger').setAttribute('aria-expanded', false); }
-    });
-  });
-  /* Drawer accordion */
-  document.querySelectorAll('.drawer-section-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = document.getElementById(btn.dataset.target);
-      const open = target.classList.toggle('open');
-      btn.classList.toggle('open', open);
-      btn.setAttribute('aria-expanded', open);
-    });
-  });
-  
-  const burger = document.querySelector('.nav-hamburger');
-  const drawer = document.getElementById('mobile-drawer');
-  burger.addEventListener('click', () => {
-    const open = drawer.classList.toggle('open');
-    burger.classList.toggle('open', open);
-    burger.setAttribute('aria-expanded', open);
-  });
-  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    drawer.classList.remove('open');
-    burger.classList.remove('open');
-    burger.setAttribute('aria-expanded', false);
-  }));
-
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  const nav=document.getElementById('main-nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+  const megaTriggers=document.querySelectorAll('.nav-has-mega');
+  megaTriggers.forEach(li=>{const t=li.querySelector('.nav-mega-trigger');t.addEventListener('click',e=>{const o=li.classList.toggle('open');t.setAttribute('aria-expanded',o);e.preventDefault();});});
+  document.addEventListener('click',e=>{megaTriggers.forEach(li=>{if(!li.contains(e.target)){li.classList.remove('open');li.querySelector('.nav-mega-trigger').setAttribute('aria-expanded',false);}});});
+  const burger=document.getElementById('burger'),drawer=document.getElementById('mobile-drawer');
+  burger.addEventListener('click',()=>{const o=drawer.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+  document.querySelectorAll('.drawer-section-toggle').forEach(btn=>{btn.addEventListener('click',()=>{const t=document.getElementById(btn.dataset.target);const o=t.classList.toggle('open');btn.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);});});
 
   const revObs = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); }
