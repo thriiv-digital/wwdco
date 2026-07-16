@@ -26,7 +26,7 @@ a{color:inherit;text-decoration:none}
 .nav-cta:hover{filter:brightness(1.08)}
 .burger{display:none;background:none;border:none;cursor:pointer;padding:4px}
 .burger span{display:block;width:24px;height:2px;background:var(--cobalt-dark);margin:5px 0}
-.nav-has-mega{position:static}
+.nav-has-mega{position:static;display:flex;align-items:center}
 .nav-mega-trigger{cursor:pointer;display:flex;align-items:center;gap:.3rem}
 .nav-chevron{font-size:.7rem;transition:transform .2s}
 .nav-has-mega.open .nav-chevron{transform:rotate(180deg)}
@@ -91,7 +91,7 @@ a{color:inherit;text-decoration:none}
 .footer-col h4{font-family:'Sora',sans-serif;font-weight:700;color:var(--white);font-size:.9rem;margin-bottom:1rem}
 .footer-col a{display:block;color:rgba(255,255,255,.55);font-size:.87rem;margin-bottom:.5rem;transition:color .2s}
 .footer-col a:hover{color:var(--electric)}
-.footer-col-sub{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.3);margin:1rem 0 .5rem}
+.footer-col-sub{font-family:'Sora',sans-serif;font-weight:700;color:var(--white);font-size:.9rem;margin:1.5rem 0 .75rem;text-transform:none;letter-spacing:0}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-copy{color:rgba(255,255,255,.35);font-size:.82rem}
 .footer-links{display:flex;gap:1.5rem}
@@ -114,10 +114,10 @@ a{color:inherit;text-decoration:none}
 .mega-col-blurb{font-size:.8rem;color:var(--muted);margin-bottom:.9rem;line-height:1.45}
 /* footer contact block */
 .footer-contact-block{margin-top:1rem}
-.footer-contact-row{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:.45rem;display:flex;align-items:baseline;gap:.4rem;line-height:1.5}
-.footer-contact-row a{color:rgba(255,255,255,.55);transition:color .2s;text-decoration:none}
+.footer-contact-row{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:.5rem;display:grid;grid-template-columns:1.4rem 1fr;gap:.5rem;align-items:start;line-height:1.5}
+.fcr-icon{text-align:center;flex-shrink:0;opacity:.7}.footer-contact-row a{color:rgba(255,255,255,.55);transition:color .2s;text-decoration:none}
 .footer-contact-row a:hover{color:var(--electric)}
-.footer-copy-block{display:flex;flex-direction:column;gap:.25rem}
+.footer-copy-block{display:flex;flex-direction:row;align-items:center}
 .footer-abn-bottom{color:rgba(255,255,255,.3);font-size:.78rem}
 .footer-links-row{display:flex;gap:1.5rem}
 .footer-links-row a{color:rgba(255,255,255,.35);font-size:.82rem}
@@ -166,8 +166,8 @@ a{color:inherit;text-decoration:none}
     <li><a href="/about/">About</a></li>
     <li><a href="/about/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
-    <li><a href="/#contact" class="nav-cta">Get a Free Quote</a></li>
   </ul>
+  <a href="/#contact" class="nav-cta">Get a Free Quote</a>
   <a href="tel:0240034436" class="nav-phone-pill">&#128222; (02) 4003 4436</a>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -479,9 +479,9 @@ a{color:inherit;text-decoration:none}
         <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;color:#fff">Wollongong Web Design Co</div>
         <p>Web design, SEO and business automation for Wollongong and Illawarra businesses. We build sites that rank, convert and grow.</p>
         <div class="footer-contact-block">
-          <div class="footer-contact-row">&#128205; 1 Innovation Way, North Wollongong NSW 2500</div>
-          <div class="footer-contact-row">&#128222; <a href="tel:0240034436">(02) 4003 4436</a></div>
-          <div class="footer-contact-row">&#9993; <a href="mailto:hello@wollongongwebdesignco.com.au">hello@wollongongwebdesignco.com.au</a></div>
+          <div class="footer-contact-row"><span class="fcr-icon">&#128205;</span><span>1 Innovation Way, North Wollongong NSW 2500</span></div>
+          <div class="footer-contact-row"><span class="fcr-icon">&#128222;</span><span><a href="tel:0240034436">(02) 4003 4436</a></span></div>
+          <div class="footer-contact-row"><span class="fcr-icon">&#9993;</span><span><a href="#" class="email-obf" data-u="hello" data-d="wollongongwebdesignco.com.au" aria-label="Email us">[click to email]</a></span></div>
         </div>
       </div>
       <div class="footer-col">
@@ -517,8 +517,7 @@ a{color:inherit;text-decoration:none}
     </div>
     <div class="footer-bottom">
       <div class="footer-copy-block">
-        <div class="footer-copy">&copy; 2025 Wollongong Web Design Co. All rights reserved.</div>
-        <div class="footer-abn-bottom">ABN 36 537 236 855</div>
+        <div class="footer-copy">&copy; 2025 Wollongong Web Design Co. All rights reserved. &nbsp;&middot;&nbsp; ABN 36 537 236 855</div>
       </div>
       <div class="footer-links-row">
         <a href="/privacy/">Privacy Policy</a>
