@@ -321,7 +321,7 @@
   .nav-links{display:flex!important;align-items:center;gap:2rem;list-style:none}
   .nav-links a{font-size:.92rem;font-weight:500;color:var(--white);transition:opacity .2s}
   .nav.scrolled .nav-links a{color:var(--body-text)}
-  .nav-links a:hover{opacity:.75;color:inherit!important}
+  .nav-links a:hover{opacity:1;color:var(--electric)!important}
   .nav-cta{background:var(--electric);color:var(--cobalt-dark)!important;padding:.5rem 1.2rem;border-radius:8px;font-weight:700!important;transition:filter .2s!important;opacity:1!important}
   .nav-cta:hover{filter:brightness(1.08)}
   .burger{display:none;background:none;border:none;cursor:pointer;padding:4px}
@@ -331,9 +331,9 @@
   .nav-mega-trigger{cursor:pointer;display:flex;align-items:center;gap:.3rem}
   .nav-chevron{font-size:.7rem;transition:transform .2s;display:inline-block}
   .nav-has-mega.open .nav-chevron{transform:rotate(180deg)}
-  .nav-mega{display:none;position:fixed;top:72px;left:0;right:0;transform:none!important;background:var(--white);border-radius:0 0 20px 20px;box-shadow:0 16px 48px rgba(0,0,0,.16);border-bottom:1px solid rgba(0,0,0,.07);border-left:1px solid rgba(0,0,0,.04);border-right:1px solid rgba(0,0,0,.04)}
-  .nav-has-mega:hover .nav-mega,.nav-has-mega.open .nav-mega{display:block;opacity:1;visibility:visible;pointer-events:auto;transform:none!important}
-  .mega-body{max-width:var(--max);margin:0 auto;padding:2rem var(--pad)}.mega-inner{display:grid!important;grid-template-columns:1fr 1fr 1fr!important;gap:2.5rem!important}
+  .nav-mega{display:none;position:fixed;top:72px;left:50%;transform:translateX(-50%)!important;width:1000px;max-width:calc(100vw - 3rem);background:var(--white);border-radius:0 0 20px 20px;box-shadow:0 16px 48px rgba(0,0,0,.16);border:1px solid rgba(0,0,0,.07)}
+  .nav-has-mega:hover .nav-mega,.nav-has-mega.open .nav-mega{display:block;opacity:1;visibility:visible;pointer-events:auto}
+  .mega-body{padding:2rem 2rem}.mega-inner{display:grid!important;grid-template-columns:1fr 1fr 1fr!important;gap:2.5rem!important}
   .mega-inner>div{min-width:0}
   .mega-col-heading{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--cobalt-dark);margin-bottom:.3rem;padding-bottom:.5rem;border-bottom:1px solid #eef1f5}
   .mega-item{display:flex;align-items:flex-start;gap:.65rem;padding:.55rem .6rem;border-radius:8px;transition:background .15s;color:var(--body-text);text-decoration:none}
