@@ -93,6 +93,18 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/blog/how-much-does-a-website-cost-in-wollongong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Sitemap page -->
   <url>
     <loc>https://wollongongwebdesignco.com.au/sitemap/</loc>
