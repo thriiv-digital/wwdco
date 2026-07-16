@@ -340,33 +340,55 @@ footer ul li a:hover { color: var(--white); }
   .footer-inner { grid-template-columns: 1fr; }
   .cs-results { gap: .5rem; }
 }
-</style>
+
+/* nav logo icon */
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--ocean),var(--cobalt-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:800;font-size:1.1rem;flex-shrink:0}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.nav-logo-line1,.nav-logo-line2{display:block;white-space:nowrap;font-size:1rem}
+.nav-logo-line2{color:var(--electric)}
+.nav.scrolled .nav-logo-line2{color:var(--ocean)}
+/* nav phone pill */
+.nav-phone-pill{display:flex;align-items:center;gap:6px;font-size:.83rem;font-weight:600;color:var(--electric);background:rgba(91,200,245,.12);border:1px solid rgba(91,200,245,.35);padding:5px 14px;border-radius:100px;white-space:nowrap;transition:background .2s,color .2s;text-decoration:none}
+.nav.scrolled .nav-phone-pill{color:var(--ocean);background:rgba(13,90,158,.08);border-color:rgba(13,90,158,.3)}
+/* mega col blurb */
+.mega-col-blurb{font-size:.8rem;color:var(--muted);margin-bottom:.9rem;line-height:1.45}
+/* footer contact block */
+.footer-contact-block{margin-top:1rem}
+.footer-contact-row{font-size:.85rem;color:rgba(255,255,255,.55);margin-bottom:.45rem;display:flex;align-items:baseline;gap:.4rem;line-height:1.5}
+.footer-contact-row a{color:rgba(255,255,255,.55);transition:color .2s;text-decoration:none}
+.footer-contact-row a:hover{color:var(--electric)}
+.footer-copy-block{display:flex;flex-direction:column;gap:.25rem}
+.footer-abn-bottom{color:rgba(255,255,255,.3);font-size:.78rem}
+.footer-links-row{display:flex;gap:1.5rem}
+.footer-links-row a{color:rgba(255,255,255,.35);font-size:.82rem}
+.footer-links-row a:hover{color:var(--electric)}</style>
 </head>
 <body>
 
 <!-- NAV -->
 <header>
   <nav class="nav" id="main-nav" aria-label="Main navigation">
-    <a href="/" class="nav-logo">Wollongong Web Design Co</a>
+    <a href="/" class="nav-logo"><span class="nav-logo-icon">W</span><span class="nav-logo-text"><span class="nav-logo-line1">Wollongong</span><span class="nav-logo-line2">Web Design Co</span></span></a>
     <ul class="nav-links" role="list">
       <li class="nav-has-mega" id="mega-services">
         <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">&#9662;</span></a>
         <div class="nav-mega" role="region" aria-label="Services menu">
           <div class="mega-inner">
             <div>
-              <div class="mega-col-heading">Web &amp; eCommerce</div>
+              <div class="mega-col-heading">Web &amp; eCommerce</div><div class="mega-col-blurb">Build a site that works as hard as you do &mdash; fast, local, built to convert.</div>
               <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites built to rank &amp; convert</span></span></a>
               <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#128722;</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce stores</span></span></a>
               <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">&#128295;</span><span class="mega-item-text"><strong>Maintenance</strong><span>Updates, security &amp; support plans</span></span></a>
             </div>
             <div>
-              <div class="mega-col-heading">Marketing</div>
+              <div class="mega-col-heading">Marketing</div><div class="mega-col-blurb">Get found on Google and turn local searches into booked jobs.</div>
               <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Rank higher, get found locally</span></span></a>
               <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate Google Maps &amp; local search</span></span></a>
               <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Leads from day one with paid search</span></span></a>
             </div>
             <div>
-              <div class="mega-col-heading">Automation</div>
+              <div class="mega-col-heading">Automation</div><div class="mega-col-blurb">Stop losing leads &mdash; let smart tools follow up while you sleep.</div>
               <a href="/business-automation-wollongong/" class="mega-item"><span class="mega-item-icon">&#129302;</span><span class="mega-item-text"><strong>Business Automation</strong><span>AI tools that work while you sleep</span></span></a>
               <a href="/business-automation-wollongong/#missed-call" class="mega-item"><span class="mega-item-icon">&#128222;</span><span class="mega-item-text"><strong>Missed Call Text Back</strong><span>Never lose a lead to voicemail</span></span></a>
               <a href="/business-automation-wollongong/#reviews" class="mega-item"><span class="mega-item-icon">&#11088;</span><span class="mega-item-text"><strong>Review Automation</strong><span>Get more Google reviews on autopilot</span></span></a>
@@ -387,7 +409,8 @@ footer ul li a:hover { color: var(--white); }
     <li><a href="/blog/">Blog</a></li>
       <li><a href="#contact" class="nav-cta">Get a Free Quote</a></li>
     </ul>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <a href="tel:0240034436" class="nav-phone-pill">&#128222; (02) 4003 4436</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -854,9 +877,13 @@ footer ul li a:hover { color: var(--white); }
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:1.05rem;color:#fff">Wollongong Web Design Co</div>
+        <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;color:#fff">Wollongong Web Design Co</div>
         <p>Web design, SEO and business automation for Wollongong and Illawarra businesses. We build sites that rank, convert and grow.</p>
-        <div class="footer-abn">ABN 36 537 236 855 &nbsp;&middot;&nbsp; 1 Innovation Way, North Wollongong NSW 2500</div>
+        <div class="footer-contact-block">
+          <div class="footer-contact-row">&#128205; 1 Innovation Way, North Wollongong NSW 2500</div>
+          <div class="footer-contact-row">&#128222; <a href="tel:0240034436">(02) 4003 4436</a></div>
+          <div class="footer-contact-row">&#9993; <a href="mailto:hello@wollongongwebdesignco.com.au">hello@wollongongwebdesignco.com.au</a></div>
+        </div>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
@@ -886,14 +913,15 @@ footer ul li a:hover { color: var(--white); }
         <a href="/about/">About Us</a>
         <a href="/blog/">Blog</a>
         <a href="/sitemap/">Sitemap</a>
-        <a href="tel:0240034436">(02) 4003 4436</a>
-        <a href="mailto:hello@wollongongwebdesignco.com.au">hello@wollongongwebdesignco.com.au</a>
         <a href="/#contact">Get a Free Quote</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">&copy; 2025 Wollongong Web Design Co. All rights reserved.</div>
-      <div class="footer-links">
+      <div class="footer-copy-block">
+        <div class="footer-copy">&copy; 2025 Wollongong Web Design Co. All rights reserved.</div>
+        <div class="footer-abn-bottom">ABN 36 537 236 855</div>
+      </div>
+      <div class="footer-links-row">
         <a href="/privacy/">Privacy Policy</a>
         <a href="/terms/">Terms</a>
       </div>
