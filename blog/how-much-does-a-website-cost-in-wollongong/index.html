@@ -241,7 +241,8 @@ h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:var(--cobalt-dark);m
 .footer-abn-bottom{color:rgba(255,255,255,.3);font-size:.78rem}
 .footer-links-row{display:flex;gap:1.5rem}
 .footer-links-row a{color:rgba(255,255,255,.35);font-size:.82rem}
-.footer-links-row a:hover{color:var(--electric)}</style>
+.footer-links-row a:hover{color:var(--electric)}
+#read-progress{position:fixed;top:72px;left:0;width:0%;height:2px;background:var(--electric);z-index:99;transition:width .1s linear}</style>
 </head>
 <body>
 
@@ -735,6 +736,10 @@ document.addEventListener('click',e=>{megaTriggers.forEach(li=>{if(!li.contains(
 const burger=document.getElementById('burger'),drawer=document.getElementById('mobile-drawer');
 burger.addEventListener('click',()=>{const o=drawer.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
 document.querySelectorAll('.drawer-section-toggle').forEach(btn=>{btn.addEventListener('click',()=>{const t=document.getElementById(btn.dataset.target);const o=t.classList.toggle('open');btn.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);});});
+</script>
+<div id="read-progress"></div>
+<script>
+(function(){var b=document.getElementById('read-progress');function u(){var d=document.documentElement;var s=d.scrollTop||document.body.scrollTop;var h=d.scrollHeight-d.clientHeight;b.style.width=(h>0?(s/h*100):0)+'%'}window.addEventListener('scroll',u,{passive:true})})();
 </script>
 <script>document.querySelectorAll(".email-obf").forEach(function(a){var u=a.getAttribute("data-u"),d=a.getAttribute("data-d"),e=u+"@"+d;a.href="mailto:"+e;a.textContent=e;a.removeAttribute("aria-label");});</script>
 </body>

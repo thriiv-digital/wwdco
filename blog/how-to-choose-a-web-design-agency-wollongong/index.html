@@ -218,6 +218,7 @@ h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:var(--cobalt-dark);m
 .nav-phone-pill{display:flex;align-items:center;gap:6px;font-size:.83rem;font-weight:600;color:var(--ocean);background:rgba(13,90,158,.08);border:1px solid rgba(13,90,158,.3);padding:5px 14px;border-radius:100px;white-space:nowrap;transition:background .2s,color .2s;text-decoration:none}
 @media(max-width:1024px){:root{--pad:40px}.article-wrap{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:1rem}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){:root{--pad:20px}.nav-links{display:none}.burger{display:block}.article-wrap{grid-template-columns:1fr}.sidebar{display:block}.footer-grid{grid-template-columns:1fr}}
+#read-progress{position:fixed;top:72px;left:0;width:0%;height:2px;background:var(--electric);z-index:99;transition:width .1s linear}
 </style>
 </head>
 <body>
@@ -754,6 +755,11 @@ h1{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:var(--cobalt-dark);m
   /* Mobile burger */
   const burger=document.getElementById('burger'),drawer=document.getElementById('mobile-drawer');
   burger.addEventListener('click',()=>{const o=drawer.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
+<div id="read-progress"></div>
+<script>
+(function(){var b=document.getElementById('read-progress');function u(){var d=document.documentElement;var s=d.scrollTop||document.body.scrollTop;var h=d.scrollHeight-d.clientHeight;b.style.width=(h>0?(s/h*100):0)+'%'}window.addEventListener('scroll',u,{passive:true})})();
+</script>
+<script>
   document.querySelectorAll('.drawer-section-toggle').forEach(btn=>{btn.addEventListener('click',()=>{const id=btn.getAttribute('data-target'),sub=document.getElementById(id);if(sub){const o=sub.classList.toggle('open');btn.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);}});});
   /* Email obfuscation */
   document.querySelectorAll('.email-obf').forEach(function(a){var u=a.getAttribute('data-u'),d=a.getAttribute('data-d'),e=u+'@'+d;a.href='mailto:'+e;a.textContent=e;a.removeAttribute('aria-label');});
