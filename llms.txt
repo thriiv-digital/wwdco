@@ -1,4 +1,4 @@
-# Wollongong Web Design Co
+﻿# Wollongong Web Design Co
 
 > Wollongong's leading web design and digital marketing agency, serving Illawarra small businesses since 2011.
 
@@ -8,7 +8,7 @@ Wollongong Web Design Co is a full-service web design and digital marketing agen
 
 Phone: (02) 4003 4436
 Email: hello@wollongongwebdesignco.com.au
-Address: 1 Innovation Way, North Wollongong NSW 2500
+Address: 1 Burelli Street, Wollongong NSW 2500
 
 ## Services
 
