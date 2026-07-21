@@ -173,6 +173,14 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Contact -->
+  <url>
+    <loc>https://wollongongwebdesignco.com.au/contact/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- About -->
   <url>
     <loc>https://wollongongwebdesignco.com.au/about/</loc>

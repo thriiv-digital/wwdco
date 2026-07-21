@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8" />
+<meta name="google-site-verification" content="9VcjnRn5rtjmUD1oPnwZpsLqaHd8OcqnIMhL2iQ3fCI" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us — Wollongong Web Design Co | (02) 4003 4436</title>
+<meta name="description" content="Get in touch with Wollongong Web Design Co. We're based at 1 Burelli Street, Wollongong and respond same day. Call (02) 4003 4436 or fill in the form." />
+<link rel="canonical" href="https://wollongongwebdesignco.com.au/contact/" />
+<meta property="og:title" content="Contact Us — Wollongong Web Design Co" />
+<meta property="og:description" content="Talk to the Wollongong Web Design Co team. Same-day response. 1 Burelli Street, Wollongong. (02) 4003 4436." />
+<meta property="og:url" content="https://wollongongwebdesignco.com.au/contact/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://wollongongwebdesignco.com.au/og-image.jpg" />
+<meta property="og:site_name" content="Wollongong Web Design Co" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Contact Us — Wollongong Web Design Co" />
+<meta name="twitter:description" content="Talk to the Wollongong Web Design Co team. Same-day response. 1 Burelli Street, Wollongong. (02) 4003 4436." />
+<meta name="twitter:image" content="https://wollongongwebdesignco.com.au/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --font-head: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --electric: #5bc8f5;
+  --electric-dim: rgba(91,200,245,.25);
+  --electric-glow: rgba(91,200,245,.08);
+  --cobalt: #1a3a6e;
+  --cobalt-dark: #0f2550;
+  --ocean: #0d5a9e;
+  --ocean-mid: #1470be;
+  --white: #ffffff;
+  --off-white: #f4f7fb;
+  --body-text: #2d3a4a;
+  --muted: #6b7a8d;
+  --radius: 12px;
+  --pad: 80px;
+  --max: 1200px;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--body-text); background: var(--white); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; }
+
+/* NAV */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 900; display: flex; align-items: center; justify-content: space-between; padding: 0 var(--pad); height: 72px; background: transparent; transition: background .3s, box-shadow .3s; }
+.nav.scrolled { background: rgba(255,255,255,.97); box-shadow: 0 1px 0 rgba(0,0,0,.08); backdrop-filter: blur(8px); }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--ocean), var(--cobalt-dark)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 800; font-size: 1.1rem; font-family: var(--font-head); flex-shrink: 0; }
+.nav-logo-text { display: flex; flex-direction: row; align-items: center; gap: .4em; font-family: var(--font-head); font-weight: 700; font-size: 1.05rem; color: var(--white); }
+.nav-logo-line2 { color: var(--electric); }
+.nav.scrolled .nav-logo-text { color: var(--cobalt-dark); }
+.nav.scrolled .nav-logo-line2 { color: var(--ocean); }
+.nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+.nav-links a { font-size: .92rem; font-weight: 600; color: rgba(255,255,255,.9); transition: color .2s; text-decoration: none; }
+.nav-links a:hover { color: var(--electric); }
+.nav.scrolled .nav-links a { color: var(--cobalt-dark); }
+.nav.scrolled .nav-links a:hover { color: var(--ocean); }
+.nav-mega-trigger { display: flex; align-items: center; gap: 4px; cursor: pointer; background: none; border: none; font-size: .92rem; font-weight: 600; color: rgba(255,255,255,.9); font-family: var(--font-body); }
+.nav.scrolled .nav-mega-trigger { color: var(--cobalt-dark); }
+.nav-chevron { font-size: .65rem; transition: transform .2s; }
+.nav-has-mega.open .nav-chevron { transform: rotate(180deg); }
+.nav-mega { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--white); border-radius: 16px; box-shadow: 0 8px 40px rgba(0,0,0,.14); padding: 0; min-width: 740px; z-index: 999; }
+.nav-has-mega { position: relative; }
+.nav-has-mega.open .nav-mega { display: block; }
+.mega-body { padding: 1.75rem 2rem 1.5rem; }
+.mega-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.mega-col-heading { font-family: var(--font-head); font-size: .72rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .75rem; }
+.mega-col-blurb { font-size: .8rem; color: var(--muted); margin-bottom: .9rem; line-height: 1.45; }
+.mega-item { display: flex; align-items: flex-start; gap: .6rem; padding: .45rem .5rem; border-radius: 8px; transition: background .15s; }
+.mega-item:hover { background: var(--off-white); }
+.mega-item-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+.mega-item-text strong { display: block; font-size: .88rem; color: var(--cobalt-dark); font-weight: 600; }
+.mega-item-text span { font-size: .78rem; color: var(--muted); }
+.mega-divider { border: none; border-top: 1px solid #e8edf4; margin: 0 -.5rem; }
+.mega-locations-row { display: flex; align-items: center; gap: .6rem; padding: 1rem 2rem 1.5rem; flex-wrap: wrap; }
+.mega-locations-label { font-size: .78rem; color: var(--muted); font-weight: 600; }
+.mega-loc-chip { font-size: .78rem; background: var(--off-white); color: var(--cobalt-dark); border-radius: 100px; padding: .25rem .75rem; font-weight: 600; transition: background .2s; }
+.mega-loc-chip:hover { background: #e0eaf8; }
+.nav-right { display: flex; align-items: center; gap: .75rem; }
+.nav-phone-pill { display: flex; align-items: center; gap: 6px; font-size: .83rem; font-weight: 600; color: var(--electric); background: rgba(91,200,245,.12); border: 1px solid rgba(91,200,245,.35); padding: 5px 14px; border-radius: 100px; white-space: nowrap; transition: background .2s, color .2s; text-decoration: none; }
+.nav.scrolled .nav-phone-pill { color: var(--ocean); background: rgba(13,90,158,.08); border-color: rgba(13,90,158,.3); }
+.nav-cta { background: var(--electric); color: var(--cobalt-dark); font-weight: 700; font-size: .85rem; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: filter .2s; white-space: nowrap; }
+.nav-cta:hover { filter: brightness(1.08); }
+.burger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.burger span { display: block; width: 24px; height: 2px; background: var(--white); margin: 5px 0; transition: background .3s; }
+.nav.scrolled .burger span { background: var(--cobalt-dark); }
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* MOBILE DRAWER */
+.mobile-drawer { display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0; background: var(--white); z-index: 890; overflow-y: auto; padding: 1.5rem var(--pad); flex-direction: column; gap: .25rem; }
+.mobile-drawer.open { display: flex; }
+.drawer-link { font-size: 1rem; font-weight: 600; color: var(--cobalt-dark); padding: .75rem 0; border-bottom: 1px solid #e8edf4; }
+.drawer-section-toggle { background: none; border: none; border-bottom: 1px solid #e8edf4; width: 100%; text-align: left; font-size: 1rem; font-weight: 600; color: var(--cobalt-dark); padding: .75rem 0; cursor: pointer; font-family: var(--font-body); display: flex; justify-content: space-between; align-items: center; }
+.chev { transition: transform .2s; }
+.drawer-section-toggle.open .chev { transform: rotate(180deg); }
+.drawer-sub { display: none; padding: .5rem 0 .5rem 1rem; flex-direction: column; gap: .25rem; }
+.drawer-sub.open { display: flex; }
+.drawer-sub a { font-size: .92rem; color: var(--body-text); padding: .5rem 0; border-bottom: 1px solid #f0f4f8; }
+.drawer-cta { margin-top: 1.5rem; display: block; background: var(--electric); color: var(--cobalt-dark); font-weight: 700; font-size: 1rem; padding: 1rem; border-radius: var(--radius); text-align: center; }
+
+/* HERO */
+.page-hero { background: linear-gradient(135deg, var(--cobalt-dark) 0%, var(--ocean) 100%); padding: 130px var(--pad) 70px; }
+.page-hero .container { max-width: var(--max); margin: 0 auto; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-size: .8rem; font-weight: 700; color: var(--electric); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1rem; }
+.hero-eyebrow::before { content: ''; display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--electric); }
+h1.contact-h1 { font-family: var(--font-head); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+.contact-h1 em { font-style: normal; color: var(--electric); }
+.page-hero-sub { font-size: 1.1rem; color: rgba(255,255,255,.75); max-width: 560px; line-height: 1.7; }
+
+/* MAIN CONTACT SECTION */
+.contact-section { padding: 80px var(--pad); }
+.contact-section .container { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: start; }
+
+/* FORM */
+.contact-form-wrap { background: var(--off-white); border-radius: 16px; padding: 2.5rem; }
+.contact-form-wrap h2 { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--cobalt-dark); margin-bottom: .5rem; }
+.contact-form-wrap p.form-intro { font-size: .95rem; color: var(--muted); margin-bottom: 1.75rem; line-height: 1.6; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1rem; }
+.form-label { font-size: .83rem; font-weight: 600; color: var(--cobalt-dark); }
+.form-input { width: 100%; padding: .75rem 1rem; border: 1.5px solid #d5dfe8; border-radius: 8px; font-size: .93rem; font-family: var(--font-body); color: var(--body-text); background: var(--white); transition: border-color .2s, box-shadow .2s; outline: none; }
+.form-input:focus { border-color: var(--ocean); box-shadow: 0 0 0 3px rgba(13,90,158,.1); }
+select.form-input { cursor: pointer; }
+.btn-submit { width: 100%; background: var(--electric); color: var(--cobalt-dark); font-family: var(--font-head); font-weight: 700; font-size: 1rem; padding: 1rem; border: none; border-radius: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: .5rem; transition: filter .2s, transform .1s; margin-top: .5rem; }
+.btn-submit:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.form-note { text-align: center; font-size: .78rem; color: var(--muted); margin-top: .75rem; }
+
+/* CONTACT INFO SIDEBAR */
+.contact-info { display: flex; flex-direction: column; gap: 1.75rem; }
+.contact-info-block { background: var(--white); border: 1.5px solid #e4ecf5; border-radius: 16px; padding: 1.5rem; }
+.cib-label { font-size: .72rem; font-weight: 700; color: var(--ocean); text-transform: uppercase; letter-spacing: .1em; margin-bottom: .6rem; }
+.cib-value { font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; color: var(--cobalt-dark); }
+.cib-value a { color: var(--cobalt-dark); text-decoration: none; }
+.cib-value a:hover { color: var(--ocean); }
+.cib-sub { font-size: .85rem; color: var(--muted); margin-top: .3rem; line-height: 1.5; }
+.response-badge { display: flex; align-items: center; gap: .75rem; background: #ecfdf5; border: 1.5px solid #86efac; border-radius: 12px; padding: 1rem 1.25rem; }
+.response-badge-icon { font-size: 1.4rem; flex-shrink: 0; }
+.response-badge-text strong { display: block; font-size: .92rem; font-weight: 700; color: #166534; font-family: var(--font-head); }
+.response-badge-text span { font-size: .82rem; color: #4ade80; color: #16a34a; }
+
+/* OFFICE PHOTOS */
+.office-photos-section { background: var(--off-white); padding: 60px var(--pad); }
+.office-photos-section .container { max-width: var(--max); margin: 0 auto; }
+.office-photos-section h2 { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--cobalt-dark); margin-bottom: .5rem; }
+.office-photos-section p { font-size: .95rem; color: var(--muted); margin-bottom: 2rem; }
+.office-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.25rem; }
+.office-grid img { width: 100%; height: 280px; object-fit: cover; border-radius: var(--radius); display: block; }
+.office-grid img:first-child { grid-column: 1 / -1; height: 380px; }
+
+/* MAP */
+.map-section { padding: 0; }
+.map-section iframe { display: block; width: 100%; height: 420px; border: 0; }
+.map-caption { background: var(--cobalt-dark); padding: 1.25rem var(--pad); display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.map-caption-item { display: flex; align-items: center; gap: .5rem; font-size: .88rem; color: rgba(255,255,255,.7); }
+.map-caption-item a { color: var(--electric); text-decoration: none; font-weight: 600; }
+.map-caption-item a:hover { color: var(--white); }
+
+/* FOOTER */
+.footer { background: var(--cobalt-dark); padding: 60px var(--pad) 0; }
+.footer-inner { max-width: var(--max); margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; }
+.footer-brand p { color: rgba(255,255,255,.5); font-size: .88rem; margin-top: .75rem; line-height: 1.6; }
+.footer-contact-block { margin-top: 1rem; }
+.footer-contact-row { font-size: .87rem; color: rgba(255,255,255,.55); margin-bottom: .5rem; display: grid; grid-template-columns: 1.4rem 1fr; gap: .5rem; align-items: start; line-height: 1.5; }
+.fcr-icon { text-align: center; opacity: .7; }
+.footer-contact-row a { color: rgba(255,255,255,.55); font-size: .87rem; transition: color .2s; text-decoration: none; }
+.footer-contact-row a:hover { color: var(--electric); }
+.footer-col h4 { font-family: var(--font-head); font-weight: 700; color: var(--white); font-size: .9rem; margin-bottom: 1rem; }
+.footer-col a { display: block; color: rgba(255,255,255,.55); font-size: .87rem; margin-bottom: .5rem; transition: color .2s; text-decoration: none; }
+.footer-col a:hover { color: var(--electric); }
+.footer-col-sub { font-family: var(--font-head); font-weight: 700; color: var(--white); font-size: .9rem; margin: 1.5rem 0 .75rem; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-copy { color: rgba(255,255,255,.35); font-size: .82rem; }
+.footer-links-row { display: flex; gap: 1.5rem; }
+.footer-links-row a { color: rgba(255,255,255,.35); font-size: .82rem; }
+.footer-links-row a:hover { color: var(--electric); }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media(max-width: 1024px) {
+  :root { --pad: 40px; }
+  .contact-section .container { grid-template-columns: 1fr; }
+  .contact-info { flex-direction: row; flex-wrap: wrap; }
+  .contact-info-block { flex: 1 1 220px; }
+  .office-grid img:first-child { grid-column: auto; height: 220px; }
+  .office-grid img { height: 220px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media(max-width: 768px) {
+  :root { --pad: 20px; }
+  .nav-links, .nav-phone-pill, .nav-cta { display: none; }
+  .burger { display: block; }
+  .form-row { grid-template-columns: 1fr; }
+  .office-grid { grid-template-columns: 1fr; }
+  .office-grid img:first-child { height: 260px; }
+  .office-grid img { height: 220px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .map-caption { flex-direction: column; align-items: flex-start; gap: .75rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo"><span class="nav-logo-icon">W</span><span class="nav-logo-text"><span class="nav-logo-line1">Wollongong</span>&nbsp;<span class="nav-logo-line2">Web Design Co</span></span></a>
+  <ul class="nav-links">
+    <li class="nav-has-mega">
+      <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">&#9662;</span></a>
+      <div class="nav-mega" role="region" aria-label="Services menu"><div class="mega-body"><div class="mega-inner">
+        <div>
+          <div class="mega-col-heading">Web &amp; eCommerce</div><div class="mega-col-blurb">Build a site that works as hard as you do — fast, local, built to convert.</div>
+          <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites that convert</span></span></a>
+          <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#128722;</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce</span></span></a>
+          <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">&#128295;</span><span class="mega-item-text"><strong>Maintenance</strong><span>Updates, security &amp; support</span></span></a>
+        </div>
+        <div>
+          <div class="mega-col-heading">Marketing</div><div class="mega-col-blurb">Get found on Google and turn local searches into booked jobs.</div>
+          <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Rank higher, get found</span></span></a>
+          <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate local search</span></span></a>
+          <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Pay-per-click campaigns</span></span></a>
+          <a href="/google-business-profile-wollongong/" class="mega-item"><span class="mega-item-icon">&#128338;</span><span class="mega-item-text"><strong>Google Business Profile</strong><span>Rank in the Maps 3-pack</span></span></a>
+        </div>
+        <div>
+          <div class="mega-col-heading">Automation</div><div class="mega-col-blurb">Stop losing leads — let smart tools follow up while you sleep.</div>
+          <a href="/business-automation-wollongong/" class="mega-item"><span class="mega-item-icon">&#129302;</span><span class="mega-item-text"><strong>Business Automation</strong><span>AI tools that save hours</span></span></a>
+          <a href="/business-automation-wollongong/#missed-call" class="mega-item"><span class="mega-item-icon">&#128241;</span><span class="mega-item-text"><strong>Missed Call Text Back</strong><span>Never lose a lead</span></span></a>
+          <a href="/business-automation-wollongong/#reviews" class="mega-item"><span class="mega-item-icon">&#11088;</span><span class="mega-item-text"><strong>Review Automation</strong><span>More 5-star reviews</span></span></a>
+        </div>
+      </div><hr class="mega-divider" />
+      <div class="mega-locations-row">
+        <span class="mega-locations-label">Areas we serve:</span>
+        <a href="/" class="mega-loc-chip">Wollongong</a>
+        <a href="/web-design-shellharbour/" class="mega-loc-chip">Shellharbour</a>
+        <a href="/web-design-kiama/" class="mega-loc-chip">Kiama</a>
+        <a href="/web-design-southern-highlands/" class="mega-loc-chip">Southern Highlands</a>
+      </div></div></div>
+    </li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/contact/" style="color:var(--electric)">Contact</a></li>
+  </ul>
+  <div class="nav-right"><a href="tel:0240034436" class="nav-phone-pill">&#128222; (02) 4003 4436</a><a href="/contact/" class="nav-cta">Get a Free Quote</a></div>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+  <button class="drawer-section-toggle" data-target="drawer-services" aria-expanded="false">Services <span class="chev">&#9662;</span></button>
+  <div class="drawer-sub" id="drawer-services">
+    <a href="/web-design-wollongong/">&#127760; Web Design</a>
+    <a href="/ecommerce-web-design-wollongong/">&#128722; eCommerce</a>
+    <a href="/seo-wollongong/">&#128200; SEO Wollongong</a>
+    <a href="/local-seo-wollongong/">&#128205; Local SEO</a>
+    <a href="/google-ads-wollongong/">&#127919; Google Ads</a>
+    <a href="/google-business-profile-wollongong/">&#128338; Google Business Profile</a>
+    <a href="/website-maintenance-wollongong/">&#128295; Maintenance</a>
+    <a href="/business-automation-wollongong/">&#129302; Business Automation</a>
+  </div>
+  <a href="/about/" class="drawer-link">About</a>
+  <a href="/blog/" class="drawer-link">Blog</a>
+  <a href="/contact/" class="drawer-link">Contact</a>
+  <button class="drawer-section-toggle" data-target="drawer-areas" aria-expanded="false">Service Areas <span class="chev">&#9662;</span></button>
+  <div class="drawer-sub" id="drawer-areas">
+    <a href="/">&#128205; Wollongong</a>
+    <a href="/web-design-shellharbour/">&#128205; Shellharbour</a>
+    <a href="/web-design-kiama/">&#128205; Kiama</a>
+    <a href="/web-design-southern-highlands/">&#128205; Southern Highlands</a>
+  </div>
+  <a href="/contact/" class="drawer-cta">Get a Free Quote &#8594;</a>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-eyebrow">Get in Touch</div>
+    <h1 class="contact-h1">Let's Talk About<br><em>Your Next Project</em></h1>
+    <p class="page-hero-sub">We're a Wollongong-based team and we respond same day — usually within the hour. No sales scripts, no offshore handoffs. Just a straight conversation about what you need.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <div class="container">
+
+    <!-- FORM -->
+    <div class="contact-form-wrap reveal">
+      <h2>Send Us a Message</h2>
+      <p class="form-intro">Tell us what you're working on and we'll come back to you with ideas, availability, and a no-obligation quote.</p>
+      <form action="https://formspree.io/f/mlgqdvyy" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="c-name">First Name *</label>
+            <input id="c-name" type="text" name="name" class="form-input" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-biz">Business Name</label>
+            <input id="c-biz" type="text" name="business" class="form-input" placeholder="Your Business" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="c-email">Email *</label>
+            <input id="c-email" type="email" name="email" class="form-input" placeholder="jane@yourbusiness.com.au" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-phone">Phone</label>
+            <input id="c-phone" type="tel" name="phone" class="form-input" placeholder="04XX XXX XXX" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="c-service">What can we help with?</label>
+          <select id="c-service" name="service" class="form-input">
+            <option value="" disabled selected>Select a service...</option>
+            <option>New Website</option>
+            <option>Website Redesign</option>
+            <option>SEO / Local SEO</option>
+            <option>Google Ads</option>
+            <option>Google Business Profile</option>
+            <option>Business Automation</option>
+            <option>Website Maintenance</option>
+            <option>Not sure yet — just exploring</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="c-msg">Tell us more</label>
+          <textarea id="c-msg" name="message" rows="5" class="form-input" placeholder="What's your business, what problem are you trying to solve, and what does success look like for you?" style="resize:vertical;"></textarea>
+        </div>
+        <input type="hidden" name="_source" value="contact page" />
+        <button type="submit" class="btn-submit">
+          Send Message
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p class="form-note">&#9889; We respond same day. No spam, ever.</p>
+      </form>
+    </div>
+
+    <!-- SIDEBAR INFO -->
+    <aside class="contact-info reveal">
+
+      <div class="response-badge">
+        <span class="response-badge-icon">&#9889;</span>
+        <div class="response-badge-text">
+          <strong>Same-Day Response</strong>
+          <span>Speed to lead — we're on it.</span>
+        </div>
+      </div>
+
+      <div class="contact-info-block">
+        <div class="cib-label">Call Us</div>
+        <div class="cib-value"><a href="tel:0240034436">(02) 4003 4436</a></div>
+        <div class="cib-sub">Mon–Fri, 8:30am–5:30pm AEST</div>
+      </div>
+
+      <div class="contact-info-block">
+        <div class="cib-label">Email Us</div>
+        <div class="cib-value"><a href="#" class="email-obf" data-u="hello" data-d="wollongongwebdesignco.com.au">[click to email]</a></div>
+        <div class="cib-sub">We read every message personally.</div>
+      </div>
+
+      <div class="contact-info-block">
+        <div class="cib-label">Visit Us</div>
+        <div class="cib-value">1 Burelli Street<br>Wollongong NSW 2500</div>
+        <div class="cib-sub">By appointment. Free street parking nearby.<br><a href="https://maps.google.com/?q=Wollongong+Web+Design+Co,+1+Burelli+Street,+Wollongong+NSW+2500" target="_blank" rel="noopener" style="color:var(--ocean);font-weight:600;font-size:.85rem;">Get directions &#8594;</a></div>
+      </div>
+
+      <div class="contact-info-block">
+        <div class="cib-label">Service Area</div>
+        <div class="cib-sub" style="margin-top:.25rem">Wollongong · Shellharbour · Kiama · Dapto · Nowra · Southern Highlands · and all Illawarra businesses</div>
+      </div>
+
+    </aside>
+  </div>
+</section>
+
+<!-- OFFICE PHOTOS -->
+<section class="office-photos-section">
+  <div class="container">
+    <h2 class="reveal">Come and See Us</h2>
+    <p class="reveal">We're based in the heart of Wollongong CBD — come in for a coffee and a chat about your project.</p>
+    <div class="office-grid reveal">
+      <img src="/contact-office-exterior.jpg" alt="Wollongong Web Design Co office — 1 Burelli Street Wollongong" loading="lazy" />
+      <img src="/contact-office-reception.jpg" alt="Wollongong Web Design Co reception" loading="lazy" />
+      <img src="/contact-office-team.jpg" alt="Wollongong Web Design Co team at work" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+  <iframe
+    src="https://maps.google.com/maps?q=1+Burelli+Street+Wollongong+NSW+2500&output=embed"
+    title="Wollongong Web Design Co location — 1 Burelli Street Wollongong"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+  <div class="map-caption">
+    <div class="map-caption-item">&#128205; <span>1 Burelli Street, Wollongong NSW 2500</span></div>
+    <div class="map-caption-item">&#128222; <a href="tel:0240034436">(02) 4003 4436</a></div>
+    <div class="map-caption-item"><a href="https://maps.google.com/?q=Wollongong+Web+Design+Co,+1+Burelli+Street,+Wollongong+NSW+2500" target="_blank" rel="noopener">Open in Google Maps &#8599;</a></div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;color:#fff">Wollongong Web Design Co</div>
+        <p>Web design, SEO and business automation for Wollongong and Illawarra businesses. We build sites that rank, convert and grow.</p>
+        <div class="footer-contact-block">
+          <div class="footer-contact-row"><span class="fcr-icon">&#128205;</span><span><a href="https://maps.google.com/?q=Wollongong+Web+Design+Co,+1+Burelli+Street,+Wollongong+NSW+2500" target="_blank" rel="noopener">1 Burelli Street, Wollongong NSW 2500</a></span></div>
+          <div class="footer-contact-row"><span class="fcr-icon">&#128222;</span><span><a href="tel:0240034436">(02) 4003 4436</a></span></div>
+          <div class="footer-contact-row"><span class="fcr-icon">&#9993;</span><span><a href="#" class="email-obf" data-u="hello" data-d="wollongongwebdesignco.com.au" aria-label="Email us">[click to email]</a></span></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/web-design-wollongong/">Web Design</a>
+        <a href="/ecommerce-web-design-wollongong/">eCommerce</a>
+        <a href="/seo-wollongong/">SEO Wollongong</a>
+        <a href="/local-seo-wollongong/">Local SEO</a>
+        <a href="/google-ads-wollongong/">Google Ads</a>
+        <a href="/google-business-profile-wollongong/">Google Business Profile</a>
+        <a href="/website-maintenance-wollongong/">Maintenance</a>
+        <a href="/business-automation-wollongong/">Business Automation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Industries</h4>
+        <a href="/tradie-websites-wollongong/">Tradies</a>
+        <a href="/restaurant-websites-wollongong/">Restaurants &amp; Caf&eacute;s</a>
+        <a href="/health-clinic-websites-wollongong/">Health Clinics</a>
+        <a href="/professional-services-websites-wollongong/">Professional Services</a>
+        <div class="footer-col-sub">Areas</div>
+        <a href="/">Wollongong</a>
+        <a href="/web-design-shellharbour/">Shellharbour</a>
+        <a href="/web-design-kiama/">Kiama</a>
+        <a href="/web-design-southern-highlands/">Southern Highlands</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about/">About Us</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact/">Contact</a>
+        <a href="/sitemap/">Sitemap</a>
+        <a href="/#contact">Get a Free Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Wollongong Web Design Co. All rights reserved. &nbsp;&middot;&nbsp; ABN 36 537 236 855</div>
+      <div class="footer-links-row">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": "https://wollongongwebdesignco.com.au/contact/",
+      "url": "https://wollongongwebdesignco.com.au/contact/",
+      "name": "Contact Wollongong Web Design Co",
+      "description": "Get in touch with the Wollongong Web Design Co team. Same-day response. 1 Burelli Street, Wollongong NSW 2500.",
+      "isPartOf": { "@id": "https://wollongongwebdesignco.com.au/#website" },
+      "breadcrumb": { "@id": "https://wollongongwebdesignco.com.au/contact/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://wollongongwebdesignco.com.au/contact/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://wollongongwebdesignco.com.au/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://wollongongwebdesignco.com.au/contact/" }
+      ]
+    },
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://wollongongwebdesignco.com.au/#business",
+      "name": "Wollongong Web Design Co",
+      "url": "https://wollongongwebdesignco.com.au/",
+      "telephone": "+61240034436",
+      "email": "hello@wollongongwebdesignco.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1 Burelli Street",
+        "addressLocality": "Wollongong",
+        "addressRegion": "NSW",
+        "postalCode": "2500",
+        "addressCountry": "AU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.4258,
+        "longitude": 150.8932
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "08:30",
+          "closes": "17:30"
+        }
+      ],
+      "areaServed": ["Wollongong","Shellharbour","Kiama","Dapto","Nowra","Illawarra","Southern Highlands"]
+    }
+  ]
+}
+</script>
+
+
+<!-- JS -->
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+
+  const megaTriggers = document.querySelectorAll('.nav-has-mega');
+  megaTriggers.forEach(li => {
+    const t = li.querySelector('.nav-mega-trigger'), m = li.querySelector('.nav-mega'); let tm;
+    const openM = () => { clearTimeout(tm); li.classList.add('open'); t.setAttribute('aria-expanded', 'true'); };
+    const closeM = () => { tm = setTimeout(() => { li.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }, 150); };
+    li.addEventListener('mouseenter', openM); li.addEventListener('mouseleave', closeM);
+    if (m) { m.addEventListener('mouseenter', openM); m.addEventListener('mouseleave', closeM); }
+    t.addEventListener('click', e => { li.classList.contains('open') ? closeM() : openM(); e.preventDefault(); });
+  });
+  document.addEventListener('click', e => { megaTriggers.forEach(li => { if (!li.contains(e.target)) { li.classList.remove('open'); const t = li.querySelector('.nav-mega-trigger'); if (t) t.setAttribute('aria-expanded', 'false'); } }); });
+
+  const burger = document.getElementById('burger'), drawer = document.getElementById('mobile-drawer');
+  burger.addEventListener('click', () => { const o = drawer.classList.toggle('open'); burger.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); });
+  document.querySelectorAll('.drawer-section-toggle').forEach(btn => { btn.addEventListener('click', () => { const t = document.getElementById(btn.dataset.target); const o = t.classList.toggle('open'); btn.classList.toggle('open', o); btn.setAttribute('aria-expanded', o); }); });
+
+  const revObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } }), { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+</script>
+<script>document.querySelectorAll(".email-obf").forEach(function(a){var u=a.getAttribute("data-u"),d=a.getAttribute("data-d"),e=u+"@"+d;a.href="mailto:"+e;a.textContent=e;a.removeAttribute("aria-label");});</script>
+</body>
+</html>
