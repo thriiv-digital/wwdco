@@ -154,12 +154,14 @@ select.form-input { cursor: pointer; }
 .office-grid img:first-child { grid-column: 1 / -1; height: 380px; }
 
 /* MAP */
-.map-section { padding: 0; }
-.map-section iframe { display: block; width: 100%; height: 420px; border: 0; }
-.map-caption { background: var(--cobalt-dark); padding: 1.25rem var(--pad); display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
-.map-caption-item { display: flex; align-items: center; gap: .5rem; font-size: .88rem; color: rgba(255,255,255,.7); }
-.map-caption-item a { color: var(--electric); text-decoration: none; font-weight: 600; }
-.map-caption-item a:hover { color: var(--white); }
+.map-section { padding: 0; position: relative; }
+.map-section iframe { display: block; width: 100%; height: 560px; border: 0; }
+.map-overlay { position: absolute; bottom: 2rem; left: 2rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+.map-chip { display: flex; align-items: center; gap: .6rem; background: rgba(15,37,80,.92); backdrop-filter: blur(8px); border: 1px solid rgba(91,200,245,.2); border-radius: 10px; padding: .75rem 1.1rem; color: var(--white); font-size: .88rem; white-space: nowrap; }
+.map-chip-icon { font-size: 1rem; flex-shrink: 0; }
+.map-chip a { color: var(--electric); font-weight: 600; text-decoration: none; }
+.map-chip a:hover { color: var(--white); }
+@media(max-width: 768px) { .map-overlay { left: 1rem; right: 1rem; bottom: 1rem; } .map-chip { font-size: .82rem; padding: .6rem .85rem; } .map-section iframe { height: 400px; } }
 
 /* FOOTER */
 .footer { background: var(--cobalt-dark); padding: 60px var(--pad) 0; }
@@ -400,16 +402,16 @@ select.form-input { cursor: pointer; }
 <!-- MAP -->
 <section class="map-section">
   <iframe
-    src="https://maps.google.com/maps?q=1+Burelli+Street+Wollongong+NSW+2500&output=embed"
+    src="https://maps.google.com/maps?q=Wollongong+Web+Design+Co,+1+Burelli+Street,+Wollongong+NSW+2500&output=embed"
     title="Wollongong Web Design Co location — 1 Burelli Street Wollongong"
     allowfullscreen=""
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade">
   </iframe>
-  <div class="map-caption">
-    <div class="map-caption-item">&#128205; <span>1 Burelli Street, Wollongong NSW 2500</span></div>
-    <div class="map-caption-item">&#128222; <a href="tel:0240034436">(02) 4003 4436</a></div>
-    <div class="map-caption-item"><a href="https://maps.google.com/?q=Wollongong+Web+Design+Co,+1+Burelli+Street,+Wollongong+NSW+2500" target="_blank" rel="noopener">Open in Google Maps &#8599;</a></div>
+  <div class="map-overlay">
+    <div class="map-chip"><span class="map-chip-icon">&#128205;</span> 1 Burelli Street, Wollongong NSW 2500</div>
+    <div class="map-chip"><span class="map-chip-icon">&#128222;</span> <a href="tel:0240034436">(02) 4003 4436</a></div>
+    <div class="map-chip"><a href="https://maps.google.com/?q=Wollongong+Web+Design+Co,+1+Burelli+Street,+Wollongong+NSW+2500" target="_blank" rel="noopener">Open in Google Maps &#8599;</a></div>
   </div>
 </section>
 
