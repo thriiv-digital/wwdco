@@ -576,14 +576,18 @@
     ════════════════════════════════════════════════ */
     #results { background: var(--card-bg); }
     .results-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-    .result-card { background: var(--white); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 30px; }
+    .result-card { background: var(--white); border: 1px solid var(--card-border); border-radius: var(--radius); overflow:hidden; }
+    .result-thumb { position:relative; height:160px; background:#d0dae8; overflow:hidden; }
+    .result-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+    .result-thumb-placeholder { width:100%; height:100%; background:linear-gradient(135deg,#c8d6e8 0%,#e4ecf5 100%); display:flex; align-items:center; justify-content:center; color:#8fa3bb; font-size:.8rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; }
     .result-industry {
-      display: inline-block; background: var(--electric-glow);
-      color: var(--ocean); font-family: var(--font-head); font-size: .72rem;
+      position:absolute; bottom:12px; left:12px;
+      background:rgba(255,255,255,.92); backdrop-filter:blur(6px);
+      color: var(--ocean); font-family: var(--font-head); font-size: .68rem;
       font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-      padding: 4px 12px; border-radius: 100px; border: 1px solid var(--card-border);
-      margin-bottom: 18px;
+      padding: 3px 10px; border-radius: 100px; border: 1px solid var(--card-border);
     }
+    .result-body { padding: 24px; }
     .result-stat { font-family: var(--font-head); font-size: 2.2rem; font-weight: 800; color: var(--ocean); line-height: 1; margin-bottom: 8px; }
     .result-card h3 { margin-bottom: 10px; font-size: .98rem; }
     .result-card p  { font-size: .87rem; color: var(--muted); line-height: 1.65; }
@@ -1241,22 +1245,37 @@
     </div>
     <div class="results-grid">
       <div class="result-card reveal">
-        <div class="result-industry">Trades &amp; Construction</div>
-        <div class="result-stat">4×</div>
-        <h3>Fairy Meadow plumber quadrupled monthly leads in 90 days</h3>
-        <p>A local plumbing business was averaging 4–5 website enquiries a month with an outdated site. After a full rebuild and local SEO campaign targeting "plumber Wollongong" and surrounding suburbs, they hit 20+ qualified leads per month within the first quarter.</p>
+        <div class="result-thumb">
+          <div class="result-thumb-placeholder">Case Study Image</div>
+          <div class="result-industry">Trades &amp; Construction</div>
+        </div>
+        <div class="result-body">
+          <div class="result-stat">4×</div>
+          <h3>Fairy Meadow plumber quadrupled monthly leads in 90 days</h3>
+          <p>A local plumbing business was averaging 4–5 website enquiries a month with an outdated site. After a full rebuild and local SEO campaign targeting "plumber Wollongong" and surrounding suburbs, they hit 20+ qualified leads per month within the first quarter.</p>
+        </div>
       </div>
       <div class="result-card reveal">
-        <div class="result-industry">Retail / eCommerce</div>
-        <div class="result-stat">+210%</div>
-        <h3>Wollongong homewares brand tripled online revenue after Shopify relaunch</h3>
-        <p>A Corrimal-based homewares retailer was running a slow, template-built WooCommerce store with a 74% mobile bounce rate. We rebuilt on Shopify, optimised for mobile, and relaunched with product SEO — online revenue grew 210% in six months.</p>
+        <div class="result-thumb">
+          <div class="result-thumb-placeholder">Case Study Image</div>
+          <div class="result-industry">Retail / eCommerce</div>
+        </div>
+        <div class="result-body">
+          <div class="result-stat">+210%</div>
+          <h3>Wollongong homewares brand tripled online revenue after Shopify relaunch</h3>
+          <p>A Corrimal-based homewares retailer was running a slow, template-built WooCommerce store with a 74% mobile bounce rate. We rebuilt on Shopify, optimised for mobile, and relaunched with product SEO — online revenue grew 210% in six months.</p>
+        </div>
       </div>
       <div class="result-card reveal">
-        <div class="result-industry">Professional Services</div>
-        <div class="result-stat">#1</div>
-        <h3>Wollongong accounting firm ranked #1 for their core keyword in 5 months</h3>
-        <p>A North Wollongong accounting practice was sitting on page 3 for "accountant Wollongong" — their primary search term. A new website with targeted content, technical SEO and Google Business Profile optimisation pushed them to position #1 within five months.</p>
+        <div class="result-thumb">
+          <div class="result-thumb-placeholder">Case Study Image</div>
+          <div class="result-industry">Professional Services</div>
+        </div>
+        <div class="result-body">
+          <div class="result-stat">#1</div>
+          <h3>Wollongong accounting firm ranked #1 for their core keyword in 5 months</h3>
+          <p>A North Wollongong accounting practice was sitting on page 3 for "accountant Wollongong" — their primary search term. A new website with targeted content, technical SEO and Google Business Profile optimisation pushed them to position #1 within five months.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -1308,25 +1327,37 @@
             <div>
               <div class="review-rating-num">5.0</div>
               <div class="review-stars" aria-hidden="true">★★★★★</div>
-              <div class="review-count">Based on 10 Google reviews</div>
+              <div class="review-count">As reviewed by local Wollongong businesses</div>
             </div>
-            <div style="text-align:right;">
-              <div style="font-size:1.4rem;font-weight:800;color:var(--ocean);">G</div>
-              <div class="review-src">Google</div>
+            <div style="text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:2px;">
+              <svg width="28" height="28" viewBox="0 0 48 48" aria-label="Google"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 29.8 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.9 20-21 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15.1 16 19.2 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3c-7.6 0-14.2 4.2-17.7 10.7z" transform="translate(0,1)"/><path fill="#FBBC05" d="M24 45c5.5 0 10.5-1.9 14.4-5.1l-6.6-5.6C29.8 35.9 27 37 24 37c-5.7 0-10.6-3.9-12.3-9.2l-7 5.4C8.1 40.8 15.5 45 24 45z" transform="translate(0,-1)"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.9l6.6 5.6C41.7 36.8 45 31 45 24c0-1.3-.2-2.7-.5-4z" transform="translate(-1,0)"/></svg>
+              <div class="review-src">Google Reviews</div>
             </div>
           </div>
           <div class="review-cards" role="list">
             <div class="review-card" role="listitem">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                <div class="review-stars-sm" aria-label="5 stars">★★★★★</div>
+                <svg width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 29.8 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.9 20-21 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15.1 16 19.2 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3c-7.6 0-14.2 4.2-17.7 10.7z" transform="translate(0,1)"/><path fill="#FBBC05" d="M24 45c5.5 0 10.5-1.9 14.4-5.1l-6.6-5.6C29.8 35.9 27 37 24 37c-5.7 0-10.6-3.9-12.3-9.2l-7 5.4C8.1 40.8 15.5 45 24 45z" transform="translate(0,-1)"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.9l6.6 5.6C41.7 36.8 45 31 45 24c0-1.3-.2-2.7-.5-4z" transform="translate(-1,0)"/></svg>
+              </div>
               <p class="review-text">"We'd been meaning to update our website for years but kept putting it off. These guys made the whole process painless — they handled everything and the result is better than we imagined. We're already getting more enquiries through the site."</p>
-              <div class="review-author"><div><div class="review-name">Daniel Sorensen</div><div class="review-suburb">Fairy Meadow, NSW</div></div><div class="review-stars-sm" aria-hidden="true">★★★★★</div></div>
+              <div class="review-author"><div><div class="review-name">Daniel Sorensen</div><div class="review-suburb">Fairy Meadow, NSW</div></div></div>
             </div>
             <div class="review-card" role="listitem">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                <div class="review-stars-sm" aria-label="5 stars">★★★★★</div>
+                <svg width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 29.8 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.9 20-21 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15.1 16 19.2 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3c-7.6 0-14.2 4.2-17.7 10.7z" transform="translate(0,1)"/><path fill="#FBBC05" d="M24 45c5.5 0 10.5-1.9 14.4-5.1l-6.6-5.6C29.8 35.9 27 37 24 37c-5.7 0-10.6-3.9-12.3-9.2l-7 5.4C8.1 40.8 15.5 45 24 45z" transform="translate(0,-1)"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.9l6.6 5.6C41.7 36.8 45 31 45 24c0-1.3-.2-2.7-.5-4z" transform="translate(-1,0)"/></svg>
+              </div>
               <p class="review-text">"Genuinely the best money we've spent on marketing. Our Google rankings went from nowhere to page one in a few months and the phone hasn't stopped. The team is local, responsive and actually knows what they're doing."</p>
-              <div class="review-author"><div><div class="review-name">Michelle Tran</div><div class="review-suburb">Wollongong, NSW</div></div><div class="review-stars-sm" aria-hidden="true">★★★★★</div></div>
+              <div class="review-author"><div><div class="review-name">Michelle Tran</div><div class="review-suburb">Wollongong, NSW</div></div></div>
             </div>
             <div class="review-card" role="listitem">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                <div class="review-stars-sm" aria-label="5 stars">★★★★★</div>
+                <svg width="16" height="16" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.7 33.9 29.8 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21c10.5 0 20-7.9 20-21 0-1.3-.2-2.7-.5-4z"/><path fill="#34A853" d="M6.3 14.7l7 5.1C15.1 16 19.2 13 24 13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 5.1 29.6 3 24 3c-7.6 0-14.2 4.2-17.7 10.7z" transform="translate(0,1)"/><path fill="#FBBC05" d="M24 45c5.5 0 10.5-1.9 14.4-5.1l-6.6-5.6C29.8 35.9 27 37 24 37c-5.7 0-10.6-3.9-12.3-9.2l-7 5.4C8.1 40.8 15.5 45 24 45z" transform="translate(0,-1)"/><path fill="#EA4335" d="M44.5 20H24v8.5h11.8c-.8 2.4-2.3 4.4-4.3 5.9l6.6 5.6C41.7 36.8 45 31 45 24c0-1.3-.2-2.7-.5-4z" transform="translate(-1,0)"/></svg>
+              </div>
               <p class="review-text">"Professional, fast and no BS. They delivered exactly what they promised on time and on budget. Refreshing to deal with a local agency that actually understands small business. Would recommend to anyone in the Illawarra."</p>
-              <div class="review-author"><div><div class="review-name">Brett Callahan</div><div class="review-suburb">Shellharbour, NSW</div></div><div class="review-stars-sm" aria-hidden="true">★★★★★</div></div>
+              <div class="review-author"><div><div class="review-name">Brett Callahan</div><div class="review-suburb">Shellharbour, NSW</div></div></div>
             </div>
           </div>
           <a href="https://maps.app.goo.gl/AevT5mboQner5fDPA" target="_blank" rel="noopener" class="btn btn--outline" style="width:100%;justify-content:center;margin-top:18px;">
