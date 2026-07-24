@@ -650,7 +650,7 @@
         linear-gradient(135deg, #061a36 0%, #0b3564 100%);
       padding: 100px 0 0;
     }
-    .cc-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(91,200,245,.35) 30%, rgba(91,200,245,.35) 70%, transparent); margin-bottom: 72px; }
+    .cc-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(91,200,245,.35) 30%, rgba(91,200,245,.35) 70%, transparent); margin-bottom: 72px; max-width: 1200px; margin-left: auto; margin-right: auto; }
     .cc-grid {
       display: grid; grid-template-columns: 44% 1fr; gap: 60px; align-items: start;
     }
@@ -696,8 +696,14 @@
     /* RIGHT — form panel */
     .cc-panel {
       background: rgba(12,55,101,0.72); border: 1px solid rgba(75,199,244,.28);
-      box-shadow: 0 24px 70px rgba(0,10,30,.3); backdrop-filter: blur(12px);
-      border-radius: 20px; padding: 44px 40px;
+      box-shadow: 0 24px 70px rgba(0,10,30,.4), 0 0 80px rgba(91,200,245,.12), inset 0 1px 0 rgba(91,200,245,.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px; padding: 44px 40px; position: relative;
+    }
+    .cc-panel::before {
+      content: ''; position: absolute; inset: -1px; border-radius: 21px; z-index: -1;
+      background: radial-gradient(ellipse at 60% 0%, rgba(91,200,245,.18) 0%, transparent 65%);
+      pointer-events: none;
     }
     .cc-panel-heading { font-family: var(--font-head); font-weight: 800; font-size: 1.25rem; color: #fff; margin-bottom: 6px; }
     .cc-panel-sub { font-size: .88rem; color: rgba(255,255,255,.55); margin-bottom: 32px; }
@@ -728,7 +734,7 @@
     @media (max-width: 860px) {
       .cc-grid { grid-template-columns: 1fr; gap: 0; }
       .cc-left { padding-bottom: 0; }
-      .cc-mobile-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+      .cc-mobile-ctas { display: none; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
       .cc-mobile-ctas a { flex: 1; min-width: 140px; text-align: center; padding: 13px 18px; border-radius: 10px; font-family: var(--font-head); font-weight: 700; font-size: .9rem; text-decoration: none; }
       .cc-mobile-cta-call { background: var(--electric); color: #061a36; }
       .cc-mobile-cta-email { background: rgba(91,200,245,.12); border: 1px solid rgba(91,200,245,.3); color: var(--electric); }
