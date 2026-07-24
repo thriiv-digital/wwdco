@@ -965,10 +965,12 @@
 .nh-btn-p:hover{filter:brightness(1.08);transform:translateY(-1px);opacity:1}
 .nh-btn-s{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-family:'Sora',sans-serif;font-weight:600;font-size:1rem;padding:.85rem 2rem;border-radius:9px;text-decoration:none;transition:border-color .2s,background .2s}
 .nh-btn-s:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);opacity:1}
-.nh-google{display:inline-flex;align-items:center;gap:.85rem;margin-bottom:1.5rem}
-.nh-g-icon{width:46px;height:46px;border-radius:50%;background:rgba(5,29,60,.68);border:1px solid rgba(91,200,245,.65);box-shadow:0 8px 24px rgba(0,0,0,.22);backdrop-filter:blur(8px);display:grid;place-items:center;flex-shrink:0}
-.nh-g-icon svg{width:25px;height:25px}
-.nh-stars{font-size:1.25rem;color:#f7b928;letter-spacing:.12em}
+.nh-google{display:inline-flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;background:rgba(5,29,60,.55);border:1px solid rgba(91,200,245,.35);border-radius:50px;padding:.55rem 1.1rem .55rem .55rem;backdrop-filter:blur(8px)}
+.nh-g-icon{width:36px;height:36px;border-radius:50%;background:rgba(5,29,60,.68);border:1px solid rgba(91,200,245,.65);box-shadow:0 4px 12px rgba(0,0,0,.22);display:grid;place-items:center;flex-shrink:0}
+.nh-g-icon img{width:20px;height:20px}
+.nh-stars{font-size:1.1rem;color:#f7b928;letter-spacing:.08em;line-height:1}
+.nh-score{font-family:'Sora',sans-serif;font-weight:800;font-size:1rem;color:#fff}
+.nh-review-by{font-size:.78rem;color:rgba(255,255,255,.65);font-weight:500;white-space:nowrap}
 .nh-proof{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
 .nh-proof-item{display:flex;align-items:center;gap:.5rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:500}
 .nh-proof-icon{width:16px;height:16px;stroke:#5bc8f5;fill:none;stroke-width:1.75;flex-shrink:0}
@@ -1134,11 +1136,13 @@
         <a href="#contact" class="nh-btn-p">Get a Free Quote</a>
         <a href="#results" class="nh-btn-s">View Our Work</a>
       </div>
-      <div class="nh-google" aria-label="Five-star rating on Google">
+      <div class="nh-google" aria-label="5.0 star rating on Google by local Wollongong businesses">
         <span class="nh-g-icon">
-          <img src="./Google__G__logo.svg.webp" alt="Google" width="25" height="25" />
+          <img src="./Google__G__logo.svg.webp" alt="Google" width="20" height="20" />
         </span>
+        <span class="nh-score">5.0</span>
         <span class="nh-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="nh-review-by">by local Wollongong businesses</span>
       </div>
       <div class="nh-proof">
         <span class="nh-proof-item">
