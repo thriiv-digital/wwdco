@@ -648,9 +648,8 @@
       background:
         radial-gradient(circle at 85% 15%, rgba(26,159,218,0.22), transparent 38%),
         linear-gradient(135deg, #061a36 0%, #0b3564 100%);
-      padding: 100px 0 0;
+      padding: 80px 0 0;
     }
-    .cc-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(91,200,245,.35) 30%, rgba(91,200,245,.35) 70%, transparent); margin-bottom: 72px; max-width: 1200px; margin-left: auto; margin-right: auto; }
     .cc-grid {
       display: grid; grid-template-columns: 44% 1fr; gap: 60px; align-items: start;
     }
@@ -665,8 +664,9 @@
     .cc-row-icon {
       width: 46px; height: 46px; border-radius: 50%; flex-shrink: 0;
       background: rgba(91,200,245,.12); border: 1px solid rgba(91,200,245,.3);
-      display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center;
     }
+    .cc-row-icon svg { display: block; }
     .cc-row-text { display: flex; flex-direction: column; }
     .cc-row-label { font-family: var(--font-head); font-size: .7rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 2px; }
     .cc-row-val { font-size: .97rem; font-weight: 600; color: #fff; }
@@ -694,16 +694,15 @@
     .cc-review-source { font-size: .75rem; color: rgba(255,255,255,.4); }
     .cc-g-icon { width: 22px; height: 22px; }
     /* RIGHT — form panel */
+    .cc-panel-wrap { position: relative; }
     .cc-panel {
-      background: rgba(12,55,101,0.72); border: 1px solid rgba(75,199,244,.28);
-      box-shadow: 0 24px 70px rgba(0,10,30,.4), 0 0 80px rgba(91,200,245,.12), inset 0 1px 0 rgba(91,200,245,.15);
-      backdrop-filter: blur(12px);
-      border-radius: 20px; padding: 44px 40px; position: relative;
-    }
-    .cc-panel::before {
-      content: ''; position: absolute; inset: -1px; border-radius: 21px; z-index: -1;
-      background: radial-gradient(ellipse at 60% 0%, rgba(91,200,245,.18) 0%, transparent 65%);
-      pointer-events: none;
+      background: rgba(12,55,101,0.75); border: 1px solid rgba(91,200,245,.4);
+      box-shadow:
+        0 0 50px 12px rgba(91,200,245,.18),
+        0 0 120px 30px rgba(91,200,245,.08),
+        inset 0 1px 0 rgba(91,200,245,.25);
+      backdrop-filter: blur(14px);
+      border-radius: 20px; padding: 44px 40px;
     }
     .cc-panel-heading { font-family: var(--font-head); font-weight: 800; font-size: 1.25rem; color: #fff; margin-bottom: 6px; }
     .cc-panel-sub { font-size: .88rem; color: rgba(255,255,255,.55); margin-bottom: 32px; }
@@ -877,7 +876,7 @@
   /* footer contact block */
   .footer-contact-block{margin-top:1rem}
   .footer-contact-row{font-size:.87rem;color:rgba(255,255,255,.55);margin-bottom:.5rem;display:grid;grid-template-columns:1.4rem 1fr;gap:.5rem;align-items:start;line-height:1.5}
-  .fcr-icon{text-align:center;flex-shrink:0;opacity:.7}.footer-contact-row a{color:rgba(255,255,255,.55)!important;font-size:.87rem!important;transition:color .2s!important;text-decoration:none!important;display:inline}
+  .fcr-icon{display:flex;align-items:center;flex-shrink:0;opacity:.8;color:rgba(255,255,255,.7)}.footer-contact-row a{color:rgba(255,255,255,.55)!important;font-size:.87rem!important;transition:color .2s!important;text-decoration:none!important;display:inline}
   .footer-contact-row a:hover{color:var(--electric)!important}
   
     @media(max-width:768px){.nav-links{display:none!important}.burger{display:block!important}.footer-grid{grid-template-columns:1fr 1fr}}
@@ -1629,7 +1628,6 @@
 <!-- CTA + CONTACT -->
 <section id="cta-contact" aria-labelledby="cta-contact-heading">
   <div class="container">
-    <div class="cc-divider"></div>
     <div class="cc-grid">
 
       <!-- LEFT -->
@@ -1646,21 +1644,27 @@
 
         <div class="cc-rows">
           <div class="cc-row">
-            <div class="cc-row-icon">&#128222;</div>
+            <div class="cc-row-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.85 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6.35 6.35l1.1-1.1a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
             <div class="cc-row-text">
               <span class="cc-row-label">Call Us</span>
               <span class="cc-row-val"><a href="tel:0240034436">(02) 4003 4436</a></span>
             </div>
           </div>
           <div class="cc-row">
-            <div class="cc-row-icon">&#9993;</div>
+            <div class="cc-row-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
             <div class="cc-row-text">
               <span class="cc-row-label">Email</span>
               <span class="cc-row-val"><a href="#" class="email-obf" data-u="hello" data-d="wollongongwebdesignco.com.au">[click to reveal]</a></span>
             </div>
           </div>
           <div class="cc-row">
-            <div class="cc-row-icon">&#128205;</div>
+            <div class="cc-row-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
             <div class="cc-row-text">
               <span class="cc-row-label">Visit</span>
               <span class="cc-row-val"><a href="https://maps.google.com/?q=1+Burelli+Street+Wollongong+NSW+2500" target="_blank" rel="noopener">1 Burelli Street, Wollongong CBD</a></span>
@@ -1687,7 +1691,8 @@
       </div>
 
       <!-- RIGHT — form -->
-      <div class="cc-panel reveal">
+      <div class="cc-panel-wrap reveal">
+      <div class="cc-panel">
         <p class="cc-panel-heading">Get My Free Recommendation</p>
         <p class="cc-panel-sub">Tell us about your business — we'll respond within one business day with a tailored strategy, not a sales pitch.</p>
         <form action="https://formspree.io/f/mlgqdvyy" method="POST">
@@ -1721,7 +1726,8 @@
           </button>
           <p class="cc-reassure">&#128274; No spam. No obligation. We respond within 1 business day.</p>
         </form>
-      </div>
+      </div><!-- /.cc-panel -->
+      </div><!-- /.cc-panel-wrap -->
 
     </div>
   </div>
@@ -1739,9 +1745,9 @@
         <div style="font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;color:#fff">Wollongong Web Design Co</div>
         <p>Web design, SEO and business automation for Wollongong and Illawarra businesses. We build sites that rank, convert and grow.</p>
         <div class="footer-contact-block">
-          <div class="footer-contact-row"><span class="fcr-icon">&#128205;</span><span><a href="https://maps.google.com/?q=Wollongong+Web+Design+Co,+1+Burelli+Street,+Wollongong+NSW+2500" target="_blank" rel="noopener">1 Burelli Street, Wollongong NSW 2500</a></span></div>
-          <div class="footer-contact-row"><span class="fcr-icon">&#128222;</span><span><a href="tel:0240034436">(02) 4003 4436</a></span></div>
-          <div class="footer-contact-row"><span class="fcr-icon">&#9993;</span><span><a href="#" class="email-obf" data-u="hello" data-d="wollongongwebdesignco.com.au" aria-label="Email us">[click to email]</a></span></div>
+          <div class="footer-contact-row"><span class="fcr-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span><a href="https://maps.google.com/?q=Wollongong+Web+Design+Co,+1+Burelli+Street,+Wollongong+NSW+2500" target="_blank" rel="noopener">1 Burelli Street, Wollongong NSW 2500</a></span></div>
+          <div class="footer-contact-row"><span class="fcr-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.85 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6.35 6.35l1.1-1.1a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span><a href="tel:0240034436">(02) 4003 4436</a></span></div>
+          <div class="footer-contact-row"><span class="fcr-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span><span><a href="#" class="email-obf" data-u="hello" data-d="wollongongwebdesignco.com.au" aria-label="Email us">[click to email]</a></span></div>
         </div>
       </div>
       <div class="footer-col">
