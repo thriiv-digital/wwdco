@@ -281,19 +281,7 @@
     /* ════════════════════════════════════════════════
        HERO — lighthouse photo + dark tint
     ════════════════════════════════════════════════ */
-    #hero {
-      position: relative;
-      display: flex; align-items: center;
-      padding: 137px 0 174px;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(8, 18, 48, .70) 0%,
-          rgba(8, 18, 48, .58) 55%,
-          rgba(8, 18, 48, .72) 100%
-        ),
-        var(--hero-img) center 60% / cover no-repeat;
-    }
+    #hero { }
 
     .hero-grid {
       display: grid;
@@ -407,28 +395,23 @@
        MARQUEE / TRUST BAR
     ════════════════════════════════════════════════ */
     #trust-bar {
-      background: var(--card-bg);
-      border-bottom: 1px solid var(--card-border);
-      padding: 18px 0; overflow: hidden;
+      background: #0f2550;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      padding: 12px 0; overflow: hidden;
     }
     .marquee-track {
-      display: flex; gap: 56px; white-space: nowrap;
-      animation: marquee 30s linear infinite;
+      display: flex; gap: 40px; white-space: nowrap;
+      animation: marquee 40s linear infinite;
     }
     @keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
     .marquee-item {
       display: flex; align-items: center; gap: 8px;
-      color: var(--muted); font-family: var(--font-head);
-      font-size: 41px; font-weight: 700; letter-spacing: .06em;
+      color: rgba(255,255,255,.75); font-family: var(--font-head);
+      font-size: .82rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
       flex-shrink: 0;
     }
-    .marquee-icon {
-      width: 24px; height: 24px; background: var(--electric-glow);
-      border: 1px solid var(--electric-dim); border-radius: 6px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: .7rem; color: var(--ocean); font-weight: 800;
-    }
-    .marquee-sep { width: 4px; height: 4px; background: var(--electric-dim); border-radius: 50%; flex-shrink: 0; }
+    .marquee-icon { display:none; }
+    .marquee-sep { width: 5px; height: 5px; background: #5bc8f5; border-radius: 50%; flex-shrink: 0; opacity:.6; align-self:center; }
 
     /* ════════════════════════════════════════════════
        STATS
@@ -830,8 +813,16 @@
   @media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
 
 /* ══ SITE HEADER ══ */
-.sh{position:sticky;top:0;left:0;right:0;z-index:300;background:#fff;border-bottom:1px solid #e8edf4;box-shadow:0 2px 12px rgba(0,0,0,.06)}
-.sh-inner{max-width:1440px;margin:0 auto;padding:0 80px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.sh{position:sticky;top:0;left:0;right:0;z-index:300;background:transparent;border-bottom:1px solid transparent;box-shadow:none;transition:background .3s,border-color .3s,box-shadow .3s}
+.sh--scrolled{background:#fff!important;border-bottom-color:#e8edf4!important;box-shadow:0 2px 12px rgba(0,0,0,.06)!important}
+.sh--scrolled .sh-logo-text{color:#0f2550!important}
+.sh--scrolled .sh-logo-text span:last-child{color:#0d5a9e!important}
+.sh--scrolled .sh-nav a,.sh--scrolled .sh-mega-btn{color:#2d3a4a!important}
+.sh--scrolled .sh-phone-btn{color:#0f2550!important;border-color:#0f2550!important}
+.sh--scrolled .sh-phone-btn svg{stroke:#5bc8f5}
+.sh--scrolled .sh-burger span{background:#0f2550!important}
+/* Default (transparent) state — overrides below base styles */
+.sh-inner{max-width:1600px;margin:0 auto;padding:0 80px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
 .sh-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
 .sh-logo-icon{width:36px;height:36px;background:linear-gradient(135deg,#0d5a9e,#0f2550);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;flex-shrink:0}
 .sh-logo-text{font-family:'Sora',sans-serif;font-weight:800;font-size:1.02rem;color:#0f2550;display:flex;flex-direction:row;align-items:center;gap:.35em}
@@ -843,13 +834,13 @@
 .sh-mega-btn{display:flex;align-items:center;gap:.3rem}
 .sh-chev{font-size:.7rem;transition:transform .2s}
 .sh-has-mega.open .sh-chev{transform:rotate(180deg)}
-.sh-mega{display:none;position:fixed;top:73px;left:50%;transform:translateX(-50%);width:1000px;max-width:calc(100vw - 3rem);background:#fff;border-radius:0 0 20px 20px;box-shadow:0 16px 48px rgba(0,0,0,.16);border:1px solid rgba(0,0,0,.07);z-index:400}
+.sh-mega{display:none;position:fixed;top:72px;left:50%;transform:translateX(-50%);width:1000px;max-width:calc(100vw - 3rem);background:#fff;border-radius:0 0 20px 20px;box-shadow:0 16px 48px rgba(0,0,0,.16);border:1px solid rgba(0,0,0,.07);z-index:400;overflow:visible}
 .sh-has-mega:hover .sh-mega,.sh-has-mega.open .sh-mega{display:block}
-.sh-mega-body{padding:2rem}
+.sh-mega-body{padding:2rem 2rem 1.5rem}
 .sh-mega-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5rem}
 .sh-mega-col-h{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#0f2550;margin-bottom:.3rem;padding-bottom:.5rem;border-bottom:1px solid #eef1f5}
 .sh-mega-blurb{font-size:.8rem;color:#6b7a8d;margin-bottom:.9rem;line-height:1.45}
-.sh-mega-item{display:flex;align-items:flex-start;gap:.65rem;padding:.55rem .6rem;border-radius:8px;transition:background .15s;color:#2d3a4a;text-decoration:none}
+.sh-mega-item{display:flex;align-items:flex-start;gap:.65rem;padding:.9rem .6rem!important;border-radius:8px;transition:background .15s;color:#2d3a4a!important;text-decoration:none}
 .sh-mega-item:hover{background:rgba(91,200,245,.08);opacity:1}
 .sh-mega-item:hover strong{color:#5bc8f5!important}
 .sh-mega-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
@@ -859,8 +850,8 @@
 .sh-mega-divider{border:none;border-top:1px solid #eef1f5;margin:1rem 0 .85rem}
 .sh-mega-locs{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
 .sh-mega-locs-lbl{font-size:.78rem;color:#6b7a8d;font-weight:500}
-.sh-loc-chip{font-size:.78rem;font-weight:600;padding:.25rem .75rem;border-radius:20px;background:transparent;color:#5bc8f5;border:1.5px solid #5bc8f5;transition:background .15s,color .15s;text-decoration:none;display:inline-flex}
-.sh-loc-chip:hover{background:#0f2550;color:#fff;border-color:#0f2550;opacity:1}
+.sh-loc-chip{font-size:.78rem!important;font-weight:600!important;padding:.25rem .75rem!important;border-radius:20px!important;background:#fff!important;color:#0d5a9e!important;border:1.5px solid #5bc8f5!important;transition:background .15s,color .15s;text-decoration:none!important;display:inline-flex!important}
+.sh-loc-chip:hover{background:#0f2550!important;color:#fff!important;border-color:#0f2550!important;opacity:1}
 .sh-actions{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
 .sh-phone-btn{display:flex;align-items:center;gap:6px;font-family:'Sora',sans-serif;font-size:.83rem;font-weight:600;color:#0f2550;border:1.5px solid #0f2550;padding:6px 14px;border-radius:100px;text-decoration:none;transition:all .2s;white-space:nowrap}
 .sh-phone-btn:hover{background:#0f2550;color:#5bc8f5;opacity:1}
@@ -879,15 +870,22 @@
 .sh-drawer-sub.open{display:flex}
 .sh-drawer-sub a{font-size:.93rem;color:#2d3a4a;padding:.5rem 0;border-bottom:1px solid #f4f7fb;text-decoration:none}
 .sh-drawer-cta{margin-top:1rem;background:#5bc8f5;color:#0f2550;font-weight:700;text-align:center;padding:.9rem;border-radius:10px;font-size:1rem;display:block;text-decoration:none}
+/* Transparent header state — must come AFTER base styles to win */
+.sh:not(.sh--scrolled) .sh-logo-text{color:#fff!important}
+.sh:not(.sh--scrolled) .sh-logo-text span:last-child{color:#5bc8f5!important}
+.sh:not(.sh--scrolled) .sh-nav a:not(.sh-loc-chip):not(.sh-mega-item),.sh:not(.sh--scrolled) .sh-mega-btn{color:rgba(255,255,255,.9)!important}
+.sh:not(.sh--scrolled) .sh-phone-btn{color:#fff!important;border-color:rgba(255,255,255,.45)!important}
+.sh:not(.sh--scrolled) .sh-phone-btn svg{stroke:#fff!important}
+.sh:not(.sh--scrolled) .sh-burger span{background:#fff!important}
 
 /* ══ NEW HERO ══ */
-.nh{position:relative;overflow:hidden}
-.nh-bg{position:absolute;inset:0;background:url('/wollongong-aerial-hero-polished-3000.jpg') center 40% / cover no-repeat;z-index:0}
+.nh{position:relative;overflow:hidden;margin-top:-72px;background:#041834}
+.nh-bg{position:absolute;inset:0;background:url('./wollongong-aerial-hero-polished-3000.jpg') center 45% / 100% auto no-repeat;z-index:0}
 .nh-grad{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,24,52,.96) 0%,rgba(4,24,52,.88) 30%,rgba(4,24,52,.42) 48%,rgba(4,24,52,0) 65%);z-index:1}
-.nh-inner{position:relative;z-index:2;max-width:1440px;margin:0 auto;padding:80px;width:100%;display:grid;grid-template-columns:42% 1fr;gap:4rem;align-items:center;min-height:calc(100vh - 72px)}
-.nh-left{padding:3rem 0}
+.nh-inner{position:relative;z-index:2;max-width:1600px;margin:0 auto;padding:190px 80px 68px;width:100%;display:grid;grid-template-columns:42% 1fr;gap:4rem;align-items:start}
+.nh-left{padding:0}
 .nh-eyebrow{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(91,200,245,.4);color:#5bc8f5;font-family:'Sora',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem 1rem;border-radius:100px;margin-bottom:1.5rem;background:rgba(91,200,245,.06)}
-.nh-h1{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(2.2rem,3.2vw,3.4rem);color:#fff;line-height:1.1;margin-bottom:1.5rem}
+.nh-h1{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(1.9rem,2.6vw,2.9rem);color:#fff;line-height:1.1;margin-bottom:1.5rem}
 .nh-hl{color:#5bc8f5;position:relative;display:inline-block}
 .nh-hl::after{content:'';position:absolute;left:0;bottom:2px;width:100%;height:2px;background:#5bc8f5;border-radius:2px;opacity:.6}
 .nh-lead{font-size:1.02rem;color:rgba(255,255,255,.85);line-height:1.75;margin-bottom:.75rem;max-width:600px}
@@ -907,12 +905,12 @@
 .nh-proof-div{width:1px;height:18px;background:rgba(255,255,255,.2)}
 /* Carousel */
 .nh-right{display:flex;flex-direction:column;gap:1.25rem;align-items:center;padding:3rem 0}
-.pc-wrap{width:100%;perspective:1500px;perspective-origin:50% 50%;position:relative}
-.pc{position:relative;width:100%;aspect-ratio:16/10}
-.ps{position:absolute;inset:0;transform-style:preserve-3d;backface-visibility:hidden;will-change:transform,opacity;transition:transform 900ms cubic-bezier(.22,1,.36,1),opacity 600ms ease;pointer-events:none}
-.ps.is-entering{transform:translate3d(70%,0,-180px) rotateY(78deg);opacity:0}
+.pc-wrap{width:100%;position:relative}
+.pc{position:relative;width:100%;aspect-ratio:16/10;perspective:1400px;perspective-origin:50% 50%;transform-style:preserve-3d}
+.ps{position:absolute;inset:0;backface-visibility:hidden;will-change:transform,opacity;transition:transform 950ms cubic-bezier(.22,1,.36,1),opacity 700ms ease;pointer-events:none;transform-origin:center center}
+.ps.is-entering{transform:translate3d(65%,0,-120px) rotateY(72deg);opacity:0}
 .ps.is-active{transform:translate3d(0,0,0) rotateY(0deg);opacity:1;pointer-events:auto}
-.ps.is-exiting{transform:translate3d(-70%,0,-180px) rotateY(-78deg);opacity:0}
+.ps.is-exiting{transform:translate3d(-65%,0,-120px) rotateY(-72deg);opacity:0}
 .bf{width:100%;height:100%;border-radius:12px;overflow:hidden;background:#1a2233;border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 60px rgba(0,0,0,.5)}
 .bf-bar{height:34px;background:#252d3d;display:flex;align-items:center;padding:0 14px;flex-shrink:0}
 .bf-dots{display:flex;gap:6px}
@@ -1097,25 +1095,25 @@
           <div class="ps is-active" role="group" aria-label="OZ Energy Solutions website" data-index="0">
             <div class="bf">
               <div class="bf-bar"><span class="bf-dots"><span></span><span></span><span></span></span></div>
-              <div class="bf-screen"><img src="/pic-ss-sq-ozenergysolutions.jpg" alt="OZ Energy Solutions — solar energy website built by Wollongong Web Design Co" loading="eager" /></div>
+              <div class="bf-screen"><img src="./pic-ss-sq-ozenergysolutions.jpg" alt="OZ Energy Solutions — solar energy website built by Wollongong Web Design Co" loading="eager" /></div>
             </div>
           </div>
           <div class="ps is-entering" role="group" aria-label="Driftwood Tiny Homes website" data-index="1">
             <div class="bf">
               <div class="bf-bar"><span class="bf-dots"><span></span><span></span><span></span></span></div>
-              <div class="bf-screen"><img src="/pic-ss-sq-driftwood-tinyhomes.jpg" alt="Driftwood Tiny Homes — lifestyle website built by Wollongong Web Design Co" loading="lazy" /></div>
+              <div class="bf-screen"><img src="./pic-ss-sq-driftwood-tinyhomes.jpg" alt="Driftwood Tiny Homes — lifestyle website built by Wollongong Web Design Co" loading="lazy" /></div>
             </div>
           </div>
           <div class="ps is-entering" role="group" aria-label="Eco Reports website" data-index="2">
             <div class="bf">
               <div class="bf-bar"><span class="bf-dots"><span></span><span></span><span></span></span></div>
-              <div class="bf-screen"><img src="/pic-ss-sq-ecoreports.jpg" alt="Eco Reports — environmental reporting website built by Wollongong Web Design Co" loading="lazy" /></div>
+              <div class="bf-screen"><img src="./pic-ss-sq-ecoreports.jpg" alt="Eco Reports — environmental reporting website built by Wollongong Web Design Co" loading="lazy" /></div>
             </div>
           </div>
           <div class="ps is-entering" role="group" aria-label="Hungry Goat Lawn Mowing website" data-index="3">
             <div class="bf">
               <div class="bf-bar"><span class="bf-dots"><span></span><span></span><span></span></span></div>
-              <div class="bf-screen"><img src="/pic-ss-sq-hungry-goat-lawn-mowing.jpg" alt="Hungry Goat Lawn Mowing — tradie website built by Wollongong Web Design Co" loading="lazy" /></div>
+              <div class="bf-screen"><img src="./pic-ss-sq-hungry-goat-lawn-mowing.jpg" alt="Hungry Goat Lawn Mowing — tradie website built by Wollongong Web Design Co" loading="lazy" /></div>
             </div>
           </div>
         </div>
@@ -1140,61 +1138,42 @@
 <!-- TRUST BAR -->
 <div id="trust-bar" aria-label="Credentials and memberships">
   <div class="marquee-track" aria-hidden="true">
-    <div class="marquee-item"><div class="marquee-icon">G</div>Google Partner</div>
+    <div class="marquee-item">Web Design</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item"><div class="marquee-icon">H</div>HubSpot Partner</div>
+    <div class="marquee-item">SEO</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item"><div class="marquee-icon">A</div>AWIA Member</div>
+    <div class="marquee-item">Google Ads</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item"><div class="marquee-icon">I</div>ICT Illawarra</div>
+    <div class="marquee-item">Social Media Marketing</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item">⭐ [RATING] Google Rating</div>
+    <div class="marquee-item">WordPress Development</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item">165+ Websites Delivered</div>
+    <div class="marquee-item">Landing Pages</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item">15 Years in Wollongong</div>
+    <div class="marquee-item">Email Marketing</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item"><div class="marquee-icon">G</div>Google Partner</div>
+    <div class="marquee-item">Ecommerce</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item"><div class="marquee-icon">H</div>HubSpot Partner</div>
+    <div class="marquee-item">Web Design</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item"><div class="marquee-icon">A</div>AWIA Member</div>
+    <div class="marquee-item">SEO</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item"><div class="marquee-icon">I</div>ICT Illawarra</div>
+    <div class="marquee-item">Google Ads</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item">⭐ [RATING] Google Rating</div>
+    <div class="marquee-item">Social Media Marketing</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item">165+ Websites Delivered</div>
+    <div class="marquee-item">WordPress Development</div>
     <div class="marquee-sep"></div>
-    <div class="marquee-item">15 Years in Wollongong</div>
+    <div class="marquee-item">Landing Pages</div>
+    <div class="marquee-sep"></div>
+    <div class="marquee-item">Email Marketing</div>
+    <div class="marquee-sep"></div>
+    <div class="marquee-item">Ecommerce</div>
     <div class="marquee-sep"></div>
   </div>
 </div>
 
 
-<!-- STATS -->
-<section id="stats" aria-label="Key statistics">
-  <div class="container" style="border-bottom:1px solid var(--card-border);">
-    <div class="stats-grid">
-      <div class="stat-card reveal">
-        <div class="stat-number"><span class="count-up" data-target="165" data-suffix="+">0</span></div>
-        <div class="stat-label">Websites Built</div>
-      </div>
-      <div class="stat-card reveal">
-        <div class="stat-number"><span class="count-up" data-target="15" data-suffix="">0</span> <span style="font-size:1.5rem;color:var(--ocean)">yrs</span></div>
-        <div class="stat-label">Local Experience</div>
-      </div>
-      <div class="stat-card reveal">
-        <div class="stat-number"><span class="count-up" data-target="10" data-suffix="">0</span> <span style="font-size:1.5rem;color:#f5a623">★</span></div>
-        <div class="stat-label">Google Reviews</div>
-      </div>
-      <div class="stat-card reveal">
-        <div class="stat-number"><span class="count-up" data-target="100" data-suffix="%">0</span></div>
-        <div class="stat-label">Illawarra-Based Team</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- SERVICES -->
@@ -1724,6 +1703,13 @@
 
 <!-- JS -->
 <script>
+  /* ── Header: transparent on homepage, white on scroll ── */
+  const siteHeader = document.getElementById('site-header');
+  if (siteHeader) {
+    const onScroll = () => siteHeader.classList.toggle('sh--scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
   /* ── Header: mega menu ── */
   const shMegas = document.querySelectorAll('.sh-has-mega');
   shMegas.forEach(li => {
