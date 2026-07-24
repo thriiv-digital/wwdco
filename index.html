@@ -828,60 +828,201 @@
   
     @media(max-width:768px){.nav-links{display:none!important}.burger{display:block!important}.footer-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+/* ══ SITE HEADER ══ */
+.sh{position:sticky;top:0;left:0;right:0;z-index:300;background:#fff;border-bottom:1px solid #e8edf4;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.sh-inner{max-width:1440px;margin:0 auto;padding:0 80px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+.sh-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.sh-logo-icon{width:36px;height:36px;background:linear-gradient(135deg,#0d5a9e,#0f2550);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Sora',sans-serif;font-weight:800;font-size:1.1rem;flex-shrink:0}
+.sh-logo-text{font-family:'Sora',sans-serif;font-weight:800;font-size:1.02rem;color:#0f2550;display:flex;flex-direction:row;align-items:center;gap:.35em}
+.sh-logo-text span:last-child{color:#0d5a9e}
+.sh-nav ul{display:flex;list-style:none;align-items:center;gap:2rem}
+.sh-nav a,.sh-mega-btn{font-size:.9rem;font-weight:500;color:#2d3a4a;text-decoration:none;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;padding:0;transition:color .2s}
+.sh-nav a:hover,.sh-mega-btn:hover{color:#0d5a9e;opacity:1}
+.sh-has-mega{position:relative}
+.sh-mega-btn{display:flex;align-items:center;gap:.3rem}
+.sh-chev{font-size:.7rem;transition:transform .2s}
+.sh-has-mega.open .sh-chev{transform:rotate(180deg)}
+.sh-mega{display:none;position:fixed;top:73px;left:50%;transform:translateX(-50%);width:1000px;max-width:calc(100vw - 3rem);background:#fff;border-radius:0 0 20px 20px;box-shadow:0 16px 48px rgba(0,0,0,.16);border:1px solid rgba(0,0,0,.07);z-index:400}
+.sh-has-mega:hover .sh-mega,.sh-has-mega.open .sh-mega{display:block}
+.sh-mega-body{padding:2rem}
+.sh-mega-inner{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5rem}
+.sh-mega-col-h{font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#0f2550;margin-bottom:.3rem;padding-bottom:.5rem;border-bottom:1px solid #eef1f5}
+.sh-mega-blurb{font-size:.8rem;color:#6b7a8d;margin-bottom:.9rem;line-height:1.45}
+.sh-mega-item{display:flex;align-items:flex-start;gap:.65rem;padding:.55rem .6rem;border-radius:8px;transition:background .15s;color:#2d3a4a;text-decoration:none}
+.sh-mega-item:hover{background:rgba(91,200,245,.08);opacity:1}
+.sh-mega-item:hover strong{color:#5bc8f5!important}
+.sh-mega-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+.sh-mega-text{display:flex;flex-direction:column}
+.sh-mega-text strong{font-size:.88rem;font-weight:600;color:#0f2550;line-height:1.3}
+.sh-mega-text span{font-size:.78rem;color:#6b7a8d;margin-top:1px;line-height:1.4}
+.sh-mega-divider{border:none;border-top:1px solid #eef1f5;margin:1rem 0 .85rem}
+.sh-mega-locs{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.sh-mega-locs-lbl{font-size:.78rem;color:#6b7a8d;font-weight:500}
+.sh-loc-chip{font-size:.78rem;font-weight:600;padding:.25rem .75rem;border-radius:20px;background:transparent;color:#5bc8f5;border:1.5px solid #5bc8f5;transition:background .15s,color .15s;text-decoration:none;display:inline-flex}
+.sh-loc-chip:hover{background:#0f2550;color:#fff;border-color:#0f2550;opacity:1}
+.sh-actions{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
+.sh-phone-btn{display:flex;align-items:center;gap:6px;font-family:'Sora',sans-serif;font-size:.83rem;font-weight:600;color:#0f2550;border:1.5px solid #0f2550;padding:6px 14px;border-radius:100px;text-decoration:none;transition:all .2s;white-space:nowrap}
+.sh-phone-btn:hover{background:#0f2550;color:#5bc8f5;opacity:1}
+.sh-phone-btn svg{width:14px;height:14px;stroke:#5bc8f5;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.sh-quote-btn{display:flex;align-items:center;font-family:'Sora',sans-serif;font-size:.88rem;font-weight:700;background:#5bc8f5;color:#0f2550;padding:8px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;transition:filter .2s}
+.sh-quote-btn:hover{filter:brightness(1.08);opacity:1}
+.sh-burger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0}
+.sh-burger span{display:block;width:24px;height:2px;background:#0f2550;margin:5px 0}
+.sh-drawer{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:#fff;z-index:299;overflow-y:auto;padding:1.5rem 1.25rem 2rem;flex-direction:column;gap:.25rem}
+.sh-drawer.open{display:flex}
+.sh-drawer-link{font-size:1rem;font-weight:500;color:#2d3a4a;padding:.75rem 0;border-bottom:1px solid #eef1f5;text-decoration:none}
+.sh-drawer-toggle{width:100%;text-align:left;background:none;border:none;border-bottom:1px solid #eef1f5;font-size:1rem;font-weight:600;color:#2d3a4a;padding:.75rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Inter',sans-serif}
+.sh-drawer-toggle .sh-chev{font-size:.75rem}
+.sh-drawer-toggle.open .sh-chev{transform:rotate(180deg)}
+.sh-drawer-sub{display:none;flex-direction:column;padding:.5rem 0 .5rem 1rem;gap:.1rem}
+.sh-drawer-sub.open{display:flex}
+.sh-drawer-sub a{font-size:.93rem;color:#2d3a4a;padding:.5rem 0;border-bottom:1px solid #f4f7fb;text-decoration:none}
+.sh-drawer-cta{margin-top:1rem;background:#5bc8f5;color:#0f2550;font-weight:700;text-align:center;padding:.9rem;border-radius:10px;font-size:1rem;display:block;text-decoration:none}
+
+/* ══ NEW HERO ══ */
+.nh{position:relative;overflow:hidden}
+.nh-bg{position:absolute;inset:0;background:url('/wollongong-aerial-hero-polished-3000.jpg') center 40% / cover no-repeat;z-index:0}
+.nh-grad{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,24,52,.96) 0%,rgba(4,24,52,.88) 30%,rgba(4,24,52,.42) 48%,rgba(4,24,52,0) 65%);z-index:1}
+.nh-inner{position:relative;z-index:2;max-width:1440px;margin:0 auto;padding:80px;width:100%;display:grid;grid-template-columns:42% 1fr;gap:4rem;align-items:center;min-height:calc(100vh - 72px)}
+.nh-left{padding:3rem 0}
+.nh-eyebrow{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(91,200,245,.4);color:#5bc8f5;font-family:'Sora',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem 1rem;border-radius:100px;margin-bottom:1.5rem;background:rgba(91,200,245,.06)}
+.nh-h1{font-family:'Sora',sans-serif;font-weight:800;font-size:clamp(2.2rem,3.2vw,3.4rem);color:#fff;line-height:1.1;margin-bottom:1.5rem}
+.nh-hl{color:#5bc8f5;position:relative;display:inline-block}
+.nh-hl::after{content:'';position:absolute;left:0;bottom:2px;width:100%;height:2px;background:#5bc8f5;border-radius:2px;opacity:.6}
+.nh-lead{font-size:1.02rem;color:rgba(255,255,255,.85);line-height:1.75;margin-bottom:.75rem;max-width:600px}
+.nh-sub{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.65;margin-bottom:2rem;max-width:570px}
+.nh-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.75rem}
+.nh-btn-p{display:inline-flex;align-items:center;gap:.5rem;background:#5bc8f5;color:#0f2550;font-family:'Sora',sans-serif;font-weight:700;font-size:1rem;padding:.85rem 2rem;border-radius:9px;text-decoration:none;transition:filter .2s,transform .2s}
+.nh-btn-p:hover{filter:brightness(1.08);transform:translateY(-1px);opacity:1}
+.nh-btn-s{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);font-family:'Sora',sans-serif;font-weight:600;font-size:1rem;padding:.85rem 2rem;border-radius:9px;text-decoration:none;transition:border-color .2s,background .2s}
+.nh-btn-s:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);opacity:1}
+.nh-google{display:inline-flex;align-items:center;gap:.85rem;margin-bottom:1.5rem}
+.nh-g-icon{width:46px;height:46px;border-radius:50%;background:rgba(5,29,60,.68);border:1px solid rgba(91,200,245,.65);box-shadow:0 8px 24px rgba(0,0,0,.22);backdrop-filter:blur(8px);display:grid;place-items:center;flex-shrink:0}
+.nh-g-icon svg{width:25px;height:25px}
+.nh-stars{font-size:1.25rem;color:#f7b928;letter-spacing:.12em}
+.nh-proof{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap}
+.nh-proof-item{display:flex;align-items:center;gap:.5rem;font-size:.88rem;color:rgba(255,255,255,.75);font-weight:500}
+.nh-proof-icon{width:16px;height:16px;stroke:#5bc8f5;fill:none;stroke-width:1.75;flex-shrink:0}
+.nh-proof-div{width:1px;height:18px;background:rgba(255,255,255,.2)}
+/* Carousel */
+.nh-right{display:flex;flex-direction:column;gap:1.25rem;align-items:center;padding:3rem 0}
+.pc-wrap{width:100%;perspective:1500px;perspective-origin:50% 50%;position:relative}
+.pc{position:relative;width:100%;aspect-ratio:16/10}
+.ps{position:absolute;inset:0;transform-style:preserve-3d;backface-visibility:hidden;will-change:transform,opacity;transition:transform 900ms cubic-bezier(.22,1,.36,1),opacity 600ms ease;pointer-events:none}
+.ps.is-entering{transform:translate3d(70%,0,-180px) rotateY(78deg);opacity:0}
+.ps.is-active{transform:translate3d(0,0,0) rotateY(0deg);opacity:1;pointer-events:auto}
+.ps.is-exiting{transform:translate3d(-70%,0,-180px) rotateY(-78deg);opacity:0}
+.bf{width:100%;height:100%;border-radius:12px;overflow:hidden;background:#1a2233;border:1px solid rgba(255,255,255,.1);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.bf-bar{height:34px;background:#252d3d;display:flex;align-items:center;padding:0 14px;flex-shrink:0}
+.bf-dots{display:flex;gap:6px}
+.bf-dots span{width:10px;height:10px;border-radius:50%}
+.bf-dots span:nth-child(1){background:#ff5f57}
+.bf-dots span:nth-child(2){background:#ffbd2e}
+.bf-dots span:nth-child(3){background:#28c840}
+.bf-screen{height:calc(100% - 34px);overflow:hidden}
+.bf-screen img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.pc-ctrl{display:flex;align-items:center;gap:1rem}
+.pc-counter{font-family:'Sora',sans-serif;font-size:.82rem;font-weight:700;color:rgba(255,255,255,.5);min-width:4rem}
+.pc-dots{display:flex;gap:.5rem}
+.pc-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);border:none;cursor:pointer;padding:0;transition:background .2s,transform .2s}
+.pc-dot.is-active{background:#5bc8f5;transform:scale(1.3)}
+.pc-arrow{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s;backdrop-filter:blur(6px)}
+.pc-arrow:hover{background:rgba(91,200,245,.25);border-color:rgba(91,200,245,.5)}
+@media(max-width:1100px){
+  .nh-inner{grid-template-columns:1fr;gap:2rem;min-height:auto;padding:60px 40px}
+  .nh-grad{background:linear-gradient(180deg,rgba(4,24,52,.95) 0%,rgba(4,24,52,.82) 60%,rgba(4,24,52,.4) 100%)}
+  .nh-bg{background-position:60% 40%}
+  .nh-left,.nh-right{padding:0}
+  .nh-left{padding-top:2rem}
+}
+@media(max-width:900px){
+  .sh-inner{padding:0 20px}
+  .sh-nav,.sh-phone-btn,.sh-quote-btn{display:none}
+  .sh-burger{display:block}
+  .nh-inner{padding:40px 20px 60px}
+  .nh-h1{font-size:clamp(1.8rem,8vw,2.6rem)}
+  .nh-proof-div{display:none}
+  .nh-ctas{flex-direction:column}
+  .nh-btn-p,.nh-btn-s{justify-content:center}
+}
+@media(max-width:600px){.pc{aspect-ratio:4/3}}
+@media(prefers-reduced-motion:reduce){
+  .ps{transition:opacity 400ms ease!important}
+  .ps.is-entering,.ps.is-exiting{transform:none!important}
+}
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════════════
-     NAV
-══════════════════════════════════════════════════ -->
-<nav class="nav" id="main-nav" aria-label="Main navigation">
-  <a href="/" class="nav-logo"><span class="nav-logo-icon">W</span><span class="nav-logo-text"><span class="nav-logo-line1">Wollongong</span><span class="nav-logo-line2">Web Design Co</span></span></a>
-  <ul class="nav-links">
-    <li class="nav-has-mega">
-      <a href="/#services" class="nav-mega-trigger" aria-haspopup="true" aria-expanded="false">Services <span class="nav-chevron">&#9662;</span></a>
-      <div class="nav-mega" role="region" aria-label="Services menu"><div class="mega-body"><div class="mega-inner">
-          <div>
-            <div class="mega-col-heading">Web &amp; eCommerce</div><div class="mega-col-blurb">Build a site that works as hard as you do &mdash; fast, local, built to convert.</div>
-            <a href="/web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#127760;</span><span class="mega-item-text"><strong>Web Design</strong><span>Custom sites that convert</span></span></a>
-            <a href="/ecommerce-web-design-wollongong/" class="mega-item"><span class="mega-item-icon">&#128722;</span><span class="mega-item-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce</span></span></a>
-            <a href="/website-maintenance-wollongong/" class="mega-item"><span class="mega-item-icon">&#128295;</span><span class="mega-item-text"><strong>Maintenance</strong><span>Updates, security &amp; support</span></span></a>
+<!-- HEADER -->
+<header class="sh" id="site-header">
+  <div class="sh-inner">
+    <a href="/" class="sh-logo">
+      <span class="sh-logo-icon">W</span>
+      <span class="sh-logo-text"><span>Wollongong</span><span>Web Design Co</span></span>
+    </a>
+    <nav class="sh-nav" aria-label="Main navigation">
+      <ul>
+        <li class="sh-has-mega">
+          <button class="sh-mega-btn" aria-haspopup="true" aria-expanded="false">Services <span class="sh-chev">&#9662;</span></button>
+          <div class="sh-mega" role="region" aria-label="Services menu">
+            <div class="sh-mega-body"><div class="sh-mega-inner">
+              <div>
+                <div class="sh-mega-col-h">Web &amp; eCommerce</div>
+                <div class="sh-mega-blurb">Build a site that works as hard as you do — fast, local, built to convert.</div>
+                <a href="/web-design-wollongong/" class="sh-mega-item"><span class="sh-mega-icon">&#127760;</span><span class="sh-mega-text"><strong>Web Design</strong><span>Custom sites that convert</span></span></a>
+                <a href="/ecommerce-web-design-wollongong/" class="sh-mega-item"><span class="sh-mega-icon">&#128722;</span><span class="sh-mega-text"><strong>eCommerce</strong><span>Shopify &amp; WooCommerce</span></span></a>
+                <a href="/website-maintenance-wollongong/" class="sh-mega-item"><span class="sh-mega-icon">&#128295;</span><span class="sh-mega-text"><strong>Maintenance</strong><span>Updates, security &amp; support</span></span></a>
+              </div>
+              <div>
+                <div class="sh-mega-col-h">Marketing</div>
+                <div class="sh-mega-blurb">Get found on Google and turn local searches into booked jobs.</div>
+                <a href="/seo-wollongong/" class="sh-mega-item"><span class="sh-mega-icon">&#128200;</span><span class="sh-mega-text"><strong>SEO Wollongong</strong><span>Rank higher, get found</span></span></a>
+                <a href="/local-seo-wollongong/" class="sh-mega-item"><span class="sh-mega-icon">&#128205;</span><span class="sh-mega-text"><strong>Local SEO</strong><span>Dominate local search</span></span></a>
+                <a href="/google-ads-wollongong/" class="sh-mega-item"><span class="sh-mega-icon">&#127919;</span><span class="sh-mega-text"><strong>Google Ads</strong><span>Pay-per-click campaigns</span></span></a>
+                <a href="/google-business-profile-wollongong/" class="sh-mega-item"><span class="sh-mega-icon">&#128338;</span><span class="sh-mega-text"><strong>Google Business Profile</strong><span>Rank in the Maps 3-pack</span></span></a>
+              </div>
+              <div>
+                <div class="sh-mega-col-h">Automation</div>
+                <div class="sh-mega-blurb">Stop losing leads — let smart tools follow up while you sleep.</div>
+                <a href="/business-automation-wollongong/" class="sh-mega-item"><span class="sh-mega-icon">&#129302;</span><span class="sh-mega-text"><strong>Business Automation</strong><span>AI tools that save hours</span></span></a>
+                <a href="/business-automation-wollongong/#missed-call" class="sh-mega-item"><span class="sh-mega-icon">&#128241;</span><span class="sh-mega-text"><strong>Missed Call Text Back</strong><span>Never lose a lead</span></span></a>
+                <a href="/business-automation-wollongong/#reviews" class="sh-mega-item"><span class="sh-mega-icon">&#11088;</span><span class="sh-mega-text"><strong>Review Automation</strong><span>More 5-star reviews</span></span></a>
+              </div>
+            </div>
+            <hr class="sh-mega-divider" />
+            <div class="sh-mega-locs">
+              <span class="sh-mega-locs-lbl">Areas we serve:</span>
+              <a href="/" class="sh-loc-chip">Wollongong</a>
+              <a href="/web-design-shellharbour/" class="sh-loc-chip">Shellharbour</a>
+              <a href="/web-design-kiama/" class="sh-loc-chip">Kiama</a>
+              <a href="/web-design-southern-highlands/" class="sh-loc-chip">Southern Highlands</a>
+            </div></div>
           </div>
-          <div>
-            <div class="mega-col-heading">Marketing</div><div class="mega-col-blurb">Get found on Google and turn local searches into booked jobs.</div>
-            <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Rank higher, get found</span></span></a>
-            <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate local search</span></span></a>
-            <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Pay-per-click campaigns</span></span></a>
-            <a href="/google-business-profile-wollongong/" class="mega-item"><span class="mega-item-icon">&#128338;</span><span class="mega-item-text"><strong>Google Business Profile</strong><span>Rank in the Maps 3-pack</span></span></a>
-          </div>
-          <div>
-            <div class="mega-col-heading">Automation</div><div class="mega-col-blurb">Stop losing leads &mdash; let smart tools follow up while you sleep.</div>
-            <a href="/business-automation-wollongong/" class="mega-item"><span class="mega-item-icon">&#129302;</span><span class="mega-item-text"><strong>Business Automation</strong><span>AI tools that save hours</span></span></a>
-            <a href="/business-automation-wollongong/#missed-call" class="mega-item"><span class="mega-item-icon">&#128241;</span><span class="mega-item-text"><strong>Missed Call Text Back</strong><span>Never lose a lead</span></span></a>
-            <a href="/business-automation-wollongong/#reviews" class="mega-item"><span class="mega-item-icon">&#11088;</span><span class="mega-item-text"><strong>Review Automation</strong><span>More 5-star reviews</span></span></a>
-          </div>
-        </div><hr class="mega-divider" />
-        <div class="mega-locations-row">
-          <span class="mega-locations-label">Areas we serve:</span>
-          <a href="/" class="mega-loc-chip">Wollongong</a>
-          <a href="/web-design-shellharbour/" class="mega-loc-chip">Shellharbour</a>
-          <a href="/web-design-kiama/" class="mega-loc-chip">Kiama</a>
-          <a href="/web-design-southern-highlands/" class="mega-loc-chip">Southern Highlands</a>
-        </div></div></div>
-    </li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/contact/">Contact</a></li>
-  </ul>
-  <div class="nav-right"><a href="tel:0240034436" class="nav-phone-pill">&#128222; (02) 4003 4436</a><a href="/#contact" class="nav-cta">Get a Free Quote</a></div>
-  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+        </li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sh-actions">
+      <a href="tel:0240034436" class="sh-phone-btn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l1.85-1.85a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (02) 4003 4436
+      </a>
+      <a href="#contact" class="sh-quote-btn">Get a Free Quote</a>
+    </div>
+    <button class="sh-burger" id="sh-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
-<nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
-  <button class="drawer-section-toggle" data-target="drawer-services" aria-expanded="false">Services <span class="chev">&#9662;</span></button>
-  <div class="drawer-sub" id="drawer-services">
+<!-- MOBILE DRAWER -->
+<nav class="sh-drawer" id="sh-drawer" aria-label="Mobile navigation">
+  <button class="sh-drawer-toggle" data-target="shd-services" aria-expanded="false">Services <span class="sh-chev">&#9662;</span></button>
+  <div class="sh-drawer-sub" id="shd-services">
     <a href="/web-design-wollongong/">&#127760; Web Design</a>
     <a href="/ecommerce-web-design-wollongong/">&#128722; eCommerce</a>
     <a href="/seo-wollongong/">&#128200; SEO Wollongong</a>
@@ -891,94 +1032,107 @@
     <a href="/website-maintenance-wollongong/">&#128295; Maintenance</a>
     <a href="/business-automation-wollongong/">&#129302; Business Automation</a>
   </div>
-  <a href="/about/" class="drawer-link">About</a>
-  <a href="/blog/" class="drawer-link">Blog</a>
-  <a href="/contact/" class="drawer-link">Contact</a>
-  <button class="drawer-section-toggle" data-target="drawer-areas" aria-expanded="false">Service Areas <span class="chev">&#9662;</span></button>
-  <div class="drawer-sub" id="drawer-areas">
+  <a href="/about/" class="sh-drawer-link">About</a>
+  <a href="/blog/" class="sh-drawer-link">Blog</a>
+  <a href="/contact/" class="sh-drawer-link">Contact</a>
+  <button class="sh-drawer-toggle" data-target="shd-areas" aria-expanded="false">Service Areas <span class="sh-chev">&#9662;</span></button>
+  <div class="sh-drawer-sub" id="shd-areas">
     <a href="/">&#128205; Wollongong</a>
     <a href="/web-design-shellharbour/">&#128205; Shellharbour</a>
     <a href="/web-design-kiama/">&#128205; Kiama</a>
     <a href="/web-design-southern-highlands/">&#128205; Southern Highlands</a>
   </div>
-  <a href="#contact" class="drawer-cta">Get a Free Quote &#8594;</a>
+  <a href="#contact" class="sh-drawer-cta">Get a Free Quote &#8594;</a>
 </nav>
 
 
-<!-- ══════════════════════════════════════════════════
-     HERO
-══════════════════════════════════════════════════ -->
+<!-- HERO -->
 <main>
-<section id="hero" aria-label="Hero">
-  <div class="container">
-    <div class="hero-grid">
+<section class="nh" id="hero" aria-label="Hero">
+  <div class="nh-bg" aria-hidden="true"></div>
+  <div class="nh-grad" aria-hidden="true"></div>
+  <div class="nh-inner">
 
-      <div class="hero-content">
-        <!-- H1 — keyword-rich, styled as eyebrow pill -->
-        <h1 class="hero-h1">
-          <span class="hero-h1-dot" aria-hidden="true"></span>
-          Wollongong Web Design Specialists — 15 Years Local
-        </h1>
-
-        <!-- Display headline -->
-        <p class="hero-display">
-          Digital Marketing<br>
-          Specialists.<br>
-          <em>Built to Rank.<br>Built to Win.</em>
-        </p>
-
-        <p class="hero-sub">
-          We build fast, beautiful, Google-ready websites and run results-driven digital marketing for Illawarra businesses. From Thirroul to Shellharbour — 165+ local websites delivered in 15 years.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn--electric">
-            Get a Free Quote
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="tel:0240034436" class="btn btn--ghost-white">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 6 6l1.85-1.85a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            (02) 4003 4436
-          </a>
-        </div>
-
-        <div class="hero-trust" aria-label="Credentials">
-          <div class="hero-trust-item"><div class="hero-trust-tick" aria-hidden="true">✓</div> Google Partner</div>
-          <div class="hero-trust-item"><div class="hero-trust-tick" aria-hidden="true">✓</div> HubSpot Partner</div>
-          <div class="hero-trust-item"><div class="hero-trust-tick" aria-hidden="true">✓</div> AWIA Member</div>
-          <div class="hero-trust-item"><div class="hero-trust-tick" aria-hidden="true">✓</div> ICT Illawarra</div>
-        </div>
+    <!-- LEFT: content -->
+    <div class="nh-left">
+      <div class="nh-eyebrow">WOLLONGONG WEB DESIGN SPECIALISTS &mdash; 15 YEARS LOCAL</div>
+      <h1 class="nh-h1">
+        Websites built to <span class="nh-hl">rank.</span><br>
+        Digital marketing built to <span class="nh-hl">grow.</span>
+      </h1>
+      <p class="nh-lead">We design fast, high-converting websites and deliver SEO and Google Ads campaigns that help ambitious Wollongong and Illawarra businesses get found, generate better enquiries and grow with confidence.</p>
+      <p class="nh-sub">Local strategy, clear communication and measurable results &mdash; from a team with 15 years of experience.</p>
+      <div class="nh-ctas">
+        <a href="#contact" class="nh-btn-p">Get a Free Quote</a>
+        <a href="#results" class="nh-btn-s">View Our Work</a>
       </div>
-
-      <!-- Dashboard card -->
-      <div class="hero-card" aria-hidden="true">
-        <div class="hero-card-bar">
-          <div class="hero-card-dots"><span></span><span></span><span></span></div>
-          <div class="hero-card-lbl">yourwebsite.com.au — Live Stats</div>
-        </div>
-        <div class="metric-row">
-          <div class="metric"><div class="metric-val" id="hm-traffic">—</div><div class="metric-lbl">Monthly visitors</div></div>
-          <div class="metric"><div class="metric-val" id="hm-leads">—</div><div class="metric-lbl">Enquiries / mo</div></div>
-          <div class="metric"><div class="metric-val" id="hm-rank">—</div><div class="metric-lbl">Google rank</div></div>
-          <div class="metric"><div class="metric-val" id="hm-speed">—</div><div class="metric-lbl">PageSpeed</div></div>
-        </div>
-        <div class="card-bars">
-          <div class="card-bar-row">
-            <div class="card-bar-top"><span>Organic search</span><span>↑ 214%</span></div>
-            <div class="card-bar-track"><div class="card-bar-fill" data-w="78"></div></div>
-          </div>
-          <div class="card-bar-row">
-            <div class="card-bar-top"><span>Local visibility</span><span>↑ 186%</span></div>
-            <div class="card-bar-track"><div class="card-bar-fill" data-w="91"></div></div>
-          </div>
-          <div class="card-bar-row">
-            <div class="card-bar-top"><span>Conversion rate</span><span>↑ 3.4×</span></div>
-            <div class="card-bar-track"><div class="card-bar-fill" data-w="65"></div></div>
-          </div>
-        </div>
+      <div class="nh-google" aria-label="Five-star rating on Google">
+        <span class="nh-g-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </span>
+        <span class="nh-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
       </div>
-
+      <div class="nh-proof">
+        <span class="nh-proof-item">
+          <svg class="nh-proof-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          165+ websites delivered
+        </span>
+        <span class="nh-proof-div" aria-hidden="true"></span>
+        <span class="nh-proof-item">
+          <svg class="nh-proof-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          15 years local
+        </span>
+      </div>
     </div>
+
+    <!-- RIGHT: portfolio carousel -->
+    <div class="nh-right">
+      <div class="pc-wrap">
+        <div class="pc" id="port-carousel" aria-label="Portfolio examples" aria-live="polite">
+          <div class="ps is-active" role="group" aria-label="OZ Energy Solutions website" data-index="0">
+            <div class="bf">
+              <div class="bf-bar"><span class="bf-dots"><span></span><span></span><span></span></span></div>
+              <div class="bf-screen"><img src="/pic-ss-sq-ozenergysolutions.jpg" alt="OZ Energy Solutions — solar energy website built by Wollongong Web Design Co" loading="eager" /></div>
+            </div>
+          </div>
+          <div class="ps is-entering" role="group" aria-label="Driftwood Tiny Homes website" data-index="1">
+            <div class="bf">
+              <div class="bf-bar"><span class="bf-dots"><span></span><span></span><span></span></span></div>
+              <div class="bf-screen"><img src="/pic-ss-sq-driftwood-tinyhomes.jpg" alt="Driftwood Tiny Homes — lifestyle website built by Wollongong Web Design Co" loading="lazy" /></div>
+            </div>
+          </div>
+          <div class="ps is-entering" role="group" aria-label="Eco Reports website" data-index="2">
+            <div class="bf">
+              <div class="bf-bar"><span class="bf-dots"><span></span><span></span><span></span></span></div>
+              <div class="bf-screen"><img src="/pic-ss-sq-ecoreports.jpg" alt="Eco Reports — environmental reporting website built by Wollongong Web Design Co" loading="lazy" /></div>
+            </div>
+          </div>
+          <div class="ps is-entering" role="group" aria-label="Hungry Goat Lawn Mowing website" data-index="3">
+            <div class="bf">
+              <div class="bf-bar"><span class="bf-dots"><span></span><span></span><span></span></span></div>
+              <div class="bf-screen"><img src="/pic-ss-sq-hungry-goat-lawn-mowing.jpg" alt="Hungry Goat Lawn Mowing — tradie website built by Wollongong Web Design Co" loading="lazy" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pc-ctrl">
+        <button class="pc-arrow" id="pc-prev" aria-label="Previous project">&#8592;</button>
+        <span class="pc-counter"><span id="pc-num">01</span> / 04</span>
+        <div class="pc-dots" role="tablist" aria-label="Portfolio slides">
+          <button class="pc-dot is-active" role="tab" aria-label="Project 1" aria-selected="true" data-dot="0"></button>
+          <button class="pc-dot" role="tab" aria-label="Project 2" aria-selected="false" data-dot="1"></button>
+          <button class="pc-dot" role="tab" aria-label="Project 3" aria-selected="false" data-dot="2"></button>
+          <button class="pc-dot" role="tab" aria-label="Project 4" aria-selected="false" data-dot="3"></button>
+        </div>
+        <button class="pc-arrow" id="pc-next" aria-label="Next project">&#8594;</button>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1570,62 +1724,114 @@
 
 <!-- JS -->
 <script>
-  /* Mega menu */
-  const nav=document.getElementById('main-nav');
-  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40),{passive:true});
-  const megaTriggers=document.querySelectorAll('.nav-has-mega');
-  megaTriggers.forEach(li=>{const t=li.querySelector('.nav-mega-trigger'),m=li.querySelector('.nav-mega');let tm;
-    const openM=()=>{clearTimeout(tm);li.classList.add('open');t.setAttribute('aria-expanded','true');};
-    const closeM=()=>{tm=setTimeout(()=>{li.classList.remove('open');t.setAttribute('aria-expanded','false');},150);};
-    li.addEventListener('mouseenter',openM);li.addEventListener('mouseleave',closeM);
-    if(m){m.addEventListener('mouseenter',openM);m.addEventListener('mouseleave',closeM);}
-    t.addEventListener('click',e=>{li.classList.contains('open')?closeM():openM();e.preventDefault();});
+  /* ── Header: mega menu ── */
+  const shMegas = document.querySelectorAll('.sh-has-mega');
+  shMegas.forEach(li => {
+    const btn = li.querySelector('.sh-mega-btn');
+    const mega = li.querySelector('.sh-mega');
+    let tm;
+    const open = () => { clearTimeout(tm); li.classList.add('open'); btn.setAttribute('aria-expanded','true'); };
+    const close = () => { tm = setTimeout(() => { li.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }, 150); };
+    li.addEventListener('mouseenter', open);
+    li.addEventListener('mouseleave', close);
+    if (mega) { mega.addEventListener('mouseenter', open); mega.addEventListener('mouseleave', close); }
+    btn.addEventListener('click', e => { li.classList.contains('open') ? close() : open(); e.preventDefault(); });
   });
-  document.addEventListener('click',e=>{megaTriggers.forEach(li=>{if(!li.contains(e.target)){li.classList.remove('open');const t=li.querySelector('.nav-mega-trigger');if(t)t.setAttribute('aria-expanded','false');}});});
-  const burger=document.getElementById('burger'),drawer=document.getElementById('mobile-drawer');
-  burger.addEventListener('click',()=>{const o=drawer.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
-  document.querySelectorAll('.drawer-section-toggle').forEach(btn=>{btn.addEventListener('click',()=>{const t=document.getElementById(btn.dataset.target);const o=t.classList.toggle('open');btn.classList.toggle('open',o);btn.setAttribute('aria-expanded',o);});});
+  document.addEventListener('click', e => {
+    shMegas.forEach(li => { if (!li.contains(e.target)) { li.classList.remove('open'); li.querySelector('.sh-mega-btn').setAttribute('aria-expanded','false'); } });
+  });
 
-  /* Scroll reveal */
+  /* ── Header: mobile burger ── */
+  const shBurger = document.getElementById('sh-burger');
+  const shDrawer = document.getElementById('sh-drawer');
+  shBurger.addEventListener('click', () => { const o = shDrawer.classList.toggle('open'); shBurger.setAttribute('aria-expanded', o); });
+  document.querySelectorAll('.sh-drawer-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sub = document.getElementById(btn.dataset.target);
+      const o = sub.classList.toggle('open');
+      btn.classList.toggle('open', o);
+      btn.setAttribute('aria-expanded', o);
+    });
+  });
+
+  /* ── Portfolio carousel ── */
+  (function() {
+    const slides = Array.from(document.querySelectorAll('.ps'));
+    const dots   = Array.from(document.querySelectorAll('.pc-dot'));
+    const counter = document.getElementById('pc-num');
+    const carousel = document.getElementById('port-carousel');
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let current = 0, timer, resumeTimer, paused = false;
+    const INTERVAL = 5000, RESUME_DELAY = 8000;
+
+    function goTo(next, dir) {
+      if (next === current) return;
+      const prev = current;
+      slides[prev].classList.remove('is-active');
+      slides[prev].classList.add('is-exiting');
+      slides[next].classList.remove('is-entering');
+      slides[next].classList.add('is-active');
+      setTimeout(() => { slides[prev].classList.remove('is-exiting'); slides[prev].classList.add('is-entering'); }, 950);
+      dots[prev].classList.remove('is-active'); dots[prev].setAttribute('aria-selected','false');
+      dots[next].classList.add('is-active'); dots[next].setAttribute('aria-selected','true');
+      counter.textContent = String(next + 1).padStart(2,'0');
+      current = next;
+    }
+
+    function next() { goTo((current + 1) % slides.length); }
+    function prev() { goTo((current - 1 + slides.length) % slides.length); }
+
+    function startAuto() { if (!paused) timer = setInterval(next, INTERVAL); }
+    function stopAuto()  { clearInterval(timer); }
+    function manualNav(fn) { stopAuto(); clearTimeout(resumeTimer); fn(); resumeTimer = setTimeout(startAuto, RESUME_DELAY); }
+
+    document.getElementById('pc-next').addEventListener('click', () => manualNav(next));
+    document.getElementById('pc-prev').addEventListener('click', () => manualNav(prev));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => manualNav(() => goTo(i))));
+
+    /* Pause on hover/focus */
+    carousel.addEventListener('mouseenter', () => { paused = true; stopAuto(); });
+    carousel.addEventListener('mouseleave', () => { paused = false; startAuto(); });
+    carousel.addEventListener('focusin',    () => { paused = true; stopAuto(); });
+    carousel.addEventListener('focusout',   () => { paused = false; startAuto(); });
+
+    /* Keyboard */
+    carousel.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') manualNav(next);
+      if (e.key === 'ArrowLeft')  manualNav(prev);
+    });
+
+    /* Touch swipe */
+    let tx = 0;
+    carousel.addEventListener('touchstart', e => { tx = e.changedTouches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend',   e => {
+      const dx = e.changedTouches[0].clientX - tx;
+      if (Math.abs(dx) > 40) manualNav(dx < 0 ? next : prev);
+    });
+
+    if (!reduced) startAuto();
+  })();
+
+  /* ── Scroll reveal ── */
   const revObs = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); }
   }), { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
 
-  /* Count-up */
+  /* ── Count-up ── */
   function countUp(el, target, suffix) {
     const dur = 1600, t0 = performance.now();
     const tick = now => {
       const p = Math.min((now - t0) / dur, 1);
-      const e = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(e * target) + suffix;
+      el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target) + suffix;
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
   }
   const stObs = new IntersectionObserver(es => es.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.querySelectorAll('.count-up').forEach(el => countUp(el, +el.dataset.target, el.dataset.suffix));
-      stObs.unobserve(e.target);
-    }
+    if (e.isIntersecting) { e.target.querySelectorAll('.count-up').forEach(el => countUp(el, +el.dataset.target, el.dataset.suffix)); stObs.unobserve(e.target); }
   }), { threshold: 0.3 });
   document.querySelectorAll('.stat-card').forEach(c => stObs.observe(c));
-
-  /* Hero card metrics */
-  setTimeout(() => {
-    [['hm-traffic','2,840'],['hm-leads','47'],['hm-rank','#1'],['hm-speed','98']].forEach(([id,val],i) => {
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (!el) return;
-        el.style.transition = 'opacity .3s';
-        el.style.opacity = '0';
-        setTimeout(() => { el.textContent = val; el.style.opacity = '1'; }, 180);
-      }, i * 280);
-    });
-  }, 700);
-
-  /* Progress bars */
-  setTimeout(() => document.querySelectorAll('.card-bar-fill').forEach(b => b.style.width = b.dataset.w + '%'), 500);
 </script>
 
 <script>document.querySelectorAll(".email-obf").forEach(function(a){var u=a.getAttribute("data-u"),d=a.getAttribute("data-d"),e=u+"@"+d;a.href="mailto:"+e;a.textContent=e;a.removeAttribute("aria-label");});</script>
