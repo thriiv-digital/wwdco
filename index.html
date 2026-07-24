@@ -579,9 +579,11 @@
     ════════════════════════════════════════════════ */
     #results { background: var(--card-bg); }
     .results-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
-    .result-card { background: var(--white); border: 1px solid var(--card-border); border-radius: var(--radius); overflow:hidden; }
-    .result-thumb { position:relative; height:160px; background:#d0dae8; overflow:hidden; }
-    .result-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+    .result-card { background: var(--white); border: 1px solid var(--card-border); border-radius: var(--radius); overflow:hidden; transition: transform .22s ease, box-shadow .22s ease; }
+    .result-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(13,90,158,.13); }
+    .result-thumb { position:relative; height:200px; background:#d0dae8; overflow:hidden; }
+    .result-thumb img { width:100%; height:100%; object-fit:cover; display:block; transition: transform .4s ease; }
+    .result-card:hover .result-thumb img { transform: scale(1.05); }
     .result-thumb-placeholder { width:100%; height:100%; background:linear-gradient(135deg,#c8d6e8 0%,#e4ecf5 100%); display:flex; align-items:center; justify-content:center; color:#8fa3bb; font-size:.8rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase; }
     .result-industry {
       position:absolute; bottom:12px; left:12px;
@@ -1312,7 +1314,7 @@
     <div class="results-grid">
       <div class="result-card reveal">
         <div class="result-thumb">
-          <div class="result-thumb-placeholder">Case Study Image</div>
+          <img src="./pic-bio-plumber.jpg" alt="Fairy Meadow plumber — local SEO case study" loading="lazy" />
           <div class="result-industry">Trades &amp; Construction</div>
         </div>
         <div class="result-body">
@@ -1323,24 +1325,24 @@
       </div>
       <div class="result-card reveal">
         <div class="result-thumb">
-          <div class="result-thumb-placeholder">Case Study Image</div>
+          <img src="./pic-bio-florist.jpg" alt="Wollongong florist — eCommerce and automation case study" loading="lazy" />
           <div class="result-industry">Retail / eCommerce</div>
         </div>
         <div class="result-body">
-          <div class="result-stat">+210%</div>
-          <h3>Wollongong homewares brand tripled online revenue after Shopify relaunch</h3>
-          <p>A Corrimal-based homewares retailer was running a slow, template-built WooCommerce store with a 74% mobile bounce rate. We rebuilt on Shopify, optimised for mobile, and relaunched with product SEO — online revenue grew 210% in six months.</p>
+          <div class="result-stat">+340%</div>
+          <h3>Wollongong florist grew online sales 340% with a new store and order automation</h3>
+          <p>A Wollongong florist was relying entirely on phone orders and a basic Facebook page. We built a WooCommerce store with automated order confirmations, delivery scheduling and upsell flows — online revenue jumped 340% in the first four months.</p>
         </div>
       </div>
       <div class="result-card reveal">
         <div class="result-thumb">
-          <div class="result-thumb-placeholder">Case Study Image</div>
-          <div class="result-industry">Professional Services</div>
+          <img src="./pic-bio-consultant.jpg" alt="EcoReports — NSW energy compliance platform case study" loading="lazy" />
+          <div class="result-industry">Energy &amp; Compliance</div>
         </div>
         <div class="result-body">
-          <div class="result-stat">#1</div>
-          <h3>Wollongong accounting firm ranked #1 for their core keyword in 5 months</h3>
-          <p>A North Wollongong accounting practice was sitting on page 3 for "accountant Wollongong" — their primary search term. A new website with targeted content, technical SEO and Google Business Profile optimisation pushed them to position #1 within five months.</p>
+          <div class="result-stat">NSW-wide</div>
+          <h3>Illawarra energy consultancy scaled to NSW-wide clients with an automated platform</h3>
+          <p>EcoReports needed to move beyond local referrals and serve builders and certifiers across NSW. We built a custom BASIX and NatHERS reporting platform that automates certificate delivery — cutting turnaround from days to hours and opening a state-wide client base.</p>
         </div>
       </div>
     </div>
