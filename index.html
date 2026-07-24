@@ -464,11 +464,12 @@
     .partner-badge {
       background: var(--white); border: 1px solid var(--card-border);
       border-radius: 10px; padding: 16px 12px; text-align: center;
-      font-family: var(--font-head); font-weight: 700; font-size: .85rem; color: var(--ocean);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
       transition: border-color .25s, box-shadow .25s;
     }
     .partner-badge:hover { border-color: var(--electric-dim); box-shadow: 0 4px 16px rgba(91,200,245,.15); }
-    .partner-badge .badge-sub { color: var(--muted); font-size: .72rem; font-weight: 500; margin-top: 3px; }
+    .partner-badge img { height: 32px; width: auto; max-width: 110px; object-fit: contain; }
+    .partner-badge .badge-sub { color: var(--muted); font-size: .72rem; font-weight: 600; font-family: var(--font-head); }
     .location-block { border-top: 1px solid var(--card-border); padding-top: 24px; }
     .location-row { display: flex; gap: 10px; font-size: .9rem; color: var(--body-text); align-items: flex-start; margin-bottom: 10px; }
     .location-row .ico { color: var(--ocean); flex-shrink: 0; }
@@ -1433,10 +1434,10 @@
         <div class="intro-panel">
           <div style="text-align:center;margin-bottom:20px;"><div class="label">Certifications &amp; Memberships</div></div>
           <div class="partner-badges" role="list">
-            <div class="partner-badge" role="listitem">🅖 Google<div class="badge-sub">Partner</div></div>
-            <div class="partner-badge" role="listitem">🅗 HubSpot<div class="badge-sub">Solutions Partner</div></div>
-            <div class="partner-badge" role="listitem">🅐 AWIA<div class="badge-sub">Member</div></div>
-            <div class="partner-badge" role="listitem">🅘 ICT<div class="badge-sub">Illawarra Member</div></div>
+            <div class="partner-badge" role="listitem"><img src="./logo-google-cloud.jpg" alt="Google Partner" /><div class="badge-sub">Partner</div></div>
+            <div class="partner-badge" role="listitem"><img src="./logo-hubspot.png" alt="HubSpot" /><div class="badge-sub">Specialists</div></div>
+            <div class="partner-badge" role="listitem"><img src="./logo-awia.jpg" alt="AWIA" /><div class="badge-sub">Member</div></div>
+            <div class="partner-badge" role="listitem"><img src="./logo-business-illawarra.jpg" alt="Business Illawarra" /><div class="badge-sub">Member</div></div>
           </div>
           <div class="location-block">
             <p style="font-family:var(--font-head);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:16px;">Our Location</p>
