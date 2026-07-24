@@ -170,7 +170,7 @@ select.form-input { cursor: pointer; }
 .footer-brand p { color: rgba(255,255,255,.5); font-size: .88rem; margin-top: .75rem; line-height: 1.6; }
 .footer-contact-block { margin-top: 1rem; }
 .footer-contact-row { font-size: .87rem; color: rgba(255,255,255,.55); margin-bottom: .5rem; display: grid; grid-template-columns: 1.4rem 1fr; gap: .5rem; align-items: start; line-height: 1.5; }
-.fcr-icon { text-align: center; opacity: .7; }
+.fcr-icon { display:flex; align-items:center; flex-shrink:0; opacity:.8; }
 .footer-contact-row a { color: rgba(255,255,255,.55); font-size: .87rem; transition: color .2s; text-decoration: none; }
 .footer-contact-row a:hover { color: var(--electric); }
 .footer-col h4 { font-family: var(--font-head); font-weight: 700; color: var(--white); font-size: .9rem; margin-bottom: 1rem; }
@@ -227,7 +227,7 @@ select.form-input { cursor: pointer; }
         <div>
           <div class="mega-col-heading">Marketing</div><div class="mega-col-blurb">Get found on Google and turn local searches into booked jobs.</div>
           <a href="/seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128200;</span><span class="mega-item-text"><strong>SEO Wollongong</strong><span>Rank higher, get found</span></span></a>
-          <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon">&#128205;</span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate local search</span></span></a>
+          <a href="/local-seo-wollongong/" class="mega-item"><span class="mega-item-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span class="mega-item-text"><strong>Local SEO</strong><span>Dominate local search</span></span></a>
           <a href="/google-ads-wollongong/" class="mega-item"><span class="mega-item-icon">&#127919;</span><span class="mega-item-text"><strong>Google Ads</strong><span>Pay-per-click campaigns</span></span></a>
           <a href="/google-business-profile-wollongong/" class="mega-item"><span class="mega-item-icon">&#128338;</span><span class="mega-item-text"><strong>Google Business Profile</strong><span>Rank in the Maps 3-pack</span></span></a>
         </div>
@@ -250,7 +250,7 @@ select.form-input { cursor: pointer; }
     <li><a href="/blog/">Blog</a></li>
     <li><a href="/contact/" style="color:var(--electric)">Contact</a></li>
   </ul>
-  <div class="nav-right"><a href="tel:0240034436" class="nav-phone-pill">&#128222; (02) 4003 4436</a><a href="/contact/" class="nav-cta">Get a Free Quote</a></div>
+  <div class="nav-right"><a href="tel:0240034436" class="nav-phone-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.85 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6.35 6.35l1.1-1.1a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (02) 4003 4436</a><a href="/contact/" class="nav-cta">Get a Free Quote</a></div>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -262,7 +262,7 @@ select.form-input { cursor: pointer; }
     <a href="/web-design-wollongong/">&#127760; Web Design</a>
     <a href="/ecommerce-web-design-wollongong/">&#128722; eCommerce</a>
     <a href="/seo-wollongong/">&#128200; SEO Wollongong</a>
-    <a href="/local-seo-wollongong/">&#128205; Local SEO</a>
+    <a href="/local-seo-wollongong/">Local SEO</a>
     <a href="/google-ads-wollongong/">&#127919; Google Ads</a>
     <a href="/google-business-profile-wollongong/">&#128338; Google Business Profile</a>
     <a href="/website-maintenance-wollongong/">&#128295; Maintenance</a>
@@ -273,10 +273,10 @@ select.form-input { cursor: pointer; }
   <a href="/contact/" class="drawer-link">Contact</a>
   <button class="drawer-section-toggle" data-target="drawer-areas" aria-expanded="false">Service Areas <span class="chev">&#9662;</span></button>
   <div class="drawer-sub" id="drawer-areas">
-    <a href="/">&#128205; Wollongong</a>
-    <a href="/web-design-shellharbour/">&#128205; Shellharbour</a>
-    <a href="/web-design-kiama/">&#128205; Kiama</a>
-    <a href="/web-design-southern-highlands/">&#128205; Southern Highlands</a>
+    <a href="/">Wollongong</a>
+    <a href="/web-design-shellharbour/">Shellharbour</a>
+    <a href="/web-design-kiama/">Kiama</a>
+    <a href="/web-design-southern-highlands/">Southern Highlands</a>
   </div>
   <a href="/contact/" class="drawer-cta">Get a Free Quote &#8594;</a>
 </nav>
@@ -409,8 +409,8 @@ select.form-input { cursor: pointer; }
     referrerpolicy="strict-origin-when-cross-origin">
   </iframe>
   <div class="map-overlay">
-    <div class="map-chip"><span class="map-chip-icon">&#128205;</span> 1 Burelli Street, Wollongong NSW 2500</div>
-    <div class="map-chip"><span class="map-chip-icon">&#128222;</span> <a href="tel:0240034436">(02) 4003 4436</a></div>
+    <div class="map-chip"><span class="map-chip-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span> 1 Burelli Street, Wollongong NSW 2500</div>
+    <div class="map-chip"><span class="map-chip-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.85 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.74a16 16 0 0 0 6.35 6.35l1.1-1.1a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> <a href="tel:0240034436">(02) 4003 4436</a></div>
     <div class="map-chip"><a href="https://maps.google.com/?q=Wollongong+Web+Design+Co,+1+Burelli+Street,+Wollongong+NSW+2500" target="_blank" rel="noopener">Open in Google Maps &#8599;</a></div>
   </div>
 </section>
