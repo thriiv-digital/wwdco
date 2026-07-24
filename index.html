@@ -730,11 +730,13 @@
     .cc-reassure { text-align: center; font-size: .77rem; color: rgba(255,255,255,.38); margin-top: 12px; }
     /* Footer transition */
     .cc-foot-fade { height: 80px; background: linear-gradient(to bottom, transparent, #0f2550); }
+    /* Mobile CTAs hidden by default — only shown on small screens */
+    .cc-mobile-ctas { display: none; }
     /* Mobile */
     @media (max-width: 860px) {
       .cc-grid { grid-template-columns: 1fr; gap: 0; }
       .cc-left { padding-bottom: 0; }
-      .cc-mobile-ctas { display: none; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
+      .cc-mobile-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px; }
       .cc-mobile-ctas a { flex: 1; min-width: 140px; text-align: center; padding: 13px 18px; border-radius: 10px; font-family: var(--font-head); font-weight: 700; font-size: .9rem; text-decoration: none; }
       .cc-mobile-cta-call { background: var(--electric); color: #061a36; }
       .cc-mobile-cta-email { background: rgba(91,200,245,.12); border: 1px solid rgba(91,200,245,.3); color: var(--electric); }
